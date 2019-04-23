@@ -19,6 +19,9 @@
 		2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */; };
 		2A0C8FDE226DE030003F8937 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDD226DE030003F8937 /* Theme.xcassets */; };
 		2AA290E7225F1A1100B289BE /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AA290E6225F1A1100B289BE /* schedule.json */; };
+		2ABBDD84226FA1C300D4212C /* SwiftIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */; };
+		2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */; };
+		2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD8F226FA2B600D4212C /* CacheManagerMock.swift */; };
 		2AD36FE1225E830800AF7542 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD36FE0225E830800AF7542 /* AppDelegate.swift */; };
 		2AD36FE6225E830800AF7542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD36FE4225E830800AF7542 /* Main.storyboard */; };
 		2AD36FE8225E830A00AF7542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD36FE7225E830A00AF7542 /* Assets.xcassets */; };
@@ -27,6 +30,16 @@
 		2AF63104226DE96D00509053 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63103226DE96D00509053 /* MapViewController.swift */; };
 		2AF63107226E5CA300509053 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63106226E5CA300509053 /* Area.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2ABBDD86226FA1C300D4212C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AD36FD5225E830800AF7542 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AD36FDC225E830800AF7542;
+			remoteInfo = SwiftIsland;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2A0C8FBD226B9F6A003F8937 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
@@ -41,6 +54,11 @@
 		2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFooterCell.swift; sourceTree = "<group>"; };
 		2A0C8FDD226DE030003F8937 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		2AA290E6225F1A1100B289BE /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
+		2ABBDD81226FA1C300D4212C /* SwiftIslandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftIslandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIslandTests.swift; sourceTree = "<group>"; };
+		2ABBDD85226FA1C300D4212C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		2ABBDD8F226FA2B600D4212C /* CacheManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerMock.swift; sourceTree = "<group>"; };
 		2AD36FDD225E830800AF7542 /* SwiftIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD36FE0225E830800AF7542 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AD36FE5225E830800AF7542 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +72,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2ABBDD7E226FA1C300D4212C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AD36FDA225E830800AF7542 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,10 +138,38 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		2ABBDD82226FA1C300D4212C /* SwiftIslandTests */ = {
+			isa = PBXGroup;
+			children = (
+				2ABBDD8E226FA2A700D4212C /* Mocks */,
+				2ABBDD8B226FA26C00D4212C /* Utilities */,
+				2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */,
+				2ABBDD85226FA1C300D4212C /* Info.plist */,
+			);
+			path = SwiftIslandTests;
+			sourceTree = "<group>";
+		};
+		2ABBDD8B226FA26C00D4212C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2ABBDD8E226FA2A700D4212C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2ABBDD8F226FA2B600D4212C /* CacheManagerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		2AD36FD4225E830800AF7542 = {
 			isa = PBXGroup;
 			children = (
 				2AD36FDF225E830800AF7542 /* SwiftIsland */,
+				2ABBDD82226FA1C300D4212C /* SwiftIslandTests */,
 				2AD36FDE225E830800AF7542 /* Products */,
 			);
 			indentWidth = 2;
@@ -127,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				2AD36FDD225E830800AF7542 /* SwiftIsland.app */,
+				2ABBDD81226FA1C300D4212C /* SwiftIslandTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +215,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2ABBDD80226FA1C300D4212C /* SwiftIslandTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABBDD8A226FA1C300D4212C /* Build configuration list for PBXNativeTarget "SwiftIslandTests" */;
+			buildPhases = (
+				2ABBDD7D226FA1C300D4212C /* Sources */,
+				2ABBDD7E226FA1C300D4212C /* Frameworks */,
+				2ABBDD7F226FA1C300D4212C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2ABBDD87226FA1C300D4212C /* PBXTargetDependency */,
+			);
+			name = SwiftIslandTests;
+			productName = SwiftIslandTests;
+			productReference = 2ABBDD81226FA1C300D4212C /* SwiftIslandTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2AD36FDC225E830800AF7542 /* SwiftIsland */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AD36FEF225E830A00AF7542 /* Build configuration list for PBXNativeTarget "SwiftIsland" */;
@@ -188,6 +260,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "AppTrix AB";
 				TargetAttributes = {
+					2ABBDD80226FA1C300D4212C = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 2AD36FDC225E830800AF7542;
+					};
 					2AD36FDC225E830800AF7542 = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -207,11 +283,19 @@
 			projectRoot = "";
 			targets = (
 				2AD36FDC225E830800AF7542 /* SwiftIsland */,
+				2ABBDD80226FA1C300D4212C /* SwiftIslandTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2ABBDD7F226FA1C300D4212C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AD36FDB225E830800AF7542 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +311,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2ABBDD7D226FA1C300D4212C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABBDD84226FA1C300D4212C /* SwiftIslandTests.swift in Sources */,
+				2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */,
+				2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AD36FD9225E830800AF7542 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,6 +344,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2ABBDD87226FA1C300D4212C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AD36FDC225E830800AF7542 /* SwiftIsland */;
+			targetProxy = 2ABBDD86226FA1C300D4212C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		2AD36FE4225E830800AF7542 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -270,6 +372,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2ABBDD88226FA1C300D4212C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6B3SHVL3L5;
+				INFOPLIST_FILE = SwiftIslandTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = se.apptrix.SwiftIslandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftIsland.app/SwiftIsland";
+			};
+			name = Debug;
+		};
+		2ABBDD89226FA1C300D4212C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6B3SHVL3L5;
+				INFOPLIST_FILE = SwiftIslandTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = se.apptrix.SwiftIslandTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftIsland.app/SwiftIsland";
+			};
+			name = Release;
+		};
 		2AD36FED225E830A00AF7542 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -425,6 +567,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2ABBDD8A226FA1C300D4212C /* Build configuration list for PBXNativeTarget "SwiftIslandTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABBDD88226FA1C300D4212C /* Debug */,
+				2ABBDD89226FA1C300D4212C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2AD36FD8225E830800AF7542 /* Build configuration list for PBXProject "SwiftIsland" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
