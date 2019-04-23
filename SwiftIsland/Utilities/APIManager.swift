@@ -8,16 +8,12 @@
 
 import Foundation
 
-protocol APIManaging {
-}
+protocol APIManaging { }
 
 enum Endpoints: String {
   case first
 }
 
-class APIManager {
+class APIManager { }
 
-}
-
-extension APIManager: APIManaging {
-}
+extension APIManager: APIManaging { }

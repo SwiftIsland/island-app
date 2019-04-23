@@ -38,9 +38,7 @@ class TimelineViewController: UIViewController {
   }
 }
 
-extension TimelineViewController: UITableViewDelegate {
-
-}
+extension TimelineViewController: UITableViewDelegate { }
 
 extension TimelineViewController: UITableViewDataSource {
 
@@ -56,7 +54,6 @@ extension TimelineViewController: UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell") as? ScheduleCell else { return UITableViewCell() }
     let activity = schedule[indexPath.section].activities[indexPath.row]
     cell.setup(with: activity)
-
     return cell
   }
 

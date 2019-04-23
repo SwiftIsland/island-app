@@ -18,7 +18,6 @@ class MapViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
     setupMap()
   }
 
@@ -28,7 +27,6 @@ class MapViewController: UIViewController {
   }
 
   private func getAreas() {
-
     dataManager.getArea { result in
       switch result {
       case .success(let areas):
@@ -39,11 +37,10 @@ class MapViewController: UIViewController {
     }
   }
 
-  private func setupMapOverlays(areas: [Area]) {
+  private func setupMapOverlays(areas: [Area]) {
     mapView.removeOverlays(mapView.overlays)
     self.areas = areas
-
-    let locations = areas.map { $0.coordinates }
+//    let locations = areas.map { $0.coordinates }
 //    let polygon = MKPolygon(
   }
 
@@ -64,6 +61,4 @@ class MapViewController: UIViewController {
   }
 }
 
-extension MapViewController: MKMapViewDelegate {
-
-}
+extension MapViewController: MKMapViewDelegate { }
