@@ -1,0 +1,90 @@
+require './constants'
+require './functions'
+require './bitrise_ci'
+
+fastlane_version = "2.102.0"
+opt_out_usage
+
+ENV["FASTLANE_SKIP_UPDATE_CHECK"] = "1"
+ENV["FASTLANE_HIDE_CHANGELOG"] = "1"
+
+default_platform(:ios)
+
+platform :ios do
+  
+  # Setup
+  
+#  before_all do |lane, options|
+#    ENV["SLACK_URL"] = SLACK_WEBHOOK_URK
+#    ENV["FL_SLACK_USERNAME"] = SLACK_USERNAME
+#    ENV["FL_SLACK_CHANNEL"] = SLACK_CHANNEL
+#  end
+  
+  # CI
+
+  desc "CI entrypoint"
+  lane :ci do |options|
+    if BitriseCI.isPullrequest?
+      buildPullrequest(options)
+    elsif BitriseCI.isDevelop?
+      buildDevelop(options)
+    else
+      buildLocal(options)
+    end
+  end
+
+  # Deploys
+
+  desc "Build for a pullrequest"
+  lane :buildPullrequest do |options|
+    options[:configuration] ||= CONFIG_ADHOC
+    
+    runScan(options)
+
+    clean_imported_certs(options)
+    run_codecov(options)
+  end
+  
+  desc "build for merge to develop"
+  lane :buildDevelop do |options|
+    options[:configuration] ||= CONFIG_ADHOC
+    
+    runScan(options)
+    runGym(options)
+    run_codecov(options)
+  end
+  
+  desc "Run test"
+  lane :buildLocal do |options|
+    options[:configuration] ||= CONFIG_RELEASE
+    
+    runScan(options)
+  end
+  
+  # Private stuff
+  
+  ## Building & Delivery
+
+  private_lane :runGym do |options|
+    increment_build_number(build_number: Time.now.strftime("%y%m%d%H%M"))
+    gym(
+      scheme: SCHEME,
+      configuration: options[:configuration],
+      output_directory: './build',
+      xcargs: "-parallelizeTargets"
+    )
+  end
+
+  private_lane :runScan do |options|
+    scan(
+      scheme: SCHEME,
+      devices: ["iPhone 5s (12.2)"],
+      code_coverage: true,
+      skip_slack: true,
+      output_types: '',
+      output_style: 'rspec',
+      buildlog_path: './build/logs/',
+      xcargs: "-parallelizeTargets OTHER_SWIFT_FLAGS=\"-Xfrontend -debug-time-function-bodies\""
+    )
+  end
+end

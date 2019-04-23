@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: opt_out_usage" time="0.008636">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.001684">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: Switch to ios buildLocal lane" time="0.001377">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: Switch to ios runScan lane" time="0.001251">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: scan" time="25.58525">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
