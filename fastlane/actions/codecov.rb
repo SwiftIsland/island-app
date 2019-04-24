@@ -2,14 +2,12 @@ module Fastlane
   module Actions
     class CodecovAction < Action
       def self.run(params)
-        cmd = ['curl -s https://codecov.io/bash | bash']
+       
+        cmd = ['curl -s https://codecov.io/bash | bash -s --']
+        cmd << "-t #{params[:codecov_token]}" if params[:codecov_token]
+        cmd << "-J #{params[:codecov_package]}" if params[:codecov_package]
 
-        cmd << "-s --" if params.all_keys.inject(false) { |p, k| p or params[k] }
-        cmd << "-X xcodeplist" if params[:use_xcodeplist]
-        cmd << "-J '#{params[:project_name]}'" if params[:project_name]
-        cmd << "-t '#{params[:token]}'" if params[:token]
-
-        sh cmd.join(" ")
+        return sh(cmd.join(' '))
       end
 
       #####################################################
@@ -26,20 +24,25 @@ module Fastlane
 
       def self.available_options
         [
-          FastlaneCore::ConfigItem.new(key: :use_xcodeplist,
-                                       env_name: "FL_CODECOV_USE_XCODEPLIST",
-                                       description: "[BETA] Upload to Codecov using xcodeplist",
-                                       is_string: false,
-                                       default_value: false,),
-          FastlaneCore::ConfigItem.new(key: :project_name,
-                                       env_name: "FL_CODECOV_PROJECT_NAME",
-                                       description: "Upload to Codecov using a project name",
-                                       optional: true),
-          FastlaneCore::ConfigItem.new(key: :token,
-                                       env_name: "FL_CODECOV_TOKEN",
-                                       description: "API token for private repos",
-                                       optional: true),
+          FastlaneCore::ConfigItem.new(key: :codecov_token,
+                                       env_name: "CODECOV_TOKEN",
+                                       description: "private repository token",
+                                       is_string: true,
+                                       optional: true
+                                       ),
+          FastlaneCore::ConfigItem.new(key: :codecov_package,
+                                       description: "Specify packages to build coverage. This *significantly* reduces time to build coverage reports",
+                                       is_string: true,
+                                       optional: true
+                                       )
         ]
+      end
+
+      def self.output
+        []
+      end
+
+      def self.return_value
       end
 
       def self.author
