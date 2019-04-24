@@ -40,8 +40,6 @@ platform :ios do
     options[:configuration] ||= CONFIG_ADHOC
     
     runScan(options)
-
-    clean_imported_certs(options)
     run_codecov(options)
   end
   
@@ -50,7 +48,6 @@ platform :ios do
     options[:configuration] ||= CONFIG_ADHOC
     
     runScan(options)
-    runGym(options)
     run_codecov(options)
   end
   
