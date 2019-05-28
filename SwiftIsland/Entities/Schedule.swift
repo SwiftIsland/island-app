@@ -21,5 +21,6 @@ struct Schedule: Codable {
     let datefrom: Date
     let dateto: Date
     let area: String
+    let mentor: Int?
   }
 }

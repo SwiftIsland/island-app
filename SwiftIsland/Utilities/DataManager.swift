@@ -34,7 +34,6 @@ extension DataManager: DataManaging {
       let schedule: [Schedule] = try cacheManager.get(from: .schedule)
       completion(.success(schedule))
     } catch {
-      debugPrint("Some error: \(error.localizedDescription)")
       completion(.failure(.noData))
     }
   }
@@ -44,7 +43,15 @@ extension DataManager: DataManaging {
       let area: [Area] = try cacheManager.get(from: .area)
       completion(.success(area))
     } catch {
-      debugPrint("Some error: \(error.localizedDescription)")
+      completion(.failure(.noData))
+    }
+  }
+
+  func getMentors(completion: @escaping (Result<[Mentor], DataErrors>) -> Void) {
+    do {
+      let mentors: [Mentor] = try cacheManager.get(from: .mentors)
+      completion(.success(mentors))
+    } catch {
       completion(.failure(.noData))
     }
   }
