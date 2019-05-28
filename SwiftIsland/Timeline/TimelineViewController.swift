@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: CardViewController {
 
   private let dataManager = DataManager.shared
   private var schedule: [Schedule] = []
@@ -38,7 +38,18 @@ class TimelineViewController: UIViewController {
   }
 }
 
-extension TimelineViewController: UITableViewDelegate { }
+private extension TimelineViewController {
+
+  func showActivity(activity: Schedule.Activity) {
+  }
+}
+
+extension TimelineViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let activity = schedule[indexPath.section].activities[indexPath.row]
+    showActivity(activity: activity)
+  }
+}
 
 extension TimelineViewController: UITableViewDataSource {
 
