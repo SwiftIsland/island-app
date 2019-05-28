@@ -15,6 +15,6 @@ def run_codecov(options)
   if ENV['CODECOV_TOKEN']
       codecov(codecov_package: 'SwiftIsland')
   else
-      UI.important("Skipping codecov - Missing ENV['CODECOV_TOKEN']")
+      FastlaneCore::UI.important("Skipping codecov - Missing ENV['CODECOV_TOKEN']")
   end
 end
