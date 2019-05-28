@@ -39,21 +39,14 @@ class MentorCardViewController: UIViewController {
     }
   }
 
-  func setup(withActivity activity: Schedule.Activity) {
-    self.activity = activity
+  func setup(withMentor mentor: Mentor) {
+    titleLabel.text = mentor.name
+    descriptionLabel.text = mentor.bio
+//    locationLabel.text = activity.area
 
-    titleLabel.text = activity.title
-    descriptionLabel.text = activity.description
-//    timeLabel.text = activity.datefrom
-    locationLabel.text = activity.area
-
-    if let mentor = mentors.first(where: { $0.id == activity.mentor }) {
-      if let image = UIImage(named: mentor.image) {
-        mentorImage.image = image
-        mentorImageView.isHidden = false
-      } else {
-        mentorImageView.isHidden = true
-      }
+    if let image = UIImage(named: mentor.image) {
+      mentorImage.image = image
+      mentorImageView.isHidden = false
     } else {
       mentorImageView.isHidden = true
     }

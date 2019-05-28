@@ -21,6 +21,8 @@
 		2A8F7CDB229D1B9800874B09 /* mentors.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F7CDA229D1B9800874B09 /* mentors.json */; };
 		2A8F7CDD229D1C5A00874B09 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CDC229D1C5A00874B09 /* Mentor.swift */; };
 		2A8F7CE2229D3C8100874B09 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */; };
+		2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */; };
+		2A8F7CE7229D542700874B09 /* MentorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE6229D542700874B09 /* MentorCell.swift */; };
 		2AA290E7225F1A1100B289BE /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AA290E6225F1A1100B289BE /* schedule.json */; };
 		2ABBDD84226FA1C300D4212C /* SwiftIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */; };
 		2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */; };
@@ -60,6 +62,8 @@
 		2A8F7CDA229D1B9800874B09 /* mentors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mentors.json; sourceTree = "<group>"; };
 		2A8F7CDC229D1C5A00874B09 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
+		2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		2A8F7CE6229D542700874B09 /* MentorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCell.swift; sourceTree = "<group>"; };
 		2AA290E6225F1A1100B289BE /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
 		2ABBDD81226FA1C300D4212C /* SwiftIslandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftIslandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIslandTests.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			children = (
 				2ACB133A229BA44F0072BB1D /* MentorCardViewController.swift */,
 				2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */,
+				2A8F7CE6229D542700874B09 /* MentorCell.swift */,
 			);
 			path = Mentor;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 		2A8F7CE3229D3CA500874B09 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */,
 				2A0C8FC8226BA741003F8937 /* FileManaging.swift in Sources */,
 				2AF63104226DE96D00509053 /* MapViewController.swift in Sources */,
+				2A8F7CE7229D542700874B09 /* MentorCell.swift in Sources */,
 				2A0C8FC3226BA210003F8937 /* APIManager.swift in Sources */,
 				2AF63107226E5CA300509053 /* Area.swift in Sources */,
 				2ACB133B229BA44F0072BB1D /* MentorCardViewController.swift in Sources */,
@@ -368,6 +375,7 @@
 				2A0C8FC5226BA218003F8937 /* CacheManager.swift in Sources */,
 				2A8F7CDD229D1C5A00874B09 /* Mentor.swift in Sources */,
 				2A8F7CE2229D3C8100874B09 /* MentorsViewController.swift in Sources */,
+				2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */,
 				2A0C8FD3226D1667003F8937 /* UIViewExtensions.swift in Sources */,
 				2AD36FF5225E84F400AF7542 /* TimelineViewController.swift in Sources */,
 				2A0C8FD7226D1C97003F8937 /* ScheduleHeaderCell.swift in Sources */,
