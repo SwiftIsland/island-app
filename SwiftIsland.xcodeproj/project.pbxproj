@@ -23,6 +23,7 @@
 		2A8F7CE2229D3C8100874B09 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */; };
 		2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */; };
 		2A8F7CE7229D542700874B09 /* MentorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE6229D542700874B09 /* MentorCell.swift */; };
+		2A9D2ABF22A3E84E00AC960D /* ConcurrentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D2ABE22A3E84E00AC960D /* ConcurrentCell.swift */; };
 		2AA290E7225F1A1100B289BE /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AA290E6225F1A1100B289BE /* schedule.json */; };
 		2ABBDD84226FA1C300D4212C /* SwiftIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */; };
 		2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */; };
@@ -64,6 +65,7 @@
 		2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		2A8F7CE6229D542700874B09 /* MentorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCell.swift; sourceTree = "<group>"; };
+		2A9D2ABE22A3E84E00AC960D /* ConcurrentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentCell.swift; sourceTree = "<group>"; };
 		2AA290E6225F1A1100B289BE /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
 		2ABBDD81226FA1C300D4212C /* SwiftIslandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftIslandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIslandTests.swift; sourceTree = "<group>"; };
@@ -158,6 +160,17 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		2A9D2AC222A3E86500AC960D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2A9D2ABE22A3E84E00AC960D /* ConcurrentCell.swift */,
+				2A0C8FD0226D13FE003F8937 /* ScheduleCell.swift */,
+				2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */,
+				2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		2AA290E5225F1A0400B289BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,10 +251,8 @@
 		2AD36FF3225E84D300AF7542 /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
-				2A0C8FD0226D13FE003F8937 /* ScheduleCell.swift */,
-				2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */,
+				2A9D2AC222A3E86500AC960D /* Cells */,
 				2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */,
-				2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -362,6 +373,7 @@
 			files = (
 				2A0C8FBE226B9F6A003F8937 /* Schedule.swift in Sources */,
 				2A0C8FC1226BA17B003F8937 /* DataManager.swift in Sources */,
+				2A9D2ABF22A3E84E00AC960D /* ConcurrentCell.swift in Sources */,
 				2A0C8FD9226DD893003F8937 /* GradientView.swift in Sources */,
 				2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */,
 				2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */,

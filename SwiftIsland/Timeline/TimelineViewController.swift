@@ -12,6 +12,8 @@ class TimelineViewController: CardViewController {
 
   private let dataManager = DataManager.shared
   private var schedule: [Schedule] = []
+  private var activities: [[Schedule.Activity]] = []
+  private var mentors: [Mentor] = []
 
   @IBOutlet weak var tableView: UITableView!
 
@@ -29,8 +31,35 @@ class TimelineViewController: CardViewController {
     dataManager.getSchedule { result in
       switch result {
       case .success(let schedule):
+        var activities: [[Schedule.Activity]] = []
+
+        for day in schedule {
+          var dayItems: [Schedule.Activity] = []
+
+          for activity in day.activities {
+            dayItems.append(activity)
+
+            if let subItems = activity.concurrent {
+              dayItems.append(contentsOf: subItems)
+            }
+          }
+          activities.append(dayItems)
+        }
+
+        self.activities = activities
         self.schedule = schedule
         self.tableView.reloadData()
+      case .failure(let error):
+        debugPrint(error.localizedDescription)
+      }
+    }
+  }
+
+  func fetchMentors() {
+    dataManager.getMentors { result in
+      switch result {
+      case .success(let mentors):
+        self.mentors = mentors
       case .failure(let error):
         debugPrint(error.localizedDescription)
       }
@@ -58,14 +87,25 @@ extension TimelineViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return schedule[section].activities.count
+    return activities[section].count
+//    return schedule[section].activities.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell") as? ScheduleCell else { return UITableViewCell() }
-    let activity = schedule[indexPath.section].activities[indexPath.row]
-    cell.setup(with: activity)
-    return cell
+    let activity = activities[indexPath.section][indexPath.row]
+    let isConcurrent = schedule[indexPath.section].activities.first(where: { $0.id == activity.id }) == nil
+
+    let activityCell: ScheduleCell
+    if isConcurrent {
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "ConcurrentCell") as? ConcurrentCell else { return UITableViewCell() }
+      activityCell = cell
+    } else {
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell") as? ScheduleCell else { return UITableViewCell() }
+      activityCell = cell
+    }
+
+    activityCell.setup(with: activity)
+    return activityCell
   }
 
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
