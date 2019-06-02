@@ -544,50 +544,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Lh-LZ-Vwu">
-                                                    <rect key="frame" x="8" y="20.5" width="69" height="69"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g8h-b6-Zx2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="g8h-b6-Zx2" secondAttribute="trailing" id="As2-5G-Avs"/>
-                                                        <constraint firstAttribute="bottom" secondItem="g8h-b6-Zx2" secondAttribute="bottom" id="Jn3-h9-pwU"/>
-                                                        <constraint firstItem="g8h-b6-Zx2" firstAttribute="top" secondItem="4Lh-LZ-Vwu" secondAttribute="top" id="Nlt-NT-16w"/>
-                                                        <constraint firstAttribute="width" secondItem="4Lh-LZ-Vwu" secondAttribute="height" multiplier="1:1" id="vAQ-zP-kpQ"/>
-                                                        <constraint firstItem="g8h-b6-Zx2" firstAttribute="leading" secondItem="4Lh-LZ-Vwu" secondAttribute="leading" id="vfQ-Sb-0ng"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                            <real key="value" value="4"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" name="scheduleTimeline"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XO-aC-Gl6" userLabel="Indicator">
-                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="110"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fog-Lm-BIP">
-                                                            <rect key="frame" x="40.5" y="0.0" width="4" height="110"/>
-                                                            <color key="backgroundColor" name="scheduleTimeline"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="4" id="1Ck-vk-Kw9"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstItem="fog-Lm-BIP" firstAttribute="top" secondItem="5XO-aC-Gl6" secondAttribute="top" id="1kQ-jy-8ZI"/>
-                                                        <constraint firstAttribute="bottom" secondItem="fog-Lm-BIP" secondAttribute="bottom" id="SmA-MT-NCo"/>
-                                                        <constraint firstAttribute="width" constant="85" id="aiW-9P-T42"/>
-                                                        <constraint firstItem="fog-Lm-BIP" firstAttribute="centerX" secondItem="5XO-aC-Gl6" secondAttribute="centerX" id="see-h0-XW5"/>
-                                                    </constraints>
-                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2AT-07-UbM" userLabel="Content">
                                                     <rect key="frame" x="85" y="8" width="321" height="94"/>
                                                     <subviews>
@@ -639,6 +595,50 @@
                                                         <constraint firstItem="fYX-jl-zqh" firstAttribute="leading" secondItem="2AT-07-UbM" secondAttribute="leading" id="k24-Ce-vRA"/>
                                                     </constraints>
                                                 </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XO-aC-Gl6" userLabel="Indicator">
+                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="110"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fog-Lm-BIP">
+                                                            <rect key="frame" x="40.5" y="0.0" width="4" height="110"/>
+                                                            <color key="backgroundColor" name="scheduleTimeline"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="4" id="1Ck-vk-Kw9"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="fog-Lm-BIP" firstAttribute="top" secondItem="5XO-aC-Gl6" secondAttribute="top" id="1kQ-jy-8ZI"/>
+                                                        <constraint firstAttribute="bottom" secondItem="fog-Lm-BIP" secondAttribute="bottom" id="SmA-MT-NCo"/>
+                                                        <constraint firstAttribute="width" constant="85" id="aiW-9P-T42"/>
+                                                        <constraint firstItem="fog-Lm-BIP" firstAttribute="centerX" secondItem="5XO-aC-Gl6" secondAttribute="centerX" id="see-h0-XW5"/>
+                                                    </constraints>
+                                                </view>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Lh-LZ-Vwu">
+                                                    <rect key="frame" x="16" y="28.5" width="53" height="53"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g8h-b6-Zx2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="g8h-b6-Zx2" secondAttribute="trailing" id="As2-5G-Avs"/>
+                                                        <constraint firstAttribute="bottom" secondItem="g8h-b6-Zx2" secondAttribute="bottom" id="Jn3-h9-pwU"/>
+                                                        <constraint firstItem="g8h-b6-Zx2" firstAttribute="top" secondItem="4Lh-LZ-Vwu" secondAttribute="top" id="Nlt-NT-16w"/>
+                                                        <constraint firstAttribute="width" secondItem="4Lh-LZ-Vwu" secondAttribute="height" multiplier="1:1" id="vAQ-zP-kpQ"/>
+                                                        <constraint firstItem="g8h-b6-Zx2" firstAttribute="leading" secondItem="4Lh-LZ-Vwu" secondAttribute="leading" id="vfQ-Sb-0ng"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="scheduleTimeline"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="5XO-aC-Gl6" secondAttribute="bottom" id="2PC-0C-cSG"/>
@@ -647,10 +647,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="2AT-07-UbM" secondAttribute="trailing" constant="8" id="KXG-9A-FbW"/>
                                                 <constraint firstItem="2AT-07-UbM" firstAttribute="top" secondItem="RlN-rX-oe6" secondAttribute="top" constant="8" id="Xj3-UM-4eC"/>
                                                 <constraint firstAttribute="bottom" secondItem="2AT-07-UbM" secondAttribute="bottom" constant="8" id="bJq-dZ-6eg"/>
-                                                <constraint firstAttribute="leading" secondItem="4Lh-LZ-Vwu" secondAttribute="leading" constant="-8" id="byA-eC-Fk3"/>
+                                                <constraint firstItem="4Lh-LZ-Vwu" firstAttribute="leading" secondItem="RlN-rX-oe6" secondAttribute="leading" constant="16" id="byA-eC-Fk3"/>
                                                 <constraint firstItem="5XO-aC-Gl6" firstAttribute="leading" secondItem="RlN-rX-oe6" secondAttribute="leading" id="eGz-aC-2Yy"/>
                                                 <constraint firstItem="4Lh-LZ-Vwu" firstAttribute="centerY" secondItem="RlN-rX-oe6" secondAttribute="centerY" id="ew7-Ei-MI7"/>
-                                                <constraint firstItem="2AT-07-UbM" firstAttribute="leading" secondItem="4Lh-LZ-Vwu" secondAttribute="trailing" constant="8" id="y4s-yi-CUc"/>
+                                                <constraint firstItem="2AT-07-UbM" firstAttribute="leading" secondItem="4Lh-LZ-Vwu" secondAttribute="trailing" constant="16" id="y4s-yi-CUc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

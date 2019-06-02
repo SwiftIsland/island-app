@@ -15,6 +15,15 @@ class ConcurrentCell: ScheduleCell {
 
   override func setup(with activity: Schedule.Activity) {
     super.setup(with: activity)
+
+    if let mentorId = activity.mentor,
+      let mentor = MentorManager.shared.mentors.first(where: { $0.id == mentorId }),
+      let mentorImg = UIImage(named: mentor.image)
+    {
+      mentorView.isHidden = false
+      mentorImage.image = mentorImg
+    }
+
     debugPrint("NOT YET IMPLEMENTED!")
   }
 
