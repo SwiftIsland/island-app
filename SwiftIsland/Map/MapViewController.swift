@@ -21,9 +21,13 @@ class MapViewController: UIViewController {
     setupMap()
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    getAreas()
+  }
+
   private func setupMap() {
     centerOnVenue()
-    getAreas()
   }
 
   private func getAreas() {
@@ -32,7 +36,7 @@ class MapViewController: UIViewController {
       case .success(let areas):
         self.setupMapOverlays(areas: areas)
       case .failure(let error):
-        debugPrint(error.localizedDescription)
+        debugPrint("Error fetching areas: \(error.localizedDescription)")
       }
     }
   }
@@ -40,18 +44,23 @@ class MapViewController: UIViewController {
   private func setupMapOverlays(areas: [Area]) {
     mapView.removeOverlays(mapView.overlays)
     self.areas = areas
-//    let locations = areas.map { $0.coordinates }
-//    let polygon = MKPolygon(
+
+    for area in areas {
+      let polygon = MKPolygon(coordinates: area.locationCoordinate2D, count: area.locationCoordinate2D.count)
+      mapView.addOverlay(polygon)
+
+      // Add outer line
+    }
   }
 
   private func centerOnVenue() {
-    let location = CLLocation(latitude: 53.1148856, longitude: 4.895983)
+    let location = CLLocation(latitude: 53.11492071953518, longitude: 4.89718462979863)
     centerMapOnLocation(location: location)
   }
 
   func centerMapOnLocation(location: CLLocation) {
     let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude),
-                                    span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+                                    span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
     DispatchQueue.main.async {
       self.mapView.setRegion(region, animated: true)
       let annotation = MKPointAnnotation()
@@ -61,4 +70,19 @@ class MapViewController: UIViewController {
   }
 }
 
-extension MapViewController: MKMapViewDelegate { }
+extension MapViewController: MKMapViewDelegate {
+  
+  func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+    if overlay is MKPolyline {
+      let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+      polylineRenderer.strokeColor = .orange
+      polylineRenderer.lineWidth = 5
+      return polylineRenderer
+    } else if overlay is MKPolygon {
+      let polygonView = MKPolygonRenderer(overlay: overlay)
+      polygonView.fillColor = .magenta
+      return polygonView
+    }
+    return MKPolylineRenderer(overlay: overlay)
+  }
+}
