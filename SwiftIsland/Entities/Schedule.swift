@@ -22,5 +22,6 @@ struct Schedule: Codable {
     let dateto: Date
     let area: String
     let mentor: Int?
+    let concurrent: [Activity]?
   }
 }

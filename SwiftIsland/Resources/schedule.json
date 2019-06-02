@@ -22,8 +22,36 @@
         "mentor": 0
       },
       {
-        "id": "3",
+        "id": "30",
         "title": "Third activity",
+        "description": "Short text",
+        "datefrom": "2019-06-03T11:15:00.000Z",
+        "dateto": "2019-06-03T12:15:00.000Z",
+        "area": "Tent",
+        "concurrent": [
+          {
+            "id": "31",
+            "title": "Concurrent one",
+            "description": "Short text",
+            "datefrom": "2019-06-03T11:15:00.000Z",
+            "dateto": "2019-06-03T12:15:00.000Z",
+            "area": "Tent",
+            "mentor": 0
+          },
+          {
+            "id": "32",
+            "title": "Concurrent two",
+            "description": "Short text",
+            "datefrom": "2019-06-03T11:15:00.000Z",
+            "dateto": "2019-06-03T12:15:00.000Z",
+            "area": "Tent",
+            "mentor": 0
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Last of the day activity",
         "description": "Short text",
         "datefrom": "2019-06-03T11:15:00.000Z",
         "dateto": "2019-06-03T12:15:00.000Z",
