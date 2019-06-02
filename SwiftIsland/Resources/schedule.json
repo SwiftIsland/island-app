@@ -27,7 +27,6 @@
         "description": "Short text",
         "datefrom": "2019-06-03T11:15:00.000Z",
         "dateto": "2019-06-03T12:15:00.000Z",
-        "area": "Tent",
         "concurrent": [
           {
             "id": "31",
@@ -62,8 +61,8 @@
         "id": "3",
         "title": "Lunch",
         "description": "Short text",
-        "datefrom": "2019-06-03T11:15:00.000Z",
-        "dateto": "2019-06-03T12:15:00.000Z",
+        "datefrom": "2019-06-03T14:15:00.000Z",
+        "dateto": "2019-06-03T15:15:00.000Z",
         "area": "Tent",
         "mentor": 0
       }

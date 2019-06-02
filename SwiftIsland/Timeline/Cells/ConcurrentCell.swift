@@ -11,7 +11,10 @@ import UIKit
 class ConcurrentCell: ScheduleCell {
 
   @IBOutlet weak var mentorView: UIView!
-  @IBOutlet weak var mentorImage: UIImageView!
+  @IBOutlet weak var mentorButton: UIButton!
+
+  var didSelectMentor: ((Mentor) -> Void)?
+  private var mentor: Mentor?
 
   override func setup(with activity: Schedule.Activity) {
     super.setup(with: activity)
@@ -20,17 +23,16 @@ class ConcurrentCell: ScheduleCell {
       let mentor = MentorManager.shared.mentors.first(where: { $0.id == mentorId }),
       let mentorImg = UIImage(named: mentor.image)
     {
+      self.mentor = mentor
       mentorView.isHidden = false
-      mentorImage.image = mentorImg
+      mentorButton.setImage(mentorImg, for: .normal)
     }
-
-    debugPrint("NOT YET IMPLEMENTED!")
   }
 
   override func prepareForReuse() {
     super.prepareForReuse()
     mentorView.isHidden = true
-    mentorImage.image = nil
+    mentorButton.setImage(nil, for: .normal)
   }
 
   override func awakeFromNib() {
@@ -39,5 +41,11 @@ class ConcurrentCell: ScheduleCell {
 
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
+  }
+
+  @IBAction func tapMentor(_ sender: Any) {
+    if let mentor = mentor {
+      didSelectMentor?(mentor)
+    }
   }
 }

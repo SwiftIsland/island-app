@@ -59,12 +59,13 @@ class TimelineViewController: CardViewController {
 private extension TimelineViewController {
 
   func showActivity(activity: Schedule.Activity) {
+    debugPrint("Show activity \(activity)")
   }
 }
 
 extension TimelineViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let activity = schedule[indexPath.section].activities[indexPath.row]
+    let activity = activities[indexPath.section][indexPath.row]
     showActivity(activity: activity)
   }
 }
@@ -88,6 +89,11 @@ extension TimelineViewController: UITableViewDataSource {
     if isConcurrent {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "ConcurrentCell") as? ConcurrentCell else { return UITableViewCell() }
       activityCell = cell
+
+      cell.didSelectMentor = { mentor in
+        self.cardContent?.setup(withMentor: mentor)
+        self.animateTransitionIfNeeded(state: .expanded, duration: 0.6)
+      }
     } else {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell") as? ScheduleCell else { return UITableViewCell() }
       activityCell = cell

@@ -11,6 +11,7 @@ import UIKit
 class MentorCardViewController: UIViewController {
 
   @IBOutlet weak var handleAreaView: UIView!
+  
   @IBOutlet weak var mentorImageView: UIView!
   @IBOutlet weak var mentorImage: UIImageView!
 
