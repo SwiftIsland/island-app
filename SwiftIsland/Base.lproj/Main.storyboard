@@ -189,7 +189,7 @@
             </objects>
             <point key="canvasLocation" x="-178.2608695652174" y="336.83035714285711"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="qid-Ge-Pdo">
             <objects>
                 <viewController id="OIQ-Dk-xHv" customClass="MapViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
@@ -213,7 +213,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YGw-12-20L"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="map" id="l2l-DK-rHq"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="l2l-DK-rHq"/>
                     <connections>
                         <outlet property="mapView" destination="7ec-NZ-2J6" id="6cJ-os-0Jf"/>
                     </connections>
@@ -222,7 +222,7 @@
             </objects>
             <point key="canvasLocation" x="728" y="10"/>
         </scene>
-        <!--Item-->
+        <!--Mentors-->
         <scene sceneID="wqT-Bg-7f9">
             <objects>
                 <viewController id="T0Z-7d-cpy" customClass="MentorsViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
@@ -237,12 +237,12 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MentorCell" rowHeight="116" id="FJk-TR-xTi" customClass="MentorCell" customModule="SwiftIsland" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FJk-TR-xTi" id="TqD-BX-YP0">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FJk-TR-xTi" id="TqD-BX-YP0">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="115.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpb-iJ-M2E">
-                                                    <rect key="frame" x="8" y="8" width="100" height="100"/>
+                                                    <rect key="frame" x="8" y="8.5" width="100" height="100"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a83-kS-YUG">
                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -267,7 +267,7 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMb-FT-6h6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMb-FT-6h6">
                                                     <rect key="frame" x="116" y="46.5" width="270" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -281,6 +281,7 @@
                                                 <constraint firstItem="Wpb-iJ-M2E" firstAttribute="leading" secondItem="TqD-BX-YP0" secondAttribute="leading" constant="8" id="n34-er-pF7"/>
                                                 <constraint firstItem="Wpb-iJ-M2E" firstAttribute="top" secondItem="TqD-BX-YP0" secondAttribute="top" constant="8" id="nC5-eI-atW"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="oMb-FT-6h6" secondAttribute="trailing" constant="8" id="nvV-FZ-8FL"/>
+                                                <constraint firstItem="oMb-FT-6h6" firstAttribute="centerY" secondItem="a83-kS-YUG" secondAttribute="centerY" id="uqv-ms-Rbw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -304,7 +305,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="exh-iQ-PdG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Rnq-he-5b9"/>
+                    <tabBarItem key="tabBarItem" title="Mentors" image="mentor" id="Rnq-he-5b9"/>
                     <connections>
                         <outlet property="tableView" destination="7Wg-Sm-GfU" id="9r0-T7-w9I"/>
                     </connections>
@@ -313,7 +314,7 @@
             </objects>
             <point key="canvasLocation" x="728" y="-1321"/>
         </scene>
-        <!--Timeline View Controller-->
+        <!--Schedule-->
         <scene sceneID="qJz-4v-Kfs">
             <objects>
                 <viewController id="xhZ-Lo-pSD" customClass="TimelineViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
@@ -599,7 +600,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bdd-ez-FYb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="schedule" id="7EY-ES-zFT"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="schedule" id="7EY-ES-zFT"/>
                     <connections>
                         <outlet property="tableView" destination="Qa8-tz-kcC" id="6hG-ee-0z9"/>
                     </connections>
@@ -630,6 +631,7 @@
     </scenes>
     <resources>
         <image name="map" width="34" height="34"/>
+        <image name="mentor" width="34" height="34"/>
         <image name="schedule" width="34" height="34"/>
         <namedColor name="scheduleTimeline">
             <color red="1" green="0.83921568627450982" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
