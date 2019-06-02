@@ -54,17 +54,6 @@ class TimelineViewController: CardViewController {
       }
     }
   }
-
-  func fetchMentors() {
-    dataManager.getMentors { result in
-      switch result {
-      case .success(let mentors):
-        self.mentors = mentors
-      case .failure(let error):
-        debugPrint(error.localizedDescription)
-      }
-    }
-  }
 }
 
 private extension TimelineViewController {

@@ -11,6 +11,7 @@ import Foundation
 protocol DataManaging {
   func getSchedule(completion: @escaping (Result<[Schedule], DataErrors>) -> Void)
   func getArea(completion: @escaping (Result<[Area], DataErrors>) -> Void)
+  func getMentors(completion: @escaping (Result<[Mentor], DataErrors>) -> Void)
 }
 
 enum DataErrors: Error {

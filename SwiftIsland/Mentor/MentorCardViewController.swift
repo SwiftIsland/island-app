@@ -21,23 +21,6 @@ class MentorCardViewController: UIViewController {
 
   private let dataManager = DataManager.shared
   private var activity: Schedule.Activity?
-  private var mentors: [Mentor] = []
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    fetchMentors()
-  }
-
-  func fetchMentors() {
-    dataManager.getMentors { result in
-      switch result {
-      case .success(let mentors):
-        self.mentors = mentors
-      case .failure(let error):
-        debugPrint(error.localizedDescription)
-      }
-    }
-  }
 
   func setup(withMentor mentor: Mentor) {
     titleLabel.text = mentor.name
