@@ -11,6 +11,7 @@ import Foundation
 enum CacheFiles: String {
   case schedule
   case area
+  case mentors
 }
 
 enum CacheErrors: Error {

@@ -9,7 +9,8 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum gravida est. Proin ultricies sapien ut fringilla egestas. Quisque tempus volutpat lorem nec ornare. Curabitur a accumsan justo. Proin orci nisl, lobortis in egestas pharetra, cursus et sem. Integer placerat convallis nisi, et aliquet dui finibus dignissim. Sed id ullamcorper tortor. Nunc viverra nunc ex, nec ornare nibh commodo quis. Sed sagittis vel purus et ornare. Donec vitae condimentum sem, in dictum elit. Vivamus sodales sit amet libero vitae mattis. Nam imperdiet lacinia nulla, eget consequat mi luctus vitae. Nam lacinia, elit a congue finibus, libero dui gravida erat, sed gravida sem libero sit amet quam. Aliquam pharetra scelerisque volutpat.",
         "datefrom": "2019-06-03T09:00:00.000Z",
         "dateto": "2019-06-03T09:15:00.000Z",
-        "area": "Main area"
+        "area": "Main area",
+        "mentor": 0
       },
       {
         "id": "2",
@@ -17,7 +18,8 @@
         "description": "Quisque vitae sollicitudin neque, eu iaculis velit. Morbi non semper ante. Quisque non ex libero. Suspendisse dictum molestie libero, sed mollis lorem aliquet eget. Donec molestie, quam sit amet interdum sagittis, neque lacus rutrum nunc, eget interdum neque mauris ut orci. Phasellus et ex felis. Sed et lorem in purus mollis volutpat. Proin ut dictum dui. Vivamus id orci blandit, sollicitudin lorem eu, elementum metus. Duis quis imperdiet sem. Nam tempor mauris augue, sed ultricies ipsum tincidunt a. Vestibulum ac sapien ut metus imperdiet auctor eget ac elit.",
         "datefrom": "2019-06-03T09:15:00.000Z",
         "dateto": "2019-06-03T11:15:00.000Z",
-        "area": "Tent"
+        "area": "Tent",
+        "mentor": 0
       },
       {
         "id": "3",
@@ -25,7 +27,8 @@
         "description": "Short text",
         "datefrom": "2019-06-03T11:15:00.000Z",
         "dateto": "2019-06-03T12:15:00.000Z",
-        "area": "Tent"
+        "area": "Tent",
+        "mentor": 0
       }
     ]
   },
@@ -39,7 +42,8 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum gravida est. Proin ultricies sapien ut fringilla egestas. Quisque tempus volutpat lorem nec ornare. Curabitur a accumsan justo. Proin orci nisl, lobortis in egestas pharetra, cursus et sem. Integer placerat convallis nisi, et aliquet dui finibus dignissim. Sed id ullamcorper tortor. Nunc viverra nunc ex, nec ornare nibh commodo quis. Sed sagittis vel purus et ornare. Donec vitae condimentum sem, in dictum elit. Vivamus sodales sit amet libero vitae mattis. Nam imperdiet lacinia nulla, eget consequat mi luctus vitae. Nam lacinia, elit a congue finibus, libero dui gravida erat, sed gravida sem libero sit amet quam. Aliquam pharetra scelerisque volutpat.",
         "datefrom": "2019-06-03T09:00:00.000Z",
         "dateto": "2019-06-03T09:15:00.000Z",
-        "area": "Main area"
+        "area": "Main area",
+        "mentor": 0
       },
       {
         "id": "5",
@@ -47,7 +51,8 @@
         "description": "Quisque vitae sollicitudin neque, eu iaculis velit. Morbi non semper ante. Quisque non ex libero. Suspendisse dictum molestie libero, sed mollis lorem aliquet eget. Donec molestie, quam sit amet interdum sagittis, neque lacus rutrum nunc, eget interdum neque mauris ut orci. Phasellus et ex felis. Sed et lorem in purus mollis volutpat. Proin ut dictum dui. Vivamus id orci blandit, sollicitudin lorem eu, elementum metus. Duis quis imperdiet sem. Nam tempor mauris augue, sed ultricies ipsum tincidunt a. Vestibulum ac sapien ut metus imperdiet auctor eget ac elit.",
         "datefrom": "2019-06-03T09:15:00.000Z",
         "dateto": "2019-06-03T11:15:00.000Z",
-        "area": "Tent"
+        "area": "Tent",
+        "mentor": 0
       },
       {
         "id": "6",
@@ -55,8 +60,8 @@
         "description": "Short text",
         "datefrom": "2019-06-03T11:15:00.000Z",
         "dateto": "2019-06-03T12:15:00.000Z",
-        "area": "Tent"
+        "area": "Tent",
+        "mentor": 0
       }
     ]
-  }
-]
+  }]
