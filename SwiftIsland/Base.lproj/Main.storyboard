@@ -46,7 +46,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KwP-sP-Vdg">
-                                        <rect key="frame" x="0.0" y="115" width="414" height="781"/>
+                                        <rect key="frame" x="0.0" y="103" width="414" height="793"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM7-9F-ncV">
                                                 <rect key="frame" x="8" y="0.0" width="398" height="23"/>
@@ -157,7 +157,7 @@
                                     <constraint firstItem="vdW-c4-JrG" firstAttribute="leading" secondItem="DDj-v8-ahe" secondAttribute="leading" id="ObV-ZO-xPr"/>
                                     <constraint firstAttribute="trailing" secondItem="vdW-c4-JrG" secondAttribute="trailing" id="QHM-Bg-bqj"/>
                                     <constraint firstAttribute="trailing" secondItem="B8o-ab-LPz" secondAttribute="trailing" constant="20" id="TG9-ek-mbn"/>
-                                    <constraint firstItem="KwP-sP-Vdg" firstAttribute="top" secondItem="vdW-c4-JrG" secondAttribute="bottom" id="TOd-5Y-sw9"/>
+                                    <constraint firstItem="KwP-sP-Vdg" firstAttribute="top" secondItem="vdW-c4-JrG" secondAttribute="bottom" constant="-12" id="TOd-5Y-sw9"/>
                                     <constraint firstItem="B8o-ab-LPz" firstAttribute="top" secondItem="DDj-v8-ahe" secondAttribute="top" id="iDQ-3v-SIu"/>
                                     <constraint firstAttribute="bottom" secondItem="KwP-sP-Vdg" secondAttribute="bottom" id="o5j-De-gUK"/>
                                     <constraint firstAttribute="bottom" secondItem="KwP-sP-Vdg" secondAttribute="bottom" id="tP1-wm-rWN"/>
