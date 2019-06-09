@@ -43,6 +43,7 @@
 		2ADD085B22ADA5F100A90D1E /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085A22ADA5F100A90D1E /* FileManagerMock.swift */; };
 		2ADD085D22ADA6E200A90D1E /* BundleMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085C22ADA6E200A90D1E /* BundleMock.swift */; };
 		2ADD085F22ADABFA00A90D1E /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085E22ADABFA00A90D1E /* CollectionExtension.swift */; };
+		2ADD086322ADADBF00A90D1E /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD086222ADADBF00A90D1E /* ThemeTests.swift */; };
 		2AF63104226DE96D00509053 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63103226DE96D00509053 /* MapViewController.swift */; };
 		2AF63107226E5CA300509053 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63106226E5CA300509053 /* Area.swift */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,7 @@
 		2ADD085A22ADA5F100A90D1E /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
 		2ADD085C22ADA6E200A90D1E /* BundleMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleMock.swift; sourceTree = "<group>"; };
 		2ADD085E22ADABFA00A90D1E /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		2ADD086222ADADBF00A90D1E /* ThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
 		2AF63103226DE96D00509053 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2AF63105226DEF4100509053 /* area.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
 		2AF63106226E5CA300509053 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				2ABBDD8E226FA2A700D4212C /* Mocks */,
+				2ADD086122ADADAC00A90D1E /* Helpers */,
 				2ABBDD8B226FA26C00D4212C /* Utilities */,
 				2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */,
 				2ABBDD85226FA1C300D4212C /* Info.plist */,
@@ -280,6 +283,14 @@
 				2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */,
 			);
 			path = Timeline;
+			sourceTree = "<group>";
+		};
+		2ADD086122ADADAC00A90D1E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2ADD086222ADADBF00A90D1E /* ThemeTests.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +402,7 @@
 				2ADD085D22ADA6E200A90D1E /* BundleMock.swift in Sources */,
 				2ABBDD84226FA1C300D4212C /* SwiftIslandTests.swift in Sources */,
 				2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */,
+				2ADD086322ADADBF00A90D1E /* ThemeTests.swift in Sources */,
 				2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */,
 				2ADD085B22ADA5F100A90D1E /* FileManagerMock.swift in Sources */,
 			);
