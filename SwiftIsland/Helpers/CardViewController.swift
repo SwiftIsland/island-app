@@ -17,7 +17,6 @@ class CardViewController: UIViewController {
 
   var visualEffectView: UIVisualEffectView?
   let cardHeight:CGFloat = 600
-  let cardHandleAreaHeight:CGFloat = 165
   let defaultDuration = 0.6
   var cardVisible = false
   var nextState:CardState {
