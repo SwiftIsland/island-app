@@ -203,24 +203,61 @@
                                     <outlet property="delegate" destination="OIQ-Dk-xHv" id="8hO-Mx-Bh6"/>
                                 </connections>
                             </mapView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjT-Ew-1gT">
+                                <rect key="frame" x="20" y="84" width="374" height="95"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHd-ow-PbB">
+                                        <rect key="frame" x="274" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Gek-Wh-CDQ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="OIQ-Dk-xHv" id="zyR-20-nIF"/>
+                                            <outlet property="delegate" destination="OIQ-Dk-xHv" id="Riz-wk-aHU"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show cottage location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-4R-02i">
+                                        <rect key="frame" x="8" y="37" width="258" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="oHd-ow-PbB" firstAttribute="leading" secondItem="eiT-4R-02i" secondAttribute="trailing" constant="8" id="36l-wD-Jwz"/>
+                                    <constraint firstItem="eiT-4R-02i" firstAttribute="centerY" secondItem="OjT-Ew-1gT" secondAttribute="centerY" id="IJT-8R-DgA"/>
+                                    <constraint firstItem="oHd-ow-PbB" firstAttribute="height" secondItem="OjT-Ew-1gT" secondAttribute="height" id="KLX-fK-FBu"/>
+                                    <constraint firstAttribute="bottom" secondItem="oHd-ow-PbB" secondAttribute="bottom" id="Zmn-Im-uuP"/>
+                                    <constraint firstItem="oHd-ow-PbB" firstAttribute="top" secondItem="OjT-Ew-1gT" secondAttribute="top" id="ixP-xt-xR4"/>
+                                    <constraint firstAttribute="height" constant="95" id="jzC-GU-E2j"/>
+                                    <constraint firstAttribute="trailing" secondItem="oHd-ow-PbB" secondAttribute="trailing" id="kQe-oD-xPo"/>
+                                    <constraint firstItem="eiT-4R-02i" firstAttribute="leading" secondItem="OjT-Ew-1gT" secondAttribute="leading" constant="8" id="oxl-ab-a3h"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7ec-NZ-2J6" firstAttribute="leading" secondItem="YGw-12-20L" secondAttribute="leading" id="5lO-dk-aNj"/>
+                            <constraint firstItem="OjT-Ew-1gT" firstAttribute="leading" secondItem="YGw-12-20L" secondAttribute="leading" constant="20" id="Cta-Ce-B4z"/>
                             <constraint firstItem="YGw-12-20L" firstAttribute="trailing" secondItem="7ec-NZ-2J6" secondAttribute="trailing" id="KQE-56-grI"/>
                             <constraint firstItem="7ec-NZ-2J6" firstAttribute="top" secondItem="SDw-2x-a3u" secondAttribute="top" id="Ont-7u-JBt"/>
                             <constraint firstAttribute="bottom" secondItem="7ec-NZ-2J6" secondAttribute="bottom" id="QHB-BJ-ul2"/>
+                            <constraint firstItem="YGw-12-20L" firstAttribute="trailing" secondItem="OjT-Ew-1gT" secondAttribute="trailing" constant="20" id="iaB-Qe-vFS"/>
+                            <constraint firstItem="OjT-Ew-1gT" firstAttribute="top" secondItem="YGw-12-20L" secondAttribute="top" constant="40" id="z19-Vc-XCq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YGw-12-20L"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" id="l2l-DK-rHq"/>
                     <connections>
+                        <outlet property="cottagePicker" destination="oHd-ow-PbB" id="JYy-cn-zbp"/>
+                        <outlet property="cottagePickerView" destination="OjT-Ew-1gT" id="XBf-Qj-5DV"/>
                         <outlet property="mapView" destination="7ec-NZ-2J6" id="6cJ-os-0Jf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tes-NI-yjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728" y="10"/>
+            <point key="canvasLocation" x="727.536231884058" y="9.375"/>
         </scene>
         <!--Mentors-->
         <scene sceneID="wqT-Bg-7f9">
