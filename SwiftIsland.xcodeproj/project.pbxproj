@@ -15,7 +15,6 @@
 		2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD0226D13FE003F8937 /* ScheduleCell.swift */; };
 		2A0C8FD3226D1667003F8937 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD2226D1667003F8937 /* UIViewExtensions.swift */; };
 		2A0C8FD7226D1C97003F8937 /* ScheduleHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */; };
-		2A0C8FD9226DD893003F8937 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD8226DD893003F8937 /* GradientView.swift */; };
 		2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */; };
 		2A0C8FDE226DE030003F8937 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDD226DE030003F8937 /* Theme.xcassets */; };
 		2A8F7CDB229D1B9800874B09 /* mentors.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F7CDA229D1B9800874B09 /* mentors.json */; };
@@ -70,7 +69,6 @@
 		2A0C8FD0226D13FE003F8937 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		2A0C8FD2226D1667003F8937 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleHeaderCell.swift; sourceTree = "<group>"; };
-		2A0C8FD8226DD893003F8937 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFooterCell.swift; sourceTree = "<group>"; };
 		2A0C8FDD226DE030003F8937 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		2A8F7CDA229D1B9800874B09 /* mentors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mentors.json; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				2A0C8FC0226BA17B003F8937 /* DataManager.swift */,
 				2A0C8FC2226BA210003F8937 /* APIManager.swift */,
 				2A0C8FC4226BA218003F8937 /* CacheManager.swift */,
-				2A0C8FD8226DD893003F8937 /* GradientView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -446,7 +443,6 @@
 				2A96CAFD22AAB49E004CED66 /* Theme.swift in Sources */,
 				2A9D2ABF22A3E84E00AC960D /* ConcurrentCell.swift in Sources */,
 				2ADD085F22ADABFA00A90D1E /* CollectionExtension.swift in Sources */,
-				2A0C8FD9226DD893003F8937 /* GradientView.swift in Sources */,
 				2A96CAFB22AAA26E004CED66 /* MapPolygon.swift in Sources */,
 				2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */,
 				2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */,
