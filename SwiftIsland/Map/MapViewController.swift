@@ -12,8 +12,7 @@ import MapKit
 class MapViewController: UIViewController {
 
   private let dataManager = DataManager.shared
-  private var areas: [Area] = [] {
-  }
+  private var areas: [Area] = []
   private var selectedArea: Area? {
     didSet {
       if let selectedArea = selectedArea {
