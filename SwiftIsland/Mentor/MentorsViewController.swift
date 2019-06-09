@@ -40,7 +40,7 @@ class MentorsViewController: CardViewController {
   }
 
   func showMentor(mentor: Mentor) {
-    cardViewController?.setup(withMentor: mentor)
+    cardContent?.setup(withMentor: mentor)
     animateTransitionIfNeeded(state: .expanded, duration: defaultDuration)
   }
 }

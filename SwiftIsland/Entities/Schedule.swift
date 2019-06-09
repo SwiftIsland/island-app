@@ -20,7 +20,8 @@ struct Schedule: Codable {
     let description: String
     let datefrom: Date
     let dateto: Date
-    let area: String
+    let area: String?
     let mentor: Int?
+    let concurrent: [Activity]?
   }
 }

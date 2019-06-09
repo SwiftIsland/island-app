@@ -13,7 +13,8 @@ class ScheduleCell: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
   @IBOutlet weak var locationLabel: UILabel!
-  @IBOutlet weak var timeLabel: UILabel!
+  @IBOutlet weak var locationPill: DesignableView?
+  @IBOutlet weak var timeLabel: UILabel?
 
   lazy var dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter.init()
@@ -32,13 +33,14 @@ class ScheduleCell: UITableViewCell {
     titleLabel.text = ""
     descriptionLabel.text = ""
     locationLabel.text = ""
-    timeLabel.text = ""
+    timeLabel?.text = ""
   }
 
   func setup(with activity: Schedule.Activity) {
     titleLabel.text = activity.title
     descriptionLabel.text = activity.description
+    timeLabel?.text = dateFormatter.string(from: activity.datefrom)
     locationLabel.text = activity.area
-    timeLabel.text = dateFormatter.string(from: activity.datefrom)
+    locationPill?.isHidden = activity.area == nil
   }
 }

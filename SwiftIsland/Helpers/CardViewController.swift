@@ -26,18 +26,18 @@ class CardViewController: UIViewController {
   var runningAnimations = [UIViewPropertyAnimator]()
   var animationProgressWhenInterrupted:CGFloat = 0
 
-  private(set) var cardViewController: MentorCardViewController?
+  var cardContent: MentorCardViewController?
 
   override func viewDidLoad() {
     super.viewDidLoad()
     setupCard()
   }
 
-  private func setupCard() {
+  func setupCard() {
     let visualEffectView = UIVisualEffectView()
     visualEffectView.frame = self.view.frame
     visualEffectView.isHidden = true
-    view.addSubview(visualEffectView)
+    view.insertSubview(visualEffectView, at: 0)
     self.visualEffectView = visualEffectView
 
     guard let vc = storyboard?.instantiateViewController(withIdentifier: "MentorCardViewController") as? MentorCardViewController else { return }
@@ -46,16 +46,18 @@ class CardViewController: UIViewController {
 
     vc.view.frame = CGRect(x: 0, y: view.frame.height, width: view.bounds.width, height: cardHeight)
     vc.view.clipsToBounds = true
+    cardContent = vc
+  }
 
+  private func setupGestures() {
     let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleCardTap(recognzier:)))
     tapGestureRecognizer.cancelsTouchesInView = false
     let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleCardPan(recognizer:)))
     panGestureRecognizer.cancelsTouchesInView = false
 
-    vc.handleAreaView.addGestureRecognizer(tapGestureRecognizer)
-    visualEffectView.addGestureRecognizer(tapGestureRecognizer)
-    vc.handleAreaView.addGestureRecognizer(panGestureRecognizer)
-    cardViewController = vc
+    cardContent?.handleAreaView.addGestureRecognizer(tapGestureRecognizer)
+    visualEffectView?.addGestureRecognizer(tapGestureRecognizer)
+    cardContent?.handleAreaView.addGestureRecognizer(panGestureRecognizer)
   }
 
   @objc
@@ -71,7 +73,7 @@ class CardViewController: UIViewController {
     case .began:
       startInteractiveTransition(state: nextState, duration: defaultDuration)
     case .changed:
-      let translation = recognizer.translation(in: cardViewController?.handleAreaView)
+      let translation = recognizer.translation(in: cardContent?.handleAreaView)
       var fractionComplete = translation.y / cardHeight
       fractionComplete = cardVisible ? fractionComplete : -fractionComplete
       updateInteractiveTransition(fractionCompleted: fractionComplete)
@@ -85,9 +87,9 @@ class CardViewController: UIViewController {
   func animateTransitionIfNeeded(state:CardState, duration:TimeInterval) {
     if runningAnimations.isEmpty {
       let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
-        self.cardViewController?.view.frame.origin.y = self.view.frame.height
+        self.cardContent?.view.frame.origin.y = self.view.frame.height
         if case .expanded = state {
-          self.cardViewController?.view.frame.origin.y -= self.cardHeight
+          self.cardContent?.view.frame.origin.y -= self.cardHeight
         }
       }
 
@@ -110,7 +112,7 @@ class CardViewController: UIViewController {
           cornerRadius = 0
         }
 
-        self.cardViewController?.handleAreaView.roundCorners(corners: [.topLeft, .topRight], radius: cornerRadius)
+        self.cardContent?.handleAreaView.roundCorners(corners: [.topLeft, .topRight], radius: cornerRadius)
       }
 
       cornerRadiusAnimator.startAnimation()

@@ -5,7 +5,7 @@
     "activities": [
       {
         "id": "1",
-        "title": "First activity",
+        "title": "Intro",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum gravida est. Proin ultricies sapien ut fringilla egestas. Quisque tempus volutpat lorem nec ornare. Curabitur a accumsan justo. Proin orci nisl, lobortis in egestas pharetra, cursus et sem. Integer placerat convallis nisi, et aliquet dui finibus dignissim. Sed id ullamcorper tortor. Nunc viverra nunc ex, nec ornare nibh commodo quis. Sed sagittis vel purus et ornare. Donec vitae condimentum sem, in dictum elit. Vivamus sodales sit amet libero vitae mattis. Nam imperdiet lacinia nulla, eget consequat mi luctus vitae. Nam lacinia, elit a congue finibus, libero dui gravida erat, sed gravida sem libero sit amet quam. Aliquam pharetra scelerisque volutpat.",
         "datefrom": "2019-06-03T09:00:00.000Z",
         "dateto": "2019-06-03T09:15:00.000Z",
@@ -14,7 +14,7 @@
       },
       {
         "id": "2",
-        "title": "Second activity",
+        "title": "Presentation",
         "description": "Quisque vitae sollicitudin neque, eu iaculis velit. Morbi non semper ante. Quisque non ex libero. Suspendisse dictum molestie libero, sed mollis lorem aliquet eget. Donec molestie, quam sit amet interdum sagittis, neque lacus rutrum nunc, eget interdum neque mauris ut orci. Phasellus et ex felis. Sed et lorem in purus mollis volutpat. Proin ut dictum dui. Vivamus id orci blandit, sollicitudin lorem eu, elementum metus. Duis quis imperdiet sem. Nam tempor mauris augue, sed ultricies ipsum tincidunt a. Vestibulum ac sapien ut metus imperdiet auctor eget ac elit.",
         "datefrom": "2019-06-03T09:15:00.000Z",
         "dateto": "2019-06-03T11:15:00.000Z",
@@ -22,11 +22,47 @@
         "mentor": 0
       },
       {
-        "id": "3",
-        "title": "Third activity",
+        "id": "30",
+        "title": "First workshop",
         "description": "Short text",
         "datefrom": "2019-06-03T11:15:00.000Z",
         "dateto": "2019-06-03T12:15:00.000Z",
+        "concurrent": [
+          {
+            "id": "31",
+            "title": "What's new in XCode",
+            "description": "Short text",
+            "datefrom": "2019-06-03T11:15:00.000Z",
+            "dateto": "2019-06-03T12:15:00.000Z",
+            "area": "Tent",
+            "mentor": 0
+          },
+          {
+            "id": "32",
+            "title": "Working with Instruments",
+            "description": "Short text",
+            "datefrom": "2019-06-03T11:15:00.000Z",
+            "dateto": "2019-06-03T12:15:00.000Z",
+            "area": "Tent",
+            "mentor": 1
+          },
+          {
+            "id": "32",
+            "title": "ARKit light",
+            "description": "Short text",
+            "datefrom": "2019-06-03T11:15:00.000Z",
+            "dateto": "2019-06-03T12:15:00.000Z",
+            "area": "Tent",
+            "mentor": 2
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Lunch",
+        "description": "Short text",
+        "datefrom": "2019-06-03T14:15:00.000Z",
+        "dateto": "2019-06-03T15:15:00.000Z",
         "area": "Tent",
         "mentor": 0
       }
