@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class MapPolygon: MKPolygonRenderer {
+final class MapPolygon: MKPolygonRenderer {
 
   let area: Area
   let selected: Bool
@@ -41,7 +41,7 @@ class MapPolygon: MKPolygonRenderer {
   }
 }
 
-class CottagePolygon: MKPolygon {
+final class CottagePolygon: MKPolygon {
   var cottageArea: Area?
   var selected: Bool = true
 }

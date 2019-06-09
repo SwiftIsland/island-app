@@ -9,12 +9,7 @@
 import Foundation
 
 protocol FileManaging {
-  func fileExists(atPath path: String) -> Bool
   func contents(atPath path: String) -> Data?
-  
-  func createFile(atPath path: String, contents data: Data?, attributes attr: [FileAttributeKey: Any]?) -> Bool
-  func urls(for directory: FileManager.SearchPathDirectory, in domainMask: FileManager.SearchPathDomainMask) -> [URL]
-  func contentsOfDirectory(at url: URL, includingPropertiesForKeys keys: [URLResourceKey]?, options mask: FileManager.DirectoryEnumerationOptions) throws -> [URL]
 }
 
 extension FileManager: FileManaging {}

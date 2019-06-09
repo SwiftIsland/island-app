@@ -15,7 +15,6 @@
 		2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD0226D13FE003F8937 /* ScheduleCell.swift */; };
 		2A0C8FD3226D1667003F8937 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD2226D1667003F8937 /* UIViewExtensions.swift */; };
 		2A0C8FD7226D1C97003F8937 /* ScheduleHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */; };
-		2A0C8FD9226DD893003F8937 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD8226DD893003F8937 /* GradientView.swift */; };
 		2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */; };
 		2A0C8FDE226DE030003F8937 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDD226DE030003F8937 /* Theme.xcassets */; };
 		2A8F7CDB229D1B9800874B09 /* mentors.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F7CDA229D1B9800874B09 /* mentors.json */; };
@@ -23,7 +22,6 @@
 		2A8F7CE2229D3C8100874B09 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */; };
 		2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */; };
 		2A8F7CE7229D542700874B09 /* MentorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE6229D542700874B09 /* MentorCell.swift */; };
-		2A96CAF922AA94B9004CED66 /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AF63105226DEF4100509053 /* area.json */; };
 		2A96CAFB22AAA26E004CED66 /* MapPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96CAFA22AAA26E004CED66 /* MapPolygon.swift */; };
 		2A96CAFD22AAB49E004CED66 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96CAFC22AAB49E004CED66 /* Theme.swift */; };
 		2A9D2ABF22A3E84E00AC960D /* ConcurrentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D2ABE22A3E84E00AC960D /* ConcurrentCell.swift */; };
@@ -40,6 +38,14 @@
 		2AD36FE8225E830A00AF7542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD36FE7225E830A00AF7542 /* Assets.xcassets */; };
 		2AD36FEB225E830A00AF7542 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD36FE9225E830A00AF7542 /* LaunchScreen.storyboard */; };
 		2AD36FF5225E84F400AF7542 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */; };
+		2ADD085922ADA58000A90D1E /* CacheManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085822ADA58000A90D1E /* CacheManagerTests.swift */; };
+		2ADD085B22ADA5F100A90D1E /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085A22ADA5F100A90D1E /* FileManagerMock.swift */; };
+		2ADD085D22ADA6E200A90D1E /* BundleMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085C22ADA6E200A90D1E /* BundleMock.swift */; };
+		2ADD085F22ADABFA00A90D1E /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085E22ADABFA00A90D1E /* CollectionExtension.swift */; };
+		2ADD086322ADADBF00A90D1E /* ThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD086222ADADBF00A90D1E /* ThemeTests.swift */; };
+		2ADD086622ADAF7400A90D1E /* AreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD086522ADAF7400A90D1E /* AreaTests.swift */; };
+		2ADD086922ADAFE100A90D1E /* Area_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ADD086822ADAFE100A90D1E /* Area_valid.json */; };
+		2ADD086B22ADB01400A90D1E /* TestDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD086A22ADB01400A90D1E /* TestDataManager.swift */; };
 		2AF63104226DE96D00509053 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63103226DE96D00509053 /* MapViewController.swift */; };
 		2AF63107226E5CA300509053 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63106226E5CA300509053 /* Area.swift */; };
 /* End PBXBuildFile section */
@@ -63,7 +69,6 @@
 		2A0C8FD0226D13FE003F8937 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		2A0C8FD2226D1667003F8937 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleHeaderCell.swift; sourceTree = "<group>"; };
-		2A0C8FD8226DD893003F8937 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFooterCell.swift; sourceTree = "<group>"; };
 		2A0C8FDD226DE030003F8937 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		2A8F7CDA229D1B9800874B09 /* mentors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mentors.json; sourceTree = "<group>"; };
@@ -90,6 +95,14 @@
 		2AD36FEA225E830A00AF7542 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AD36FEC225E830A00AF7542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		2ADD085822ADA58000A90D1E /* CacheManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerTests.swift; sourceTree = "<group>"; };
+		2ADD085A22ADA5F100A90D1E /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
+		2ADD085C22ADA6E200A90D1E /* BundleMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleMock.swift; sourceTree = "<group>"; };
+		2ADD085E22ADABFA00A90D1E /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		2ADD086222ADADBF00A90D1E /* ThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTests.swift; sourceTree = "<group>"; };
+		2ADD086522ADAF7400A90D1E /* AreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTests.swift; sourceTree = "<group>"; };
+		2ADD086822ADAFE100A90D1E /* Area_valid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Area_valid.json; sourceTree = "<group>"; };
+		2ADD086A22ADB01400A90D1E /* TestDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataManager.swift; sourceTree = "<group>"; };
 		2AF63103226DE96D00509053 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2AF63105226DEF4100509053 /* area.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
 		2AF63106226E5CA300509053 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
@@ -130,7 +143,6 @@
 				2A0C8FC0226BA17B003F8937 /* DataManager.swift */,
 				2A0C8FC2226BA210003F8937 /* APIManager.swift */,
 				2A0C8FC4226BA218003F8937 /* CacheManager.swift */,
-				2A0C8FD8226DD893003F8937 /* GradientView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -140,6 +152,7 @@
 			children = (
 				2A0C8FC7226BA741003F8937 /* FileManaging.swift */,
 				2A0C8FD2226D1667003F8937 /* UIViewExtensions.swift */,
+				2ADD085E22ADABFA00A90D1E /* CollectionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -200,10 +213,13 @@
 		2ABBDD82226FA1C300D4212C /* SwiftIslandTests */ = {
 			isa = PBXGroup;
 			children = (
+				2ADD086722ADAFCA00A90D1E /* Resources */,
 				2ABBDD8E226FA2A700D4212C /* Mocks */,
+				2ADD086422ADAF4E00A90D1E /* Entities */,
+				2ADD086122ADADAC00A90D1E /* Helpers */,
 				2ABBDD8B226FA26C00D4212C /* Utilities */,
-				2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */,
 				2ABBDD85226FA1C300D4212C /* Info.plist */,
+				2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */,
 			);
 			path = SwiftIslandTests;
 			sourceTree = "<group>";
@@ -212,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */,
+				2ADD085822ADA58000A90D1E /* CacheManagerTests.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -220,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				2ABBDD8F226FA2B600D4212C /* CacheManagerMock.swift */,
+				2ADD085A22ADA5F100A90D1E /* FileManagerMock.swift */,
+				2ADD085C22ADA6E200A90D1E /* BundleMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -269,6 +288,31 @@
 				2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */,
 			);
 			path = Timeline;
+			sourceTree = "<group>";
+		};
+		2ADD086122ADADAC00A90D1E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2ADD086222ADADBF00A90D1E /* ThemeTests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2ADD086422ADAF4E00A90D1E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2ADD086522ADAF7400A90D1E /* AreaTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2ADD086722ADAFCA00A90D1E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2ADD086822ADAFE100A90D1E /* Area_valid.json */,
+				2ADD086A22ADB01400A90D1E /* TestDataManager.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ADD086922ADAFE100A90D1E /* Area_valid.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,9 +421,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ADD086B22ADB01400A90D1E /* TestDataManager.swift in Sources */,
+				2ADD085922ADA58000A90D1E /* CacheManagerTests.swift in Sources */,
+				2ADD085D22ADA6E200A90D1E /* BundleMock.swift in Sources */,
 				2ABBDD84226FA1C300D4212C /* SwiftIslandTests.swift in Sources */,
 				2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */,
+				2ADD086322ADADBF00A90D1E /* ThemeTests.swift in Sources */,
 				2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */,
+				2ADD086622ADAF7400A90D1E /* AreaTests.swift in Sources */,
+				2ADD085B22ADA5F100A90D1E /* FileManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +442,7 @@
 				2A0C8FC1226BA17B003F8937 /* DataManager.swift in Sources */,
 				2A96CAFD22AAB49E004CED66 /* Theme.swift in Sources */,
 				2A9D2ABF22A3E84E00AC960D /* ConcurrentCell.swift in Sources */,
-				2A0C8FD9226DD893003F8937 /* GradientView.swift in Sources */,
+				2ADD085F22ADABFA00A90D1E /* CollectionExtension.swift in Sources */,
 				2A96CAFB22AAA26E004CED66 /* MapPolygon.swift in Sources */,
 				2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */,
 				2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */,
@@ -538,6 +589,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xfrontend -debug-time-function-bodies -Xfrontend -warn-long-expression-type-checking=200 -Xfrontend -warn-long-function-bodies=200";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
