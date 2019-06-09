@@ -37,7 +37,7 @@ class CardViewController: UIViewController {
     let visualEffectView = UIVisualEffectView()
     visualEffectView.frame = self.view.frame
     visualEffectView.isHidden = true
-    view.insertSubview(visualEffectView, at: 0)
+    view.addSubview(visualEffectView)
     self.visualEffectView = visualEffectView
 
     guard let vc = storyboard?.instantiateViewController(withIdentifier: "MentorCardViewController") as? MentorCardViewController else { return }
@@ -47,6 +47,8 @@ class CardViewController: UIViewController {
     vc.view.frame = CGRect(x: 0, y: view.frame.height, width: view.bounds.width, height: cardHeight)
     vc.view.clipsToBounds = true
     cardContent = vc
+
+    setupGestures()
   }
 
   private func setupGestures() {
