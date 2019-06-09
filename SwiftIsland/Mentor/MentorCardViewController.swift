@@ -20,9 +20,6 @@ class MentorCardViewController: UIViewController {
   @IBOutlet weak var timeLabel: UILabel!
   @IBOutlet weak var locationLabel: UILabel!
 
-  private let dataManager = DataManager.shared
-  private var activity: Schedule.Activity?
-
   func setup(withMentor mentor: Mentor) {
     titleLabel.text = mentor.name
     descriptionLabel.text = mentor.bio

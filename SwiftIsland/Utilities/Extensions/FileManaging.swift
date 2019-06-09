@@ -13,11 +13,3 @@ protocol FileManaging {
 }
 
 extension FileManager: FileManaging {}
-
-protocol JSONEncoding {
-  func encode<T>(_ value: T) throws -> Data where T: Encodable
-  
-  var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy { get set }
-}
-
-extension JSONEncoder: JSONEncoding { }

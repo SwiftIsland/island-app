@@ -19,7 +19,6 @@ struct Schedule: Codable {
     let title: String
     let description: String
     let datefrom: Date
-    let dateto: Date
     let area: String?
     let mentor: Int?
     let concurrent: [Activity]?

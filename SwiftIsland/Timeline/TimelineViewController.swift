@@ -13,7 +13,6 @@ class TimelineViewController: CardViewController {
   private let dataManager = DataManager.shared
   private var schedule: [Schedule] = []
   private var activities: [[Schedule.Activity]] = []
-  private var mentors: [Mentor] = []
 
   @IBOutlet weak var tableView: UITableView!
 
