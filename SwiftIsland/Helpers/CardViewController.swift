@@ -115,7 +115,7 @@ class CardViewController: UIViewController {
         }
 
         // Rounding all corners since using mask solution doesn't work well with animations
-        self.cardViewController?.handleAreaView.layer.cornerRadius = cornerRadius
+        self.cardContent?.handleAreaView.layer.cornerRadius = cornerRadius
       }
 
       cornerRadiusAnimator.startAnimation()
