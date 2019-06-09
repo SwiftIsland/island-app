@@ -23,7 +23,6 @@
 		2A8F7CE2229D3C8100874B09 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */; };
 		2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */; };
 		2A8F7CE7229D542700874B09 /* MentorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE6229D542700874B09 /* MentorCell.swift */; };
-		2A96CAF922AA94B9004CED66 /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AF63105226DEF4100509053 /* area.json */; };
 		2A96CAFB22AAA26E004CED66 /* MapPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96CAFA22AAA26E004CED66 /* MapPolygon.swift */; };
 		2A96CAFD22AAB49E004CED66 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96CAFC22AAB49E004CED66 /* Theme.swift */; };
 		2A9D2ABF22A3E84E00AC960D /* ConcurrentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D2ABE22A3E84E00AC960D /* ConcurrentCell.swift */; };
@@ -40,6 +39,10 @@
 		2AD36FE8225E830A00AF7542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD36FE7225E830A00AF7542 /* Assets.xcassets */; };
 		2AD36FEB225E830A00AF7542 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD36FE9225E830A00AF7542 /* LaunchScreen.storyboard */; };
 		2AD36FF5225E84F400AF7542 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */; };
+		2ADD085922ADA58000A90D1E /* CacheManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085822ADA58000A90D1E /* CacheManagerTests.swift */; };
+		2ADD085B22ADA5F100A90D1E /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085A22ADA5F100A90D1E /* FileManagerMock.swift */; };
+		2ADD085D22ADA6E200A90D1E /* BundleMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085C22ADA6E200A90D1E /* BundleMock.swift */; };
+		2ADD085F22ADABFA00A90D1E /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD085E22ADABFA00A90D1E /* CollectionExtension.swift */; };
 		2AF63104226DE96D00509053 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63103226DE96D00509053 /* MapViewController.swift */; };
 		2AF63107226E5CA300509053 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63106226E5CA300509053 /* Area.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +93,10 @@
 		2AD36FEA225E830A00AF7542 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AD36FEC225E830A00AF7542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		2ADD085822ADA58000A90D1E /* CacheManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerTests.swift; sourceTree = "<group>"; };
+		2ADD085A22ADA5F100A90D1E /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
+		2ADD085C22ADA6E200A90D1E /* BundleMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleMock.swift; sourceTree = "<group>"; };
+		2ADD085E22ADABFA00A90D1E /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		2AF63103226DE96D00509053 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2AF63105226DEF4100509053 /* area.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
 		2AF63106226E5CA300509053 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
@@ -140,6 +147,7 @@
 			children = (
 				2A0C8FC7226BA741003F8937 /* FileManaging.swift */,
 				2A0C8FD2226D1667003F8937 /* UIViewExtensions.swift */,
+				2ADD085E22ADABFA00A90D1E /* CollectionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */,
+				2ADD085822ADA58000A90D1E /* CacheManagerTests.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -220,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				2ABBDD8F226FA2B600D4212C /* CacheManagerMock.swift */,
+				2ADD085A22ADA5F100A90D1E /* FileManagerMock.swift */,
+				2ADD085C22ADA6E200A90D1E /* BundleMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -376,9 +387,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ADD085922ADA58000A90D1E /* CacheManagerTests.swift in Sources */,
+				2ADD085D22ADA6E200A90D1E /* BundleMock.swift in Sources */,
 				2ABBDD84226FA1C300D4212C /* SwiftIslandTests.swift in Sources */,
 				2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */,
 				2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */,
+				2ADD085B22ADA5F100A90D1E /* FileManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +405,7 @@
 				2A0C8FC1226BA17B003F8937 /* DataManager.swift in Sources */,
 				2A96CAFD22AAB49E004CED66 /* Theme.swift in Sources */,
 				2A9D2ABF22A3E84E00AC960D /* ConcurrentCell.swift in Sources */,
+				2ADD085F22ADABFA00A90D1E /* CollectionExtension.swift in Sources */,
 				2A0C8FD9226DD893003F8937 /* GradientView.swift in Sources */,
 				2A96CAFB22AAA26E004CED66 /* MapPolygon.swift in Sources */,
 				2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */,

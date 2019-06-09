@@ -26,15 +26,17 @@ protocol CacheManaging {
 
 final class CacheManager: CacheManaging {
   private let fileManager: FileManaging
+  private let bundle: Bundle
 
-  init(fileManager: FileManaging = FileManager.default) {
+  init(fileManager: FileManaging = FileManager.default, bundle: Bundle = Bundle.main) {
     self.fileManager = fileManager
+    self.bundle = bundle
   }
 
   //MARK: - CacheManaging
 
   func get<T: Decodable>(from file: CacheFiles) throws -> T {
-    guard let path = Bundle.main.path(forResource: file.rawValue, ofType: "json") else { throw CacheErrors.fileNotFound }
+    guard let path = bundle.path(forResource: file.rawValue, ofType: "json") else { throw CacheErrors.fileNotFound }
     guard let data = fileManager.contents(atPath: path) else { throw CacheErrors.contentNotFound }
     let decoder = JSONDecoder()
 
