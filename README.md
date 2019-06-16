@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="Logo.png" width="200" max-width="90%" alt="Swift Island" />
+    <img src="logo.png" width="200" max-width="90%" alt="Swift Island" />
 </p>
 <center>
 
