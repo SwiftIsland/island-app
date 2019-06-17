@@ -10,6 +10,7 @@ import Foundation
 
 protocol FileManaging {
   func contents(atPath path: String) -> Data?
+  func urls(for directory: FileManager.SearchPathDirectory, in domainMask: FileManager.SearchPathDomainMask) -> [URL]
 }
 
 extension FileManager: FileManaging {}

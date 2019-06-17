@@ -20,6 +20,11 @@ class CacheManagerMock: CacheManaging {
   var getReturnValue: Decodable?
   var getError: Error?
 
+  var setInvokeCount = 0
+  var setTo: CacheFiles?
+  var setData: Encodable?
+  var setError: Error?
+
   func get<T>(from file: CacheFiles) throws -> T where T : Decodable {
     getInvokeCount += 1
     getFrom = file
@@ -31,5 +36,15 @@ class CacheManagerMock: CacheManaging {
     }
 
     throw CacheManagerMockError.isNotCorrectDecodable
+  }
+
+  func set<T>(to file: CacheFiles, data: T) throws where T : Encodable {
+    setInvokeCount += 1
+    setTo = file
+    setData = data
+
+    if let error = setError {
+      throw error
+    }
   }
 }

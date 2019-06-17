@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import SwiftIsland
 
 class AreaTests: XCTestCase {
@@ -26,5 +27,18 @@ class AreaTests: XCTestCase {
     guard let firstPoint = area?.points.first else { XCTFail("Did not find point"); return }
     XCTAssertEqual(firstPoint.latitude, firstPoint.coordinate.latitude)
     XCTAssertEqual(firstPoint.longitude, firstPoint.coordinate.longitude)
+  }
+
+  func test_encode_invoke_shouldEncodeCorrectly() {
+    let point = Area.Point(withCoordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 1.1))
+    let area = Area(withName: "test", points: [point], locationCoordinate2d: [CLLocationCoordinate2D(latitude: 0.0, longitude: 1.1)])
+
+    do {
+      let json = try JSONEncoder().encode(area)
+      let string = String(data: json, encoding: .utf8)
+      XCTAssertEqual(string, #"{"name":"test","points":[{"longitude":1.1000000000000001,"latitude":0}]}"#)
+    } catch {
+      XCTFail("Could not encode Area")
+    }
   }
 }

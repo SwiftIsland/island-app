@@ -23,6 +23,7 @@ class MapViewController: UIViewController {
     }
   }
 
+  @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
   @IBOutlet weak var mapView: MKMapView!
   @IBOutlet weak var cottagePickerView: UIView! {
     didSet {
@@ -46,7 +47,10 @@ class MapViewController: UIViewController {
   }
 
   private func getAreas() {
+    loadingSpinner.isHidden = false
+    loadingSpinner.startAnimating()
     dataManager.getArea { result in
+      self.loadingSpinner.stopAnimating()
       switch result {
       case .success(let areas):
         let areas = areas.sorted { $0.name < $1.name }

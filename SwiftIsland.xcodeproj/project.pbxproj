@@ -30,9 +30,12 @@
 		2AA290E7225F1A1100B289BE /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AA290E6225F1A1100B289BE /* schedule.json */; };
 		2AA81FDA22B6E708001F3A58 /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA81FD922B6E708001F3A58 /* APIManagerTests.swift */; };
 		2AA81FDC22B6E74D001F3A58 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA81FDB22B6E74D001F3A58 /* URLSessionMock.swift */; };
+		2AA81FDE22B83850001F3A58 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA81FDD22B83850001F3A58 /* APIManagerMock.swift */; };
 		2ABBDD84226FA1C300D4212C /* SwiftIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */; };
 		2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */; };
 		2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD8F226FA2B600D4212C /* CacheManagerMock.swift */; };
+		2ABEC08222B97A3300C0C8A5 /* DataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEC08122B97A3300C0C8A5 /* DataWriter.swift */; };
+		2ABEC08422B97A4300C0C8A5 /* DataWriterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEC08322B97A4300C0C8A5 /* DataWriterMock.swift */; };
 		2ACB133B229BA44F0072BB1D /* MentorCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACB133A229BA44F0072BB1D /* MentorCardViewController.swift */; };
 		2AD36FE1225E830800AF7542 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD36FE0225E830800AF7542 /* AppDelegate.swift */; };
 		2AD36FE6225E830800AF7542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD36FE4225E830800AF7542 /* Main.storyboard */; };
@@ -84,11 +87,14 @@
 		2AA290E6225F1A1100B289BE /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
 		2AA81FD922B6E708001F3A58 /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
 		2AA81FDB22B6E74D001F3A58 /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		2AA81FDD22B83850001F3A58 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
 		2ABBDD81226FA1C300D4212C /* SwiftIslandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftIslandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ABBDD83226FA1C300D4212C /* SwiftIslandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftIslandTests.swift; sourceTree = "<group>"; };
 		2ABBDD85226FA1C300D4212C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		2ABBDD8F226FA2B600D4212C /* CacheManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerMock.swift; sourceTree = "<group>"; };
+		2ABEC08122B97A3300C0C8A5 /* DataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWriter.swift; sourceTree = "<group>"; };
+		2ABEC08322B97A4300C0C8A5 /* DataWriterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWriterMock.swift; sourceTree = "<group>"; };
 		2ACB133A229BA44F0072BB1D /* MentorCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCardViewController.swift; sourceTree = "<group>"; };
 		2AD36FDD225E830800AF7542 /* SwiftIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD36FE0225E830800AF7542 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				2A0C8FC0226BA17B003F8937 /* DataManager.swift */,
 				2A0C8FC2226BA210003F8937 /* APIManager.swift */,
 				2A0C8FC4226BA218003F8937 /* CacheManager.swift */,
+				2ABEC08122B97A3300C0C8A5 /* DataWriter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -231,6 +238,7 @@
 				2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */,
 				2ADD085822ADA58000A90D1E /* CacheManagerTests.swift */,
 				2AA81FD922B6E708001F3A58 /* APIManagerTests.swift */,
+				2ABEC08322B97A4300C0C8A5 /* DataWriterMock.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 				2ABBDD8F226FA2B600D4212C /* CacheManagerMock.swift */,
 				2ADD085A22ADA5F100A90D1E /* FileManagerMock.swift */,
 				2ADD085C22ADA6E200A90D1E /* BundleMock.swift */,
+				2AA81FDD22B83850001F3A58 /* APIManagerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -424,12 +433,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ABEC08422B97A4300C0C8A5 /* DataWriterMock.swift in Sources */,
 				2ADD086B22ADB01400A90D1E /* TestDataManager.swift in Sources */,
 				2ADD085922ADA58000A90D1E /* CacheManagerTests.swift in Sources */,
 				2ADD085D22ADA6E200A90D1E /* BundleMock.swift in Sources */,
 				2ABBDD84226FA1C300D4212C /* SwiftIslandTests.swift in Sources */,
 				2AA81FDA22B6E708001F3A58 /* APIManagerTests.swift in Sources */,
 				2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */,
+				2AA81FDE22B83850001F3A58 /* APIManagerMock.swift in Sources */,
 				2AA81FDC22B6E74D001F3A58 /* URLSessionMock.swift in Sources */,
 				2ADD086322ADADBF00A90D1E /* ThemeTests.swift in Sources */,
 				2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */,
@@ -452,6 +463,7 @@
 				2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */,
 				2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */,
 				2A0C8FC8226BA741003F8937 /* FileManaging.swift in Sources */,
+				2ABEC08222B97A3300C0C8A5 /* DataWriter.swift in Sources */,
 				2AF63104226DE96D00509053 /* MapViewController.swift in Sources */,
 				2A8F7CE7229D542700874B09 /* MentorCell.swift in Sources */,
 				2A0C8FC3226BA210003F8937 /* APIManager.swift in Sources */,

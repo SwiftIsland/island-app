@@ -15,6 +15,11 @@ class FileManagerMock: FileManaging {
   var contentsAtPath: String?
   var contentsReturnValue: [Data?] = []
 
+  var urlsInvokeCount = 0
+  var urlsFor: FileManager.SearchPathDirectory?
+  var urlsIn: FileManager.SearchPathDomainMask?
+  var urlsReturnValue: [URL] = []
+
   private let lock = NSLock()
 
   func contents(atPath path: String) -> Data? {
@@ -24,5 +29,14 @@ class FileManagerMock: FileManaging {
     contentsAtPath = path
 
     return contentsReturnValue[safe: contentsInvokeCount - 1] ?? nil
+  }
+
+  func urls(for directory: FileManager.SearchPathDirectory, in domainMask: FileManager.SearchPathDomainMask) -> [URL] {
+    lock.lock()
+    defer { lock.unlock() }
+    urlsInvokeCount += 1
+    urlsFor = directory
+    urlsIn = domainMask
+    return urlsReturnValue
   }
 }
