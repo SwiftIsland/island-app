@@ -14,8 +14,16 @@ class TimelineViewController: CardViewController {
   private var schedule: [Schedule] = []
   private var activities: [[Schedule.Activity]] = []
 
-  @IBOutlet weak var tableView: UITableView!
-  @IBOutlet weak var countdownContainer: UIView!
+  @IBOutlet weak var tableView: UITableView! {
+    didSet {
+      tableView.isHidden = true
+    }
+  }
+  @IBOutlet weak var countdownContainer: UIView! {
+    didSet {
+      countdownContainer.isHidden = true
+    }
+  }
   @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
 
   override func viewDidLoad() {
@@ -35,6 +43,7 @@ class TimelineViewController: CardViewController {
       switch result {
       case .success(let schedule):
         self.countdownContainer.isHidden = true
+        self.tableView.isHidden = false
         var activities: [[Schedule.Activity]] = []
 
         for day in schedule {
@@ -54,10 +63,11 @@ class TimelineViewController: CardViewController {
         self.schedule = schedule
         self.tableView.reloadData()
       case .failure(let error):
+        self.countdownContainer.isHidden = false
         if case .notYetAvailable = error {
           debugPrint("The schedule is not yet released.")
         } else {
-          debugPrint("Another error occured!")
+          debugPrint("Another error occured! Error: \(error)")
         }
       }
     }
