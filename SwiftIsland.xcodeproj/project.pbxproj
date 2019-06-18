@@ -33,6 +33,17 @@
 		2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBDD8F226FA2B600D4212C /* CacheManagerMock.swift */; };
 		2ABEC08222B97A3300C0C8A5 /* DataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEC08122B97A3300C0C8A5 /* DataWriter.swift */; };
 		2ABEC08422B97A4300C0C8A5 /* DataWriterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEC08322B97A4300C0C8A5 /* DataWriterMock.swift */; };
+		2ABEC0B722B9925400C0C8A5 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEC0AD22B9925400C0C8A5 /* WorkSans-Regular.ttf */; };
+		2ABEC0B822B9925400C0C8A5 /* WorkSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEC0AE22B9925400C0C8A5 /* WorkSans-Light.ttf */; };
+		2ABEC0B922B9925400C0C8A5 /* WorkSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEC0AF22B9925400C0C8A5 /* WorkSans-ExtraBold.ttf */; };
+		2ABEC0BA22B9925400C0C8A5 /* WorkSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEC0B022B9925400C0C8A5 /* WorkSans-ExtraLight.ttf */; };
+		2ABEC0BB22B9925400C0C8A5 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEC0B122B9925400C0C8A5 /* WorkSans-Medium.ttf */; };
+		2ABEC0BC22B9925400C0C8A5 /* WorkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEC0B222B9925400C0C8A5 /* WorkSans-SemiBold.ttf */; };
+		2ABEC0BD22B9925400C0C8A5 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEC0B322B9925400C0C8A5 /* OFL.txt */; };
+		2ABEC0BE22B9925400C0C8A5 /* WorkSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEC0B422B9925400C0C8A5 /* WorkSans-Thin.ttf */; };
+		2ABEC0BF22B9925400C0C8A5 /* WorkSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEC0B522B9925400C0C8A5 /* WorkSans-Black.ttf */; };
+		2ABEC0C022B9925400C0C8A5 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ABEC0B622B9925400C0C8A5 /* WorkSans-Bold.ttf */; };
+		2ABEC0C222B996DE00C0C8A5 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEC0C122B996DE00C0C8A5 /* CountdownViewController.swift */; };
 		2ACB133B229BA44F0072BB1D /* MentorCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACB133A229BA44F0072BB1D /* MentorCardViewController.swift */; };
 		2AD36FE1225E830800AF7542 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD36FE0225E830800AF7542 /* AppDelegate.swift */; };
 		2AD36FE6225E830800AF7542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD36FE4225E830800AF7542 /* Main.storyboard */; };
@@ -90,6 +101,17 @@
 		2ABBDD8F226FA2B600D4212C /* CacheManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerMock.swift; sourceTree = "<group>"; };
 		2ABEC08122B97A3300C0C8A5 /* DataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWriter.swift; sourceTree = "<group>"; };
 		2ABEC08322B97A4300C0C8A5 /* DataWriterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWriterMock.swift; sourceTree = "<group>"; };
+		2ABEC0AD22B9925400C0C8A5 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		2ABEC0AE22B9925400C0C8A5 /* WorkSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Light.ttf"; sourceTree = "<group>"; };
+		2ABEC0AF22B9925400C0C8A5 /* WorkSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2ABEC0B022B9925400C0C8A5 /* WorkSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		2ABEC0B122B9925400C0C8A5 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		2ABEC0B222B9925400C0C8A5 /* WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		2ABEC0B322B9925400C0C8A5 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		2ABEC0B422B9925400C0C8A5 /* WorkSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Thin.ttf"; sourceTree = "<group>"; };
+		2ABEC0B522B9925400C0C8A5 /* WorkSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Black.ttf"; sourceTree = "<group>"; };
+		2ABEC0B622B9925400C0C8A5 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		2ABEC0C122B996DE00C0C8A5 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		2ACB133A229BA44F0072BB1D /* MentorCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCardViewController.swift; sourceTree = "<group>"; };
 		2AD36FDD225E830800AF7542 /* SwiftIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD36FE0225E830800AF7542 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +225,7 @@
 		2AA290E5225F1A0400B289BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2ABEC0AB22B9925400C0C8A5 /* Fonts */,
 				2AD36FE7225E830A00AF7542 /* Assets.xcassets */,
 				2A0C8FDD226DE030003F8937 /* Theme.xcassets */,
 			);
@@ -244,6 +267,31 @@
 				2AA81FDD22B83850001F3A58 /* APIManagerMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		2ABEC0AB22B9925400C0C8A5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2ABEC0AC22B9925400C0C8A5 /* Work_Sans */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2ABEC0AC22B9925400C0C8A5 /* Work_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				2ABEC0AD22B9925400C0C8A5 /* WorkSans-Regular.ttf */,
+				2ABEC0AE22B9925400C0C8A5 /* WorkSans-Light.ttf */,
+				2ABEC0AF22B9925400C0C8A5 /* WorkSans-ExtraBold.ttf */,
+				2ABEC0B022B9925400C0C8A5 /* WorkSans-ExtraLight.ttf */,
+				2ABEC0B122B9925400C0C8A5 /* WorkSans-Medium.ttf */,
+				2ABEC0B222B9925400C0C8A5 /* WorkSans-SemiBold.ttf */,
+				2ABEC0B322B9925400C0C8A5 /* OFL.txt */,
+				2ABEC0B422B9925400C0C8A5 /* WorkSans-Thin.ttf */,
+				2ABEC0B522B9925400C0C8A5 /* WorkSans-Black.ttf */,
+				2ABEC0B622B9925400C0C8A5 /* WorkSans-Bold.ttf */,
+			);
+			path = Work_Sans;
 			sourceTree = "<group>";
 		};
 		2AD36FD4225E830800AF7542 = {
@@ -289,6 +337,7 @@
 			children = (
 				2A9D2AC222A3E86500AC960D /* Cells */,
 				2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */,
+				2ABEC0C122B996DE00C0C8A5 /* CountdownViewController.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -407,10 +456,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ABEC0BF22B9925400C0C8A5 /* WorkSans-Black.ttf in Resources */,
 				2AD36FEB225E830A00AF7542 /* LaunchScreen.storyboard in Resources */,
+				2ABEC0BD22B9925400C0C8A5 /* OFL.txt in Resources */,
+				2ABEC0B822B9925400C0C8A5 /* WorkSans-Light.ttf in Resources */,
+				2ABEC0B922B9925400C0C8A5 /* WorkSans-ExtraBold.ttf in Resources */,
 				2AD36FE8225E830A00AF7542 /* Assets.xcassets in Resources */,
+				2ABEC0BA22B9925400C0C8A5 /* WorkSans-ExtraLight.ttf in Resources */,
+				2ABEC0BC22B9925400C0C8A5 /* WorkSans-SemiBold.ttf in Resources */,
 				2A0C8FDE226DE030003F8937 /* Theme.xcassets in Resources */,
 				2AD36FE6225E830800AF7542 /* Main.storyboard in Resources */,
+				2ABEC0BE22B9925400C0C8A5 /* WorkSans-Thin.ttf in Resources */,
+				2ABEC0BB22B9925400C0C8A5 /* WorkSans-Medium.ttf in Resources */,
+				2ABEC0B722B9925400C0C8A5 /* WorkSans-Regular.ttf in Resources */,
+				2ABEC0C022B9925400C0C8A5 /* WorkSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +511,7 @@
 				2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */,
 				2A0C8FC8226BA741003F8937 /* FileManaging.swift in Sources */,
 				2ABEC08222B97A3300C0C8A5 /* DataWriter.swift in Sources */,
+				2ABEC0C222B996DE00C0C8A5 /* CountdownViewController.swift in Sources */,
 				2AF63104226DE96D00509053 /* MapViewController.swift in Sources */,
 				2A8F7CE7229D542700874B09 /* MentorCell.swift in Sources */,
 				2A0C8FC3226BA210003F8937 /* APIManager.swift in Sources */,
