@@ -1,0 +1,12 @@
+coverage:
+  status:
+    project: off
+    patch: off
+  ignore:
+  - SwiftIslandTests/.*
+
+comment:
+  layout: "diff"
+  behavior: "new"
+  require_changes: yes
+
