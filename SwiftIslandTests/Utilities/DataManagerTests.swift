@@ -166,4 +166,59 @@ class DataManagerTests: XCTestCase {
 
     wait(for: [expectation], timeout: 1)
   }
+
+  // MARK: Mentors
+
+  func test_getMentors_successNoAPINoCache_shouldSuccessEmpty() {
+    cacheManagerMock.getReturnValue = [Mentor]()
+    apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 1337)
+    let expectation = XCTestExpectation(description: "")
+
+    sut.getMentors { result in
+      if case .success(let value) = result {
+        XCTAssertEqual(value.count, 0)
+      } else {
+        XCTFail("Expected the result to be .success")
+      }
+      expectation.fulfill()
+    }
+
+    wait(for: [expectation], timeout: 1)
+  }
+
+  func test_getMentors_successAPI_shouldSuccessFromAPI() {
+    cacheManagerMock.getReturnValue = [Mentor]()
+    apiManagerMock.getCompletionHandlerResult = [Mentor(id: 0, name: "Test", image: "img", bio: "bio", twitter: nil, web: nil)]
+    let expectation = XCTestExpectation(description: "")
+
+    sut.getMentors { result in
+      if case .success(let value) = result {
+        XCTAssertEqual(value.count, 1)
+        XCTAssertEqual(value.first?.name, "Test")
+      } else {
+        XCTFail("Expected the result to be .success")
+      }
+      expectation.fulfill()
+    }
+
+    wait(for: [expectation], timeout: 1)
+  }
+
+  func test_getMentors_noApiNoCache_shouldAreaSchedule() {
+    cacheManagerMock.getReturnValue = nil
+    cacheManagerMock.getError = DataManagerTestsError.dummyError
+    apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 1337)
+    let expectation = XCTestExpectation(description: "")
+
+    sut.getMentors { result in
+      if case .failure(let error) = result {
+        XCTAssertEqual(error, DataErrors.noData)
+      } else {
+        XCTFail("Expected the result to be .failure with error DataErrors.noData")
+      }
+      expectation.fulfill()
+    }
+
+    wait(for: [expectation], timeout: 1)
+  }
 }
