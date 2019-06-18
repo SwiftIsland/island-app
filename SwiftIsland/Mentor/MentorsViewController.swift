@@ -11,6 +11,7 @@ import UIKit
 class MentorsViewController: CardViewController {
 
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
 
   private let dataManager = DataManager.shared
   private var mentors: [Mentor] = [] {
@@ -28,8 +29,10 @@ class MentorsViewController: CardViewController {
     tableView.sectionHeaderHeight = 0
   }
 
-  func fetchMentors() {
+  private func fetchMentors() {
+    loadingSpinner.startAnimating()
     dataManager.getMentors { result in
+      self.loadingSpinner.stopAnimating()
       switch result {
       case .success(let mentors):
         self.mentors = mentors
@@ -39,7 +42,7 @@ class MentorsViewController: CardViewController {
     }
   }
 
-  func showMentor(mentor: Mentor) {
+  private func showMentor(mentor: Mentor) {
     cardContent?.setup(withMentor: mentor)
     animateTransitionIfNeeded(state: .expanded, duration: defaultDuration)
   }
