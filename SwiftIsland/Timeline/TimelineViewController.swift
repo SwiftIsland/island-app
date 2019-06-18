@@ -15,6 +15,7 @@ class TimelineViewController: CardViewController {
   private var activities: [[Schedule.Activity]] = []
 
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,7 +28,9 @@ class TimelineViewController: CardViewController {
   }
 
   func fetchSchedule() {
+    loadingSpinner.startAnimating()
     dataManager.getSchedule { result in
+      self.loadingSpinner.stopAnimating()
       switch result {
       case .success(let schedule):
         var activities: [[Schedule.Activity]] = []

@@ -339,9 +339,15 @@
                                     <outlet property="delegate" destination="T0Z-7d-cpy" id="Lko-e4-s5T"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="g2m-G8-QCU">
+                                <rect key="frame" x="188.5" y="410" width="37" height="37"/>
+                                <color key="color" name="orange"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="g2m-G8-QCU" firstAttribute="centerX" secondItem="exh-iQ-PdG" secondAttribute="centerX" id="2Jl-6I-ygk"/>
+                            <constraint firstItem="g2m-G8-QCU" firstAttribute="centerY" secondItem="exh-iQ-PdG" secondAttribute="centerY" id="5Hb-ld-Fn7"/>
                             <constraint firstItem="exh-iQ-PdG" firstAttribute="trailing" secondItem="7Wg-Sm-GfU" secondAttribute="trailing" id="EXd-eZ-IFh"/>
                             <constraint firstItem="7Wg-Sm-GfU" firstAttribute="leading" secondItem="exh-iQ-PdG" secondAttribute="leading" id="Hw7-Mg-Vll"/>
                             <constraint firstItem="7Wg-Sm-GfU" firstAttribute="top" secondItem="nhW-Ze-18m" secondAttribute="top" id="Zs0-5P-rXE"/>
@@ -351,6 +357,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Mentors" image="mentor" id="Rnq-he-5b9"/>
                     <connections>
+                        <outlet property="loadingSpinner" destination="g2m-G8-QCU" id="8Bx-fh-jJN"/>
                         <outlet property="tableView" destination="7Wg-Sm-GfU" id="9r0-T7-w9I"/>
                     </connections>
                 </viewController>
@@ -764,9 +771,15 @@
                                     <outlet property="delegate" destination="xhZ-Lo-pSD" id="wga-7e-oK5"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="efU-Hl-yIf">
+                                <rect key="frame" x="188.5" y="410" width="37" height="37"/>
+                                <color key="color" name="red"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="efU-Hl-yIf" firstAttribute="centerY" secondItem="Bdd-ez-FYb" secondAttribute="centerY" id="0Nk-rJ-em4"/>
+                            <constraint firstItem="efU-Hl-yIf" firstAttribute="centerX" secondItem="Bdd-ez-FYb" secondAttribute="centerX" id="5qA-qo-f3D"/>
                             <constraint firstItem="Qa8-tz-kcC" firstAttribute="top" secondItem="MKb-Nh-TZN" secondAttribute="top" id="Nvt-Tf-BDJ"/>
                             <constraint firstItem="Qa8-tz-kcC" firstAttribute="leading" secondItem="Bdd-ez-FYb" secondAttribute="leading" id="Qr8-3a-rtx"/>
                             <constraint firstItem="Bdd-ez-FYb" firstAttribute="bottom" secondItem="Qa8-tz-kcC" secondAttribute="bottom" id="WmP-CM-Jzj"/>
@@ -776,6 +789,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" image="schedule" id="7EY-ES-zFT"/>
                     <connections>
+                        <outlet property="loadingSpinner" destination="efU-Hl-yIf" id="fCf-R5-QJF"/>
                         <outlet property="tableView" destination="Qa8-tz-kcC" id="6hG-ee-0z9"/>
                     </connections>
                 </viewController>
@@ -810,6 +824,9 @@
         <image name="schedule" width="34" height="34"/>
         <namedColor name="orange">
             <color red="1" green="0.53333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="red">
+            <color red="1" green="0.0" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="scheduleTimeline">
             <color red="1" green="0.83921568627450982" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
