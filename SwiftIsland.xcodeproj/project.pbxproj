@@ -17,7 +17,6 @@
 		2A0C8FD7226D1C97003F8937 /* ScheduleHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */; };
 		2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */; };
 		2A0C8FDE226DE030003F8937 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDD226DE030003F8937 /* Theme.xcassets */; };
-		2A8F7CDB229D1B9800874B09 /* mentors.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A8F7CDA229D1B9800874B09 /* mentors.json */; };
 		2A8F7CDD229D1C5A00874B09 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CDC229D1C5A00874B09 /* Mentor.swift */; };
 		2A8F7CE2229D3C8100874B09 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */; };
 		2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */; };
@@ -26,8 +25,6 @@
 		2A96CAFD22AAB49E004CED66 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96CAFC22AAB49E004CED66 /* Theme.swift */; };
 		2A9D2ABF22A3E84E00AC960D /* ConcurrentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D2ABE22A3E84E00AC960D /* ConcurrentCell.swift */; };
 		2A9D2AC422A3FD0700AC960D /* MentorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D2AC322A3FD0700AC960D /* MentorManager.swift */; };
-		2A9D2AE922A47A5700AC960D /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AF63105226DEF4100509053 /* area.json */; };
-		2AA290E7225F1A1100B289BE /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AA290E6225F1A1100B289BE /* schedule.json */; };
 		2AA81FDA22B6E708001F3A58 /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA81FD922B6E708001F3A58 /* APIManagerTests.swift */; };
 		2AA81FDC22B6E74D001F3A58 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA81FDB22B6E74D001F3A58 /* URLSessionMock.swift */; };
 		2AA81FDE22B83850001F3A58 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA81FDD22B83850001F3A58 /* APIManagerMock.swift */; };
@@ -75,7 +72,6 @@
 		2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleHeaderCell.swift; sourceTree = "<group>"; };
 		2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFooterCell.swift; sourceTree = "<group>"; };
 		2A0C8FDD226DE030003F8937 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
-		2A8F7CDA229D1B9800874B09 /* mentors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mentors.json; sourceTree = "<group>"; };
 		2A8F7CDC229D1C5A00874B09 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +80,6 @@
 		2A96CAFC22AAB49E004CED66 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		2A9D2ABE22A3E84E00AC960D /* ConcurrentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentCell.swift; sourceTree = "<group>"; };
 		2A9D2AC322A3FD0700AC960D /* MentorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorManager.swift; sourceTree = "<group>"; };
-		2AA290E6225F1A1100B289BE /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
 		2AA81FD922B6E708001F3A58 /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
 		2AA81FDB22B6E74D001F3A58 /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		2AA81FDD22B83850001F3A58 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
@@ -112,7 +107,6 @@
 		2ADD086822ADAFE100A90D1E /* Area_valid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Area_valid.json; sourceTree = "<group>"; };
 		2ADD086A22ADB01400A90D1E /* TestDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataManager.swift; sourceTree = "<group>"; };
 		2AF63103226DE96D00509053 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		2AF63105226DEF4100509053 /* area.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
 		2AF63106226E5CA300509053 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,9 +205,6 @@
 			children = (
 				2AD36FE7225E830A00AF7542 /* Assets.xcassets */,
 				2A0C8FDD226DE030003F8937 /* Theme.xcassets */,
-				2AA290E6225F1A1100B289BE /* schedule.json */,
-				2AF63105226DEF4100509053 /* area.json */,
-				2A8F7CDA229D1B9800874B09 /* mentors.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -419,9 +410,6 @@
 				2AD36FEB225E830A00AF7542 /* LaunchScreen.storyboard in Resources */,
 				2AD36FE8225E830A00AF7542 /* Assets.xcassets in Resources */,
 				2A0C8FDE226DE030003F8937 /* Theme.xcassets in Resources */,
-				2A9D2AE922A47A5700AC960D /* area.json in Resources */,
-				2A8F7CDB229D1B9800874B09 /* mentors.json in Resources */,
-				2AA290E7225F1A1100B289BE /* schedule.json in Resources */,
 				2AD36FE6225E830800AF7542 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
