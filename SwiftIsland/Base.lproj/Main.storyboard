@@ -235,15 +235,21 @@
                                     <constraint firstItem="eiT-4R-02i" firstAttribute="leading" secondItem="OjT-Ew-1gT" secondAttribute="leading" constant="8" id="oxl-ab-a3h"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kdD-LA-g0q">
+                                <rect key="frame" x="188.5" y="410" width="37" height="37"/>
+                                <color key="color" name="orange"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7ec-NZ-2J6" firstAttribute="leading" secondItem="YGw-12-20L" secondAttribute="leading" id="5lO-dk-aNj"/>
+                            <constraint firstItem="kdD-LA-g0q" firstAttribute="centerY" secondItem="YGw-12-20L" secondAttribute="centerY" id="C4i-yN-5uQ"/>
                             <constraint firstItem="OjT-Ew-1gT" firstAttribute="leading" secondItem="YGw-12-20L" secondAttribute="leading" constant="20" id="Cta-Ce-B4z"/>
                             <constraint firstItem="YGw-12-20L" firstAttribute="trailing" secondItem="7ec-NZ-2J6" secondAttribute="trailing" id="KQE-56-grI"/>
                             <constraint firstItem="7ec-NZ-2J6" firstAttribute="top" secondItem="SDw-2x-a3u" secondAttribute="top" id="Ont-7u-JBt"/>
                             <constraint firstAttribute="bottom" secondItem="7ec-NZ-2J6" secondAttribute="bottom" id="QHB-BJ-ul2"/>
                             <constraint firstItem="YGw-12-20L" firstAttribute="trailing" secondItem="OjT-Ew-1gT" secondAttribute="trailing" constant="20" id="iaB-Qe-vFS"/>
+                            <constraint firstItem="kdD-LA-g0q" firstAttribute="centerX" secondItem="YGw-12-20L" secondAttribute="centerX" id="mu4-re-eVY"/>
                             <constraint firstItem="OjT-Ew-1gT" firstAttribute="top" secondItem="YGw-12-20L" secondAttribute="top" constant="40" id="z19-Vc-XCq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YGw-12-20L"/>
@@ -252,6 +258,7 @@
                     <connections>
                         <outlet property="cottagePicker" destination="oHd-ow-PbB" id="JYy-cn-zbp"/>
                         <outlet property="cottagePickerView" destination="OjT-Ew-1gT" id="XBf-Qj-5DV"/>
+                        <outlet property="loadingSpinner" destination="kdD-LA-g0q" id="KYh-Wr-Hc5"/>
                         <outlet property="mapView" destination="7ec-NZ-2J6" id="6cJ-os-0Jf"/>
                     </connections>
                 </viewController>
@@ -801,6 +808,9 @@
         <image name="mentor" width="34" height="34"/>
         <image name="paulhudson" width="400" height="400"/>
         <image name="schedule" width="34" height="34"/>
+        <namedColor name="orange">
+            <color red="1" green="0.53333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="scheduleTimeline">
             <color red="1" green="0.83921568627450982" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

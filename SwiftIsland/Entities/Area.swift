@@ -9,7 +9,7 @@
 import CoreLocation
 import GLKit
 
-struct Area: Decodable {
+struct Area: Codable {
   let name: String
   let points: [Point]
   let locationCoordinate2D: [CLLocationCoordinate2D]
@@ -38,7 +38,7 @@ struct Area: Decodable {
     return result
   }
 
-  struct Point: Decodable {
+  struct Point: Codable {
     var latitude: Double {
       return coordinate.latitude
     }
@@ -59,6 +59,16 @@ struct Area: Decodable {
 
       coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
+
+    public func encode(to encoder: Encoder) throws {
+      var container = encoder.container(keyedBy: CodingKeys.self)
+      try container.encode(self.latitude, forKey: .latitude)
+      try container.encode(self.longitude, forKey: .longitude)
+    }
+
+    init(withCoordinate coordinate: CLLocationCoordinate2D) {
+      self.coordinate = coordinate
+    }
   }
 
   enum CodingKeys: String, CodingKey {
@@ -74,5 +84,11 @@ struct Area: Decodable {
 
     let locationCoordinate2D = points.compactMap({ $0.coordinate })
     self.locationCoordinate2D = locationCoordinate2D
+  }
+
+  init(withName name: String, points: [Point] = [], locationCoordinate2d: [CLLocationCoordinate2D] = []) {
+    self.name = name
+    self.points = points
+    self.locationCoordinate2D = locationCoordinate2d
   }
 }
