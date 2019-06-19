@@ -17,6 +17,8 @@
 		2A0C8FD7226D1C97003F8937 /* ScheduleHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */; };
 		2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */; };
 		2A0C8FDE226DE030003F8937 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDD226DE030003F8937 /* Theme.xcassets */; };
+		2A5BE94B22BA8B270062D868 /* MentorCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BE94A22BA8B270062D868 /* MentorCollectionView.swift */; };
+		2A5BE94D22BA8B890062D868 /* MentorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BE94C22BA8B890062D868 /* MentorCollectionViewCell.swift */; };
 		2A8F7CDD229D1C5A00874B09 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CDC229D1C5A00874B09 /* Mentor.swift */; };
 		2A8F7CE2229D3C8100874B09 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */; };
 		2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */; };
@@ -83,6 +85,8 @@
 		2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleHeaderCell.swift; sourceTree = "<group>"; };
 		2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFooterCell.swift; sourceTree = "<group>"; };
 		2A0C8FDD226DE030003F8937 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		2A5BE94A22BA8B270062D868 /* MentorCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCollectionView.swift; sourceTree = "<group>"; };
+		2A5BE94C22BA8B890062D868 /* MentorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCollectionViewCell.swift; sourceTree = "<group>"; };
 		2A8F7CDC229D1C5A00874B09 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */,
 				2A8F7CE6229D542700874B09 /* MentorCell.swift */,
 				2A9D2AC322A3FD0700AC960D /* MentorManager.swift */,
+				2A5BE94A22BA8B270062D868 /* MentorCollectionView.swift */,
+				2A5BE94C22BA8B890062D868 /* MentorCollectionViewCell.swift */,
 			);
 			path = Mentor;
 			sourceTree = "<group>";
@@ -515,12 +521,14 @@
 				2AF63104226DE96D00509053 /* MapViewController.swift in Sources */,
 				2A8F7CE7229D542700874B09 /* MentorCell.swift in Sources */,
 				2A0C8FC3226BA210003F8937 /* APIManager.swift in Sources */,
+				2A5BE94B22BA8B270062D868 /* MentorCollectionView.swift in Sources */,
 				2AF63107226E5CA300509053 /* Area.swift in Sources */,
 				2ACB133B229BA44F0072BB1D /* MentorCardViewController.swift in Sources */,
 				2AD36FE1225E830800AF7542 /* AppDelegate.swift in Sources */,
 				2A0C8FC5226BA218003F8937 /* CacheManager.swift in Sources */,
 				2A8F7CDD229D1C5A00874B09 /* Mentor.swift in Sources */,
 				2A8F7CE2229D3C8100874B09 /* MentorsViewController.swift in Sources */,
+				2A5BE94D22BA8B890062D868 /* MentorCollectionViewCell.swift in Sources */,
 				2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */,
 				2A0C8FD3226D1667003F8937 /* UIViewExtensions.swift in Sources */,
 				2AD36FF5225E84F400AF7542 /* TimelineViewController.swift in Sources */,
