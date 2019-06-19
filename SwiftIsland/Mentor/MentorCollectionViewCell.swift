@@ -25,6 +25,11 @@ class MentorCollectionViewCell: UICollectionViewCell {
       mentorImage.image = image
     }
     nameLabel.text = mentor.name
-    countryLabel.text = mentor.country
+
+    if let country = mentor.country {
+      countryLabel.text = country
+    } else {
+      countryLabel.text = ""
+    }
   }
 }

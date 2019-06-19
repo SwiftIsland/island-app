@@ -11,9 +11,9 @@ import Foundation
 struct Mentor: Codable {
   let id: Int
   let name: String
-  let country: String?
   let image: String
   let bio: String
   let twitter: URL?
   let web: URL?
+  let country: String?
 }
