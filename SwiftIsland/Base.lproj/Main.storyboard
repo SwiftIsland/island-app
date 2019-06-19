@@ -214,6 +214,14 @@
                                     <constraint firstAttribute="trailing" secondItem="oHd-ow-PbB" secondAttribute="trailing" id="kQe-oD-xPo"/>
                                     <constraint firstItem="eiT-4R-02i" firstAttribute="leading" secondItem="OjT-Ew-1gT" secondAttribute="leading" constant="8" id="oxl-ab-a3h"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="orange"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kdD-LA-g0q">
                                 <rect key="frame" x="188.5" y="410" width="37" height="37"/>

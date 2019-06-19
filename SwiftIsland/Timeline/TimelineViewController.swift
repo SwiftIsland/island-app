@@ -26,6 +26,13 @@ class TimelineViewController: CardViewController {
   }
   @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
 
+  override func loadView() {
+    super.loadView()
+
+    // Todo: Make a more elegant solution for this. Need to access this here for now so it is ready for the table later
+    _ = MentorManager.shared.mentors
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
