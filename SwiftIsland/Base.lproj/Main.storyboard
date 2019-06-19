@@ -216,7 +216,7 @@
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kdD-LA-g0q">
                                 <rect key="frame" x="188.5" y="410" width="37" height="37"/>
-                                <color key="color" name="orange"/>
+                                <color key="color" name="tag"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -876,35 +876,21 @@
             </objects>
             <point key="canvasLocation" x="1695.6521739130435" y="-638.16964285714278"/>
         </scene>
-        <!--Gradient Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="iic-b2-3vH">
             <objects>
-                <tabBarController id="aia-tD-VjM" customClass="GradientTabBarController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="aia-tD-VjM" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PnM-5U-PGk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="redDark"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
                                 <color key="value" name="orange"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                            <color key="value" name="redDark"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                            <color key="value" name="orange"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
-                            <point key="value" x="0.0" y="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
-                            <point key="value" x="1" y="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="xhZ-Lo-pSD" kind="relationship" relationship="viewControllers" id="xsj-zS-j39"/>
                         <segue destination="OIQ-Dk-xHv" kind="relationship" relationship="viewControllers" id="TCt-Zg-i2G"/>
