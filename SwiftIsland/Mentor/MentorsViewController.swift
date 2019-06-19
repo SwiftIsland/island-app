@@ -68,4 +68,8 @@ extension MentorsViewController: UITableViewDataSource {
     cell.setup(withMentor: mentor)
     return cell
   }
+
+  func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    return UIView(frame: .zero)
+  }
 }
