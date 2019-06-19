@@ -21,7 +21,6 @@
 		2A8F7CE2229D3C8100874B09 /* MentorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */; };
 		2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */; };
 		2A8F7CE7229D542700874B09 /* MentorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE6229D542700874B09 /* MentorCell.swift */; };
-		2A92422622BA39D5001BCF21 /* GradientTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A92422522BA39D5001BCF21 /* GradientTabBarController.swift */; };
 		2A96CAFB22AAA26E004CED66 /* MapPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96CAFA22AAA26E004CED66 /* MapPolygon.swift */; };
 		2A96CAFD22AAB49E004CED66 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A96CAFC22AAB49E004CED66 /* Theme.swift */; };
 		2A9D2ABF22A3E84E00AC960D /* ConcurrentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D2ABE22A3E84E00AC960D /* ConcurrentCell.swift */; };
@@ -88,7 +87,6 @@
 		2A8F7CE1229D3C8100874B09 /* MentorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorsViewController.swift; sourceTree = "<group>"; };
 		2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		2A8F7CE6229D542700874B09 /* MentorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCell.swift; sourceTree = "<group>"; };
-		2A92422522BA39D5001BCF21 /* GradientTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTabBarController.swift; sourceTree = "<group>"; };
 		2A96CAFA22AAA26E004CED66 /* MapPolygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPolygon.swift; sourceTree = "<group>"; };
 		2A96CAFC22AAB49E004CED66 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		2A9D2ABE22A3E84E00AC960D /* ConcurrentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentCell.swift; sourceTree = "<group>"; };
@@ -213,14 +211,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		2A92422422BA39C3001BCF21 /* General */ = {
-			isa = PBXGroup;
-			children = (
-				2A92422522BA39D5001BCF21 /* GradientTabBarController.swift */,
-			);
-			path = General;
-			sourceTree = "<group>";
-		};
 		2A9D2AC222A3E86500AC960D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,7 +317,6 @@
 		2AD36FDF225E830800AF7542 /* SwiftIsland */ = {
 			isa = PBXGroup;
 			children = (
-				2A92422422BA39C3001BCF21 /* General */,
 				2A8F7CE3229D3CA500874B09 /* Helpers */,
 				2A0C8FBC226B9F5D003F8937 /* Entities */,
 				2A0C8FDC226DE00D003F8937 /* Map */,
@@ -520,7 +509,6 @@
 				2A96CAFB22AAA26E004CED66 /* MapPolygon.swift in Sources */,
 				2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */,
 				2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */,
-				2A92422622BA39D5001BCF21 /* GradientTabBarController.swift in Sources */,
 				2A0C8FC8226BA741003F8937 /* FileManaging.swift in Sources */,
 				2ABEC08222B97A3300C0C8A5 /* DataWriter.swift in Sources */,
 				2ABEC0C222B996DE00C0C8A5 /* CountdownViewController.swift in Sources */,
