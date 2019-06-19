@@ -36,10 +36,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdW-c4-JrG">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="65"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="35"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9h-E2-yc1">
-                                                <rect key="frame" x="176.5" y="29" width="61" height="7"/>
+                                                <rect key="frame" x="176.5" y="14" width="61" height="7"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="61" id="KmG-x3-mBt"/>
@@ -54,28 +54,26 @@
                                         <constraints>
                                             <constraint firstItem="A9h-E2-yc1" firstAttribute="centerY" secondItem="vdW-c4-JrG" secondAttribute="centerY" id="DAh-KD-9cg"/>
                                             <constraint firstItem="A9h-E2-yc1" firstAttribute="centerX" secondItem="vdW-c4-JrG" secondAttribute="centerX" id="Zdq-Bd-Kc8"/>
-                                            <constraint firstAttribute="bottom" secondItem="A9h-E2-yc1" secondAttribute="bottom" constant="29" id="eab-p8-Q8v"/>
-                                            <constraint firstAttribute="height" constant="65" id="fsu-VK-dZL"/>
-                                            <constraint firstItem="A9h-E2-yc1" firstAttribute="top" secondItem="vdW-c4-JrG" secondAttribute="top" constant="29" id="gQk-c6-rel"/>
+                                            <constraint firstAttribute="height" constant="35" id="fsu-VK-dZL"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KwP-sP-Vdg">
-                                        <rect key="frame" x="0.0" y="103" width="414" height="793"/>
+                                        <rect key="frame" x="0.0" y="73" width="414" height="823"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM7-9F-ncV">
-                                                <rect key="frame" x="8" y="0.0" width="398" height="23"/>
+                                                <rect key="frame" x="8" y="16" width="398" height="23"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                                 <color key="textColor" name="textDefault"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgW-hs-aU8" userLabel="Description">
-                                                <rect key="frame" x="8" y="31" width="398" height="20"/>
+                                                <rect key="frame" x="8" y="47" width="398" height="20"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" name="textBody"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZy-ud-qyq" customClass="DesignableView" customModule="SwiftIsland" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="63" width="52.5" height="20"/>
+                                                <rect key="frame" x="8" y="79" width="52.5" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:00" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hyj-dB-FKX">
                                                         <rect key="frame" x="6" y="4" width="40.5" height="12"/>
@@ -97,7 +95,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5EO-G6-d9i" customClass="DesignableView" customModule="SwiftIsland" customModuleProvider="target">
-                                                <rect key="frame" x="72.5" y="63" width="52" height="20"/>
+                                                <rect key="frame" x="72.5" y="79" width="52" height="20"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhz-He-aue">
                                                         <rect key="frame" x="8" y="0.0" width="36" height="20"/>
@@ -124,7 +122,7 @@
                                             <constraint firstItem="SgW-hs-aU8" firstAttribute="leading" secondItem="TM7-9F-ncV" secondAttribute="leading" id="28r-AW-sln"/>
                                             <constraint firstItem="SgW-hs-aU8" firstAttribute="top" secondItem="TM7-9F-ncV" secondAttribute="bottom" constant="8" id="29F-ZH-rya"/>
                                             <constraint firstItem="uZy-ud-qyq" firstAttribute="leading" secondItem="SgW-hs-aU8" secondAttribute="leading" id="2L3-XD-M7n"/>
-                                            <constraint firstItem="TM7-9F-ncV" firstAttribute="top" secondItem="KwP-sP-Vdg" secondAttribute="top" id="BdH-h4-dJX"/>
+                                            <constraint firstItem="TM7-9F-ncV" firstAttribute="top" secondItem="KwP-sP-Vdg" secondAttribute="top" constant="16" id="BdH-h4-dJX"/>
                                             <constraint firstItem="5EO-G6-d9i" firstAttribute="centerY" secondItem="uZy-ud-qyq" secondAttribute="centerY" id="D1V-Pd-KCN"/>
                                             <constraint firstItem="uZy-ud-qyq" firstAttribute="top" secondItem="SgW-hs-aU8" secondAttribute="bottom" constant="12" id="Grb-eL-xZY"/>
                                             <constraint firstItem="TM7-9F-ncV" firstAttribute="leading" secondItem="KwP-sP-Vdg" secondAttribute="leading" constant="8" id="Syt-3U-Xv4"/>
@@ -147,7 +145,6 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" name="tag"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="Xgg-Jd-1ye"/>
                                             <constraint firstAttribute="width" secondItem="B8o-ab-LPz" secondAttribute="height" multiplier="1:1" id="jRc-qk-LAB"/>
@@ -155,10 +152,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="textDefault"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -203,7 +197,7 @@
             </objects>
             <point key="canvasLocation" x="-178.2608695652174" y="336.83035714285711"/>
         </scene>
-        <!--Map-->
+        <!--Map View Controller-->
         <scene sceneID="qid-Ge-Pdo">
             <objects>
                 <viewController id="OIQ-Dk-xHv" customClass="MapViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
@@ -268,7 +262,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YGw-12-20L"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map" id="l2l-DK-rHq"/>
+                    <tabBarItem key="tabBarItem" title="" image="map" id="l2l-DK-rHq"/>
                     <connections>
                         <outlet property="cottagePicker" destination="oHd-ow-PbB" id="JYy-cn-zbp"/>
                         <outlet property="cottagePickerView" destination="OjT-Ew-1gT" id="XBf-Qj-5DV"/>
@@ -280,7 +274,7 @@
             </objects>
             <point key="canvasLocation" x="727.536231884058" y="9.375"/>
         </scene>
-        <!--Mentors-->
+        <!--Mentors View Controller-->
         <scene sceneID="wqT-Bg-7f9">
             <objects>
                 <viewController id="T0Z-7d-cpy" customClass="MentorsViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
@@ -317,10 +311,10 @@
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                            <real key="value" value="6"/>
+                                                            <real key="value" value="0.0"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" name="textDefault"/>
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
@@ -369,7 +363,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="exh-iQ-PdG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mentors" image="mentor" id="Rnq-he-5b9"/>
+                    <tabBarItem key="tabBarItem" title="" image="mentor" id="Rnq-he-5b9"/>
                     <connections>
                         <outlet property="loadingSpinner" destination="g2m-G8-QCU" id="8Bx-fh-jJN"/>
                         <outlet property="tableView" destination="7Wg-Sm-GfU" id="9r0-T7-w9I"/>
@@ -379,7 +373,7 @@
             </objects>
             <point key="canvasLocation" x="728" y="-1321"/>
         </scene>
-        <!--Schedule-->
+        <!--Timeline View Controller-->
         <scene sceneID="qJz-4v-Kfs">
             <objects>
                 <viewController id="xhZ-Lo-pSD" customClass="TimelineViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
@@ -812,7 +806,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bdd-ez-FYb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" image="schedule" id="7EY-ES-zFT"/>
+                    <tabBarItem key="tabBarItem" title="" image="schedule" id="7EY-ES-zFT">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="-5" vertical="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="countdownContainer" destination="Oq7-Yd-5hC" id="6Xx-5H-JeT"/>
                         <outlet property="loadingSpinner" destination="efU-Hl-yIf" id="fCf-R5-QJF"/>
@@ -943,15 +939,35 @@
             </objects>
             <point key="canvasLocation" x="1695.6521739130435" y="-638.16964285714278"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Gradient Tab Bar Controller-->
         <scene sceneID="iic-b2-3vH">
             <objects>
-                <tabBarController id="aia-tD-VjM" sceneMemberID="viewController">
+                <tabBarController id="aia-tD-VjM" customClass="GradientTabBarController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PnM-5U-PGk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="yellowLight"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" name="orange"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" name="redDark"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" name="orange"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                            <point key="value" x="0.0" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                            <point key="value" x="1" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="xhZ-Lo-pSD" kind="relationship" relationship="viewControllers" id="xsj-zS-j39"/>
                         <segue destination="OIQ-Dk-xHv" kind="relationship" relationship="viewControllers" id="TCt-Zg-i2G"/>
@@ -977,6 +993,9 @@
         <namedColor name="red">
             <color red="1" green="0.0" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="redDark">
+            <color red="0.8666666666666667" green="0.0039215686274509803" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="scheduleTimeline">
             <color red="1" green="0.83921568627450982" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -994,6 +1013,9 @@
         </namedColor>
         <namedColor name="textDefault">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellowLight">
+            <color red="1" green="0.89803921568627454" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
