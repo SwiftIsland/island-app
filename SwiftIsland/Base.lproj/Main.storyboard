@@ -191,7 +191,7 @@
             </objects>
             <point key="canvasLocation" x="-178.2608695652174" y="336.83035714285711"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="qid-Ge-Pdo">
             <objects>
                 <viewController id="OIQ-Dk-xHv" customClass="MapViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
@@ -256,9 +256,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YGw-12-20L"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="map" id="l2l-DK-rHq">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="l2l-DK-rHq"/>
                     <connections>
                         <outlet property="cottagePicker" destination="oHd-ow-PbB" id="JYy-cn-zbp"/>
                         <outlet property="cottagePickerView" destination="OjT-Ew-1gT" id="XBf-Qj-5DV"/>
@@ -270,7 +268,7 @@
             </objects>
             <point key="canvasLocation" x="727.536231884058" y="9.375"/>
         </scene>
-        <!--Mentors View Controller-->
+        <!--Mentors-->
         <scene sceneID="wqT-Bg-7f9">
             <objects>
                 <viewController id="T0Z-7d-cpy" customClass="MentorsViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
@@ -359,9 +357,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="exh-iQ-PdG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="mentor" id="Rnq-he-5b9">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Mentors" image="mentor" id="Rnq-he-5b9"/>
                     <connections>
                         <outlet property="loadingSpinner" destination="g2m-G8-QCU" id="8Bx-fh-jJN"/>
                         <outlet property="tableView" destination="7Wg-Sm-GfU" id="9r0-T7-w9I"/>
@@ -371,7 +367,7 @@
             </objects>
             <point key="canvasLocation" x="728" y="-1321"/>
         </scene>
-        <!--Timeline View Controller-->
+        <!--Schedule-->
         <scene sceneID="qJz-4v-Kfs">
             <objects>
                 <viewController id="xhZ-Lo-pSD" customClass="TimelineViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
@@ -785,7 +781,7 @@
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="efU-Hl-yIf">
                                 <rect key="frame" x="188.5" y="410" width="37" height="37"/>
-                                <color key="color" name="red"/>
+                                <color key="color" name="redDark"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -804,8 +800,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bdd-ez-FYb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="schedule" id="7EY-ES-zFT">
-                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="schedule" id="7EY-ES-zFT">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="-5" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
@@ -847,13 +842,13 @@
                                                     <constraint firstAttribute="width" secondItem="Bqv-e6-OeM" secondAttribute="height" multiplier="1:1" id="QGg-5Z-Rju"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule will be available from July 2nd" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejd-jR-X71">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule will be available from July 2nd at 9am" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejd-jR-X71">
                                                 <rect key="frame" x="15" y="42" width="334" height="52"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans Medium" pointSize="22"/>
                                                 <color key="textColor" name="textBody"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at 9am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoN-HG-8uE">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at 9am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoN-HG-8uE">
                                                 <rect key="frame" x="0.0" y="94" width="364" height="22"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="18"/>
                                                 <color key="textColor" name="textBody"/>
@@ -912,7 +907,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" name="yellowLight"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
                                 <color key="value" name="orange"/>
@@ -977,9 +972,6 @@
         </namedColor>
         <namedColor name="textDefault">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="yellowLight">
-            <color red="1" green="0.89803921568627454" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
