@@ -262,7 +262,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YGw-12-20L"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="map" id="l2l-DK-rHq"/>
+                    <tabBarItem key="tabBarItem" title="" image="map" id="l2l-DK-rHq">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="cottagePicker" destination="oHd-ow-PbB" id="JYy-cn-zbp"/>
                         <outlet property="cottagePickerView" destination="OjT-Ew-1gT" id="XBf-Qj-5DV"/>
@@ -363,7 +365,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="exh-iQ-PdG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="mentor" id="Rnq-he-5b9"/>
+                    <tabBarItem key="tabBarItem" title="" image="mentor" id="Rnq-he-5b9">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="loadingSpinner" destination="g2m-G8-QCU" id="8Bx-fh-jJN"/>
                         <outlet property="tableView" destination="7Wg-Sm-GfU" id="9r0-T7-w9I"/>
@@ -807,6 +811,7 @@
                         <viewLayoutGuide key="safeArea" id="Bdd-ez-FYb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="schedule" id="7EY-ES-zFT">
+                        <inset key="imageInsets" minX="0.0" minY="4" maxX="0.0" maxY="-4"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="-5" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
