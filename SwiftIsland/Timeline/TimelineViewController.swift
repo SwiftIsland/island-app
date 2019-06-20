@@ -31,8 +31,7 @@ class TimelineViewController: CardViewController {
   override func loadView() {
     super.loadView()
 
-    // Todo: Make a more elegant solution for this. Need to access this here for now so it is ready for the table later
-    _ = MentorManager.shared.mentors
+    _ = MentorManager.shared.mentors // Todo: Make a more elegant solution for this. Need to access this here for now so it is ready for the table later
 
     networkRechability.didChangeConnectivity = { [weak self] status in
       guard let self = self else { return }
@@ -53,12 +52,15 @@ class TimelineViewController: CardViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    fetchSchedule()
     
     tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 110
     tableView.sectionHeaderHeight = 39
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    fetchSchedule()
   }
 
   func fetchSchedule() {
