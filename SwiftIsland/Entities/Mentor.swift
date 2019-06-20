@@ -15,4 +15,5 @@ struct Mentor: Codable {
   let bio: String
   let twitter: URL?
   let web: URL?
+  let country: String?
 }

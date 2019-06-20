@@ -188,7 +188,7 @@ class DataManagerTests: XCTestCase {
 
   func test_getMentors_successAPI_shouldSuccessFromAPI() {
     cacheManagerMock.getReturnValue = [Mentor]()
-    apiManagerMock.getCompletionHandlerResult = [Mentor(id: 0, name: "Test", image: "img", bio: "bio", twitter: nil, web: nil)]
+    apiManagerMock.getCompletionHandlerResult = [Mentor(id: 0, name: "Test", image: "img", bio: "bio", twitter: nil, web: nil, country: nil)]
     let expectation = XCTestExpectation(description: "")
 
     sut.getMentors { result in

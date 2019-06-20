@@ -1,21 +1,18 @@
 //
-//  MentorCell.swift
+//  MentorCollectionViewCell.swift
 //  SwiftIsland
 //
-//  Created by Paul Peelen on 2019-05-28.
+//  Created by Paul Peelen on 2019-06-19.
 //  Copyright © 2019 AppTrix AB. All rights reserved.
 //
 
 import UIKit
 
-class MentorCell: UITableViewCell {
+class MentorCollectionViewCell: UICollectionViewCell {
 
   @IBOutlet weak var mentorImage: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
-
-  override func awakeFromNib() {
-    super.awakeFromNib()
-  }
+  @IBOutlet weak var countryLabel: UILabel!
 
   override func prepareForReuse() {
     super.prepareForReuse()
@@ -28,9 +25,11 @@ class MentorCell: UITableViewCell {
       mentorImage.image = image
     }
     nameLabel.text = mentor.name
-  }
 
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
+    if let country = mentor.country {
+      countryLabel.text = country
+    } else {
+      countryLabel.text = ""
+    }
   }
 }
