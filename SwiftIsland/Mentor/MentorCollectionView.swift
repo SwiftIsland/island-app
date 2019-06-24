@@ -30,6 +30,8 @@ class MentorCollectionView: CardViewController {
       let cellDifference = flowLayout.itemSize.height / flowLayout.itemSize.width
       let cellWidth = (view.frame.width - max(0, numberOfCellsPerRow - 1)*horizontalSpacing)/numberOfCellsPerRow
       flowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth * cellDifference)
+      // TODO: This should actually be something like `flowLayout.itemSize = UICollectionViewFlowLayout.automaticSize`.
+      // However, that blows up the cell size to such a degree that it doesn't actually render the cells anymore.
     }
   }
   
