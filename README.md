@@ -13,6 +13,11 @@
 # Swift Island App
 This is a simple app made for the event Swift Island, which takes place in July in the Netherlands. More information on: [https://swiftisland.nl](https://swiftisland.nl).
 
-The purpose of the app is to show a simple schedule of the two day event, give more information about the workshops and their mentors present at the even, as well as make it easier for attendees to find their bungalow.
+The purpose of the app is to show a simple schedule of the two day event, give more information about the workshops and their mentors present at the event, as well as make it easier for attendees to find their bungalow.
 
 The app is made by [Paul Peelen](https://github.com/ppeelen). The source code is available under MIT license. Please contribute!
+
+## API
+The app uses an api where it fetches data from. The source for the API can be found here:
+https://github.com/ppeelen/swiftislandapi.
+The API is written in Swift and uses Vapor. For more information, please check the link above.
