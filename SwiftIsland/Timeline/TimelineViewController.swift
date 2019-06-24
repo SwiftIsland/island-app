@@ -13,6 +13,8 @@ class TimelineViewController: CardViewController {
   private let dataManager = DataManager.shared
   private var schedule: [Schedule] = []
   private var activities: [[Schedule.Activity]] = []
+  private let networkRechability: NetworkReachability = NetworkReachability()
+  private let userDefaults: UserDefaults = UserDefaults.standard
 
   @IBOutlet weak var tableView: UITableView! {
     didSet {
@@ -29,18 +31,36 @@ class TimelineViewController: CardViewController {
   override func loadView() {
     super.loadView()
 
-    // Todo: Make a more elegant solution for this. Need to access this here for now so it is ready for the table later
-    _ = MentorManager.shared.mentors
+    _ = MentorManager.shared.mentors // Todo: Make a more elegant solution for this. Need to access this here for now so it is ready for the table later
+
+    networkRechability.didChangeConnectivity = { [weak self] status in
+      guard let self = self else { return }
+      let userDefaultsKey = "showNetworkError"
+
+      let shouldShowAlert = self.userDefaults.object(forKey: userDefaultsKey) != nil ? self.userDefaults.bool(forKey: userDefaultsKey) : true
+      if case .unreachable = status, shouldShowAlert {
+        let alert = UIAlertController(title: "Where did you go?", message: "It seems that there is no network connection. The first time the app launches it'll download the schedule, bungalow locations and mentor information. After that, it can be used offline... but that'll mean you won't get any updates, which makes the app sad :(", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Don't show again", style: .default, handler: { (action) in
+          self.userDefaults.set(false, forKey: userDefaultsKey)
+        }))
+        alert.addAction(UIAlertAction(title: "Thanks", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+      }
+    }
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    fetchSchedule()
     
     tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 110
     tableView.sectionHeaderHeight = 39
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    fetchSchedule()
   }
 
   func fetchSchedule() {
