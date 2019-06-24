@@ -13,13 +13,26 @@ class MentorCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var mentorImage: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var countryLabel: UILabel!
-
+  
   override func prepareForReuse() {
     super.prepareForReuse()
     mentorImage.image = nil
     nameLabel.text = nil
   }
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    setupFonts()
+  }
 
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    super.traitCollectionDidChange(previousTraitCollection)
+    guard previousTraitCollection != nil else {
+      return
+    }
+    setupFonts()
+  }
+  
   func setup(withMentor mentor: Mentor) {
     if let image = UIImage(named: mentor.image) {
       mentorImage.image = image
@@ -31,5 +44,12 @@ class MentorCollectionViewCell: UICollectionViewCell {
     } else {
       countryLabel.text = ""
     }
+  }
+  
+  private func setupFonts() {
+    let font = UIFont.systemFont(ofSize: 18.0, weight: .light)
+    let metrics = UIFontMetrics(forTextStyle: .headline)
+    let newFont = metrics.scaledFont(for: font)
+    nameLabel.font = newFont
   }
 }
