@@ -40,6 +40,13 @@ class MentorCollectionView: CardViewController {
       return
     }
     collectionView?.collectionViewLayout.invalidateLayout()
+    if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+      if traitCollection.preferredContentSizeCategory.isAccessibilityCategory {
+        layout.estimatedItemSize = CGSize(width: 320, height: 400) // TODO: Not sure how to get a 'one icon per row' layout.
+      } else {
+        layout.estimatedItemSize = CGSize(width: 200, height: 248)
+      }
+    }
   }
   
   private func fetchMentors() {
