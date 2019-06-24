@@ -18,6 +18,7 @@ class MentorCollectionViewCell: UICollectionViewCell {
     super.prepareForReuse()
     mentorImage.image = nil
     nameLabel.text = nil
+    setupFonts()
   }
   
   override func awakeFromNib() {
