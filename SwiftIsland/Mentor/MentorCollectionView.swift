@@ -32,7 +32,16 @@ class MentorCollectionView: CardViewController {
       flowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth * cellDifference)
     }
   }
-
+  
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    super.traitCollectionDidChange(previousTraitCollection)
+    
+    guard previousTraitCollection != nil else {
+      return
+    }
+    collectionView?.collectionViewLayout.invalidateLayout()
+  }
+  
   private func fetchMentors() {
     loadingSpinner.startAnimating()
     dataManager.getMentors { result in
