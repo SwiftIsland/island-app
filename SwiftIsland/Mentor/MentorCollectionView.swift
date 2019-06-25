@@ -38,15 +38,18 @@ class MentorCollectionView: CardViewController {
   }
   
   private func setupCollectionView() {
-    if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+    if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
       
-      if traitCollection.preferredContentSizeCategory.isAccessibilityCategory {
-        layout.itemSize = UICollectionViewFlowLayout.automaticSize
-        layout.estimatedItemSize = CGSize(width: 320, height: 400) // TODO: Not sure how to get a 'one icon per row' layout.
-      } else {
-        layout.itemSize = UICollectionViewFlowLayout.automaticSize
-        layout.estimatedItemSize = CGSize(width: 136, height: 200)
-      }
+      let frameWidth = view.frame.width
+      let horizontalSpacing = flowLayout.scrollDirection == .vertical ? flowLayout.minimumInteritemSpacing : flowLayout.minimumLineSpacing
+      let isAccessibility = traitCollection.preferredContentSizeCategory.isAccessibilityCategory
+      let ratio: CGFloat = isAccessibility ? 1 : 1.6
+      let numberOfCellsPerRow = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? 1 : 2
+      let totalSpacing = horizontalSpacing * CGFloat(numberOfCellsPerRow - 1)
+      let padding = CGFloat(12 * 2) // padding left and right
+      let cellWidth = (frameWidth - padding - totalSpacing) / CGFloat(numberOfCellsPerRow)
+      
+      flowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth * ratio)
     }
   }
   

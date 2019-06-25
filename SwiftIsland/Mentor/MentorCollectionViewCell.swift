@@ -11,14 +11,13 @@ import UIKit
 class MentorCollectionViewCell: UICollectionViewCell {
 
   @IBOutlet weak var mentorImage: UIImageView!
-  @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var countryLabel: UILabel!
+  @IBOutlet weak var label: UILabel!
   @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
     
   override func prepareForReuse() {
     super.prepareForReuse()
     mentorImage.image = nil
-    nameLabel.text = nil
+    label.text = nil
     setupFonts()
   }
   
@@ -40,13 +39,14 @@ class MentorCollectionViewCell: UICollectionViewCell {
     if let image = UIImage(named: mentor.image) {
       mentorImage.image = image
     }
-    nameLabel.text = mentor.name
-
-    if let country = mentor.country {
-      countryLabel.text = country
-    } else {
-      countryLabel.text = ""
-    }
+    let text: String = {
+      var result = mentor.name
+      if let country = mentor.country {
+        result += "\n\(country)"
+      }
+      return result
+    }()
+    label.text = text
   }
   
   private func setupMetrics(with traits: UITraitCollection) {
@@ -61,6 +61,6 @@ class MentorCollectionViewCell: UICollectionViewCell {
     let font = UIFont.systemFont(ofSize: 18.0, weight: .light)
     let metrics = UIFontMetrics(forTextStyle: .headline)
     let newFont = metrics.scaledFont(for: font)
-    nameLabel.font = newFont
+    label.font = newFont
   }
 }
