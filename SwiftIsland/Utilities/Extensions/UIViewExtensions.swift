@@ -42,7 +42,7 @@ extension UIView {
       layer.borderWidth = newValue
     }
   }
-  
+
   @IBInspectable var borderColor: UIColor? {
     get {
       var color: UIColor?

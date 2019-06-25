@@ -30,9 +30,9 @@ final class MapPolygon: MKPolygonRenderer {
 
     let paragraphStyle = NSMutableParagraphStyle()
     paragraphStyle.alignment = .center
-    let attributes = [NSAttributedString.Key.paragraphStyle  : paragraphStyle,
-                      NSAttributedString.Key.font            : UIFont.systemFont(ofSize: 50.0),
-                      NSAttributedString.Key.foregroundColor : UIColor.themeColor(.redDark)]
+    let attributes = [NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 50.0),
+                      NSAttributedString.Key.foregroundColor: UIColor.themeColor(.redDark)]
     let polyRect = self.rect(for: polygon.boundingMapRect)
 
     UIGraphicsPushContext(context)

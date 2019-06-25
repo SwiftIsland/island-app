@@ -13,14 +13,14 @@ class MentorCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var mentorImage: UIImageView!
   @IBOutlet weak var label: UILabel!
   @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
-    
+
   override func prepareForReuse() {
     super.prepareForReuse()
     mentorImage.image = nil
     label.text = nil
     setupFonts()
   }
-  
+
   override func awakeFromNib() {
     super.awakeFromNib()
     setupFonts()
@@ -34,7 +34,7 @@ class MentorCollectionViewCell: UICollectionViewCell {
     }
     setupFonts()
   }
-  
+
   func setup(withMentor mentor: Mentor) {
     if let image = UIImage(named: mentor.image) {
       mentorImage.image = image
@@ -48,7 +48,7 @@ class MentorCollectionViewCell: UICollectionViewCell {
     }()
     label.text = text
   }
-  
+
   private func setupMetrics(with traits: UITraitCollection) {
     if traits.preferredContentSizeCategory.isAccessibilityCategory {
       imageWidthConstraint.constant = 240
@@ -56,7 +56,7 @@ class MentorCollectionViewCell: UICollectionViewCell {
       imageWidthConstraint.constant = 136
     }
   }
-  
+
   private func setupFonts() {
     let font = UIFont.systemFont(ofSize: 18.0, weight: .light)
     let metrics = UIFontMetrics(forTextStyle: .headline)

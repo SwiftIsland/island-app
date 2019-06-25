@@ -50,8 +50,7 @@ extension DataManager: DataManaging {
       case .failure(let error):
         if let networkError = error as? APIManagerError,
           case .apiReponseUnhandledStatusCode(let statusCode) = networkError,
-          statusCode == 404
-        {
+          statusCode == 404 {
           completion(.failure(.notYetAvailable))
         } else {
           do {
