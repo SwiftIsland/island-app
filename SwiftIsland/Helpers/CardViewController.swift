@@ -39,7 +39,8 @@ class CardViewController: UIViewController {
     view.addSubview(visualEffectView)
     self.visualEffectView = visualEffectView
 
-    guard let viewController = UIStoryboard(name: "Mentor", bundle: nil).instantiateViewController(withIdentifier: "MentorCardViewController") as? MentorCardViewController else { return }
+    guard let viewController = UIStoryboard(name: "Mentor", bundle: nil)
+      .instantiateViewController(withIdentifier: "MentorCardViewController") as? MentorCardViewController else { return }
     addChild(viewController)
     view.addSubview(viewController.view)
 

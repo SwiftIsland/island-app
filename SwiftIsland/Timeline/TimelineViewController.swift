@@ -39,8 +39,12 @@ class TimelineViewController: CardViewController {
 
       let shouldShowAlert = self.userDefaults.object(forKey: userDefaultsKey) != nil ? self.userDefaults.bool(forKey: userDefaultsKey) : true
       if case .unreachable = status, shouldShowAlert {
-        let alert = UIAlertController(title: "Where did you go?", message: "It seems that there is no network connection. The first time the app launches it'll download the schedule, bungalow locations and mentor information. After that, it can be used offline... but that'll mean you won't get any updates, which makes the app sad :(", preferredStyle: .alert)
-
+        // swiftlint:disable line_length
+        let alert = UIAlertController(
+          title: "Where did you go?",
+          message: "It seems that there is no network connection. The first time the app launches it'll download the schedule, bungalow locations and mentor information. After that, it can be used offline... but that'll mean you won't get any updates, which makes the app sad :(",
+          preferredStyle: .alert)
+        // swiftlint:enable line_length
         alert.addAction(UIAlertAction(title: "Don't show again", style: .default, handler: { (_) in
           self.userDefaults.set(false, forKey: userDefaultsKey)
         }))

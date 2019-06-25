@@ -72,8 +72,8 @@ struct Area: Codable {
   }
 
   enum CodingKeys: String, CodingKey {
-    case name = "name"
-    case points = "points"
+    case name
+    case points
   }
 
   init(from decoder: Decoder) throws {
