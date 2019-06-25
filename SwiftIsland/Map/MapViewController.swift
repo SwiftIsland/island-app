@@ -41,12 +41,15 @@ class MapViewController: UIViewController {
     super.viewDidAppear(animated)
     getAreas()
   }
+}
 
-  private func setupMap() {
+private extension MapViewController {
+
+  func setupMap() {
     centerOnVenue()
   }
 
-  private func getAreas() {
+  func getAreas() {
     loadingSpinner.isHidden = false
     loadingSpinner.startAnimating()
     dataManager.getArea { result in
@@ -61,14 +64,14 @@ class MapViewController: UIViewController {
     }
   }
 
-  private func setupMapOverlays(areas: [Area]) {
+  func setupMapOverlays(areas: [Area]) {
     mapView.removeOverlays(mapView.overlays)
     self.areas = areas
     cottagePicker.reloadAllComponents()
     renderMapOverlays()
   }
 
-  private func renderMapOverlays() {
+  func renderMapOverlays() {
     for area in areas {
       let polygon = CottagePolygon(coordinates: area.locationCoordinate2D, count: area.locationCoordinate2D.count)
       polygon.cottageArea = area
@@ -77,7 +80,7 @@ class MapViewController: UIViewController {
     }
   }
 
-  private func centerOnVenue() {
+  func centerOnVenue() {
     let location = CLLocation(latitude: 53.11492071953518, longitude: 4.89718462979863)
     centerMapOnLocation(location: location)
   }
@@ -95,7 +98,7 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MKMapViewDelegate {
-  
+
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
     if overlay is MKPolyline {
       let polylineRenderer = MKPolylineRenderer(overlay: overlay)
