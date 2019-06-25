@@ -26,6 +26,9 @@ class ConcurrentCell: ScheduleCell {
       self.mentor = mentor
       mentorView.isHidden = false
       mentorButton.setImage(mentorImg, for: .normal)
+    } else {
+      mentorView.isHidden = true
+      mentorButton.setImage(nil, for: .normal)
     }
   }
 
