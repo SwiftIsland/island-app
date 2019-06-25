@@ -24,15 +24,7 @@ class MentorCollectionView: CardViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     fetchMentors()
-
-    if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-      let horizontalSpacing = flowLayout.scrollDirection == .vertical ? flowLayout.minimumInteritemSpacing : flowLayout.minimumLineSpacing
-      let cellDifference = flowLayout.itemSize.height / flowLayout.itemSize.width
-      let cellWidth = (view.frame.width - max(0, numberOfCellsPerRow - 1)*horizontalSpacing)/numberOfCellsPerRow
-      flowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth * cellDifference)
-      // TODO: This should actually be something like `flowLayout.itemSize = UICollectionViewFlowLayout.automaticSize`.
-      // However, that blows up the cell size to such a degree that it doesn't actually render the cells anymore.
-    }
+    setupCollectionView()
   }
   
   override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -42,11 +34,18 @@ class MentorCollectionView: CardViewController {
       return
     }
     collectionView?.collectionViewLayout.invalidateLayout()
+    setupCollectionView()
+  }
+  
+  private func setupCollectionView() {
     if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+      
       if traitCollection.preferredContentSizeCategory.isAccessibilityCategory {
+        layout.itemSize = UICollectionViewFlowLayout.automaticSize
         layout.estimatedItemSize = CGSize(width: 320, height: 400) // TODO: Not sure how to get a 'one icon per row' layout.
       } else {
-        layout.estimatedItemSize = CGSize(width: 200, height: 248)
+        layout.itemSize = UICollectionViewFlowLayout.automaticSize
+        layout.estimatedItemSize = CGSize(width: 136, height: 200)
       }
     }
   }

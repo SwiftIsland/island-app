@@ -13,7 +13,8 @@ class MentorCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var mentorImage: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var countryLabel: UILabel!
-  
+  @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
+    
   override func prepareForReuse() {
     super.prepareForReuse()
     mentorImage.image = nil
@@ -24,6 +25,7 @@ class MentorCollectionViewCell: UICollectionViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     setupFonts()
+    setupMetrics(with: traitCollection)
   }
 
   override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -44,6 +46,14 @@ class MentorCollectionViewCell: UICollectionViewCell {
       countryLabel.text = country
     } else {
       countryLabel.text = ""
+    }
+  }
+  
+  private func setupMetrics(with traits: UITraitCollection) {
+    if traits.preferredContentSizeCategory.isAccessibilityCategory {
+      imageWidthConstraint.constant = 240
+    } else {
+      imageWidthConstraint.constant = 136
     }
   }
   
