@@ -16,14 +16,14 @@ class CardViewController: UIViewController {
   }
 
   var visualEffectView: UIVisualEffectView?
-  let cardHeight:CGFloat = 600
+  let cardHeight: CGFloat = 600
   let defaultDuration = 0.6
   var cardVisible = false
-  var nextState:CardState {
+  var nextState: CardState {
     return cardVisible ? .collapsed : .expanded
   }
   var runningAnimations = [UIViewPropertyAnimator]()
-  var animationProgressWhenInterrupted:CGFloat = 0
+  var animationProgressWhenInterrupted: CGFloat = 0
 
   var cardContent: MentorCardViewController?
 
@@ -39,13 +39,13 @@ class CardViewController: UIViewController {
     view.addSubview(visualEffectView)
     self.visualEffectView = visualEffectView
 
-    guard let vc = UIStoryboard(name: "Mentor", bundle: nil).instantiateViewController(withIdentifier: "MentorCardViewController") as? MentorCardViewController else { return }
-    addChild(vc)
-    view.addSubview(vc.view)
+    guard let viewController = UIStoryboard(name: "Mentor", bundle: nil).instantiateViewController(withIdentifier: "MentorCardViewController") as? MentorCardViewController else { return }
+    addChild(viewController)
+    view.addSubview(viewController.view)
 
-    vc.view.frame = CGRect(x: 0, y: view.frame.height, width: view.bounds.width, height: cardHeight)
-    vc.view.clipsToBounds = true
-    cardContent = vc
+    viewController.view.frame = CGRect(x: 0, y: view.frame.height, width: view.bounds.width, height: cardHeight)
+    viewController.view.clipsToBounds = true
+    cardContent = viewController
 
     setupGestures()
   }
@@ -62,14 +62,14 @@ class CardViewController: UIViewController {
   }
 
   @objc
-  func handleCardTap(recognzier:UITapGestureRecognizer) {
+  func handleCardTap(recognzier: UITapGestureRecognizer) {
     if case .ended = recognzier.state {
       animateTransitionIfNeeded(state: nextState, duration: defaultDuration)
     }
   }
 
   @objc
-  func handleCardPan (recognizer:UIPanGestureRecognizer) {
+  func handleCardPan (recognizer: UIPanGestureRecognizer) {
     switch recognizer.state {
     case .began:
       startInteractiveTransition(state: nextState, duration: defaultDuration)
@@ -85,7 +85,7 @@ class CardViewController: UIViewController {
     }
   }
 
-  func animateTransitionIfNeeded(state:CardState, duration:TimeInterval) {
+  func animateTransitionIfNeeded(state: CardState, duration: TimeInterval) {
     if runningAnimations.isEmpty {
       let frameAnimator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1) {
         self.cardContent?.view.frame.origin.y = self.view.frame.height
@@ -135,7 +135,7 @@ class CardViewController: UIViewController {
     }
   }
 
-  func startInteractiveTransition(state:CardState, duration:TimeInterval) {
+  func startInteractiveTransition(state: CardState, duration: TimeInterval) {
     if runningAnimations.isEmpty {
       animateTransitionIfNeeded(state: state, duration: duration)
     }
@@ -145,13 +145,13 @@ class CardViewController: UIViewController {
     }
   }
 
-  func updateInteractiveTransition(fractionCompleted:CGFloat) {
+  func updateInteractiveTransition(fractionCompleted: CGFloat) {
     for animator in runningAnimations {
       animator.fractionComplete = fractionCompleted + animationProgressWhenInterrupted
     }
   }
 
-  func continueInteractiveTransition (){
+  func continueInteractiveTransition () {
     for animator in runningAnimations {
       animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
     }

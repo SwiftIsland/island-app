@@ -17,6 +17,9 @@ The purpose of the app is to show a simple schedule of the two day event, give m
 
 The app is made by [Paul Peelen](https://github.com/ppeelen). The source code is available under MIT license. Please contribute!
 
+## Requirements
+In order to get the best result, and not to get rejections on pull requests, please install [Swiftlint](https://www.github.com/realm/SwiftLint) and follow the set rules.
+
 ## API
 The app uses an api where it fetches data from. The source for the API can be found here:
 https://github.com/ppeelen/swiftislandapi.

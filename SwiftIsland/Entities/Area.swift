@@ -15,24 +15,24 @@ struct Area: Codable {
   let locationCoordinate2D: [CLLocationCoordinate2D]
 
   var center: CLLocationCoordinate2D {
-    var x: Float = 0.0
-    var y: Float = 0.0
-    var z: Float = 0.0
+    var locationX: Float = 0.0
+    var locationY: Float = 0.0
+    var locationZ: Float = 0.0
     for points in locationCoordinate2D {
       let lat = GLKMathDegreesToRadians(Float(points.latitude))
       let long = GLKMathDegreesToRadians(Float(points.longitude))
 
-      x += cos(lat) * cos(long)
-      y += cos(lat) * sin(long)
-      z += sin(lat)
+      locationX += cos(lat) * cos(long)
+      locationY += cos(lat) * sin(long)
+      locationZ += sin(lat)
     }
-    x = x / Float(locationCoordinate2D.count)
-    y = y / Float(locationCoordinate2D.count)
-    z = z / Float(locationCoordinate2D.count)
+    locationX /= Float(locationCoordinate2D.count)
+    locationY /= Float(locationCoordinate2D.count)
+    locationZ /= Float(locationCoordinate2D.count)
 
-    let resultLong = atan2(y, x)
-    let resultHyp = sqrt(x * x + y * y)
-    let resultLat = atan2(z, resultHyp)
+    let resultLong = atan2(locationY, locationX)
+    let resultHyp = sqrt(locationX * locationX + locationY * locationY)
+    let resultLat = atan2(locationZ, resultHyp)
     let result = CLLocationCoordinate2D(latitude: CLLocationDegrees(GLKMathRadiansToDegrees(Float(resultLat))),
                                         longitude: CLLocationDegrees(GLKMathRadiansToDegrees(Float(resultLong))))
     return result

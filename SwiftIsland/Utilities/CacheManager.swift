@@ -42,7 +42,7 @@ final class CacheManager: CacheManaging {
     self.dataWriter = dataWriter
   }
 
-  //MARK: - CacheManaging
+  // MARK: - CacheManaging
 
   func get<T: Decodable>(from file: CacheFiles) throws -> T {
     guard let path = filePath(for: file) else { throw CacheErrors.fileNotFound }

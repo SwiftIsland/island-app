@@ -26,20 +26,20 @@ class MentorCollectionView: CardViewController {
     fetchMentors()
     setupCollectionView()
   }
-  
+
   override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     super.traitCollectionDidChange(previousTraitCollection)
-    
+
     guard previousTraitCollection != nil else {
       return
     }
     collectionView?.collectionViewLayout.invalidateLayout()
     setupCollectionView()
   }
-  
+
   private func setupCollectionView() {
     if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-      
+
       let frameWidth = view.frame.width
       let horizontalSpacing = flowLayout.scrollDirection == .vertical ? flowLayout.minimumInteritemSpacing : flowLayout.minimumLineSpacing
       let isAccessibility = traitCollection.preferredContentSizeCategory.isAccessibilityCategory
@@ -48,11 +48,11 @@ class MentorCollectionView: CardViewController {
       let totalSpacing = horizontalSpacing * CGFloat(numberOfCellsPerRow - 1)
       let padding = CGFloat(12 * 2) // padding left and right
       let cellWidth = (frameWidth - padding - totalSpacing) / CGFloat(numberOfCellsPerRow)
-      
+
       flowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth * ratio)
     }
   }
-  
+
   private func fetchMentors() {
     loadingSpinner.startAnimating()
     dataManager.getMentors { result in

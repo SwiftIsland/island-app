@@ -41,7 +41,7 @@ class TimelineViewController: CardViewController {
       if case .unreachable = status, shouldShowAlert {
         let alert = UIAlertController(title: "Where did you go?", message: "It seems that there is no network connection. The first time the app launches it'll download the schedule, bungalow locations and mentor information. After that, it can be used offline... but that'll mean you won't get any updates, which makes the app sad :(", preferredStyle: .alert)
 
-        alert.addAction(UIAlertAction(title: "Don't show again", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "Don't show again", style: .default, handler: { (_) in
           self.userDefaults.set(false, forKey: userDefaultsKey)
         }))
         alert.addAction(UIAlertAction(title: "Thanks", style: .cancel, handler: nil))
@@ -52,7 +52,7 @@ class TimelineViewController: CardViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 110
     tableView.sectionHeaderHeight = 39

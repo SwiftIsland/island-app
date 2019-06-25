@@ -11,10 +11,8 @@ import UIKit
 class MentorCardViewController: UIViewController {
 
   @IBOutlet weak var handleAreaView: UIView!
-  
   @IBOutlet weak var mentorImageView: UIView!
   @IBOutlet weak var mentorImage: UIImageView!
-
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
   @IBOutlet weak var socialTwitter: UIButton!

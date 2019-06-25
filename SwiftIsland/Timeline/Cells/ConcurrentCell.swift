@@ -21,8 +21,7 @@ class ConcurrentCell: ScheduleCell {
 
     if let mentorId = activity.mentor,
       let mentor = MentorManager.shared.mentors.first(where: { $0.id == mentorId }),
-      let mentorImg = UIImage(named: mentor.image)
-    {
+      let mentorImg = UIImage(named: mentor.image) {
       self.mentor = mentor
       mentorView.isHidden = false
       mentorButton.setImage(mentorImg, for: .normal)
