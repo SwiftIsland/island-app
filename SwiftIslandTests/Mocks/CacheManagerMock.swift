@@ -25,6 +25,9 @@ class CacheManagerMock: CacheManaging {
   var setData: Encodable?
   var setError: Error?
 
+  var copyFromBundleInvokeCount = 0
+  var copyFromBundleFile: CacheFiles?
+
   func get<T>(from file: CacheFiles) throws -> T where T : Decodable {
     getInvokeCount += 1
     getFrom = file
@@ -46,5 +49,10 @@ class CacheManagerMock: CacheManaging {
     if let error = setError {
       throw error
     }
+  }
+
+  func copyFromBundle(file: CacheFiles) throws {
+    copyFromBundleInvokeCount += 1
+    copyFromBundleFile = file
   }
 }

@@ -1,0 +1,73 @@
+[
+  {
+    "id": 0,
+    "name": "Erica Sadun",
+    "image": "erica_sadun",
+    "bio": "Erica Sadun writes lots of books. When not writing or coding, she parents geeks who are brushing up on their world domination skills. According to her academic dosimeter, she's acquired more education than any self-respecting person might consider wise. She enjoys deep diving into technology and has written, co-written, and contributed to dozens of books about computing and digital media. Sadun has blogged at TUAW, Ars Technica, O'Reilly, and Lifehacker. She has also authored more rejected Swift Language proposals than anyone else.",
+    "twitter": "https://www.twitter.com/ericasadun",
+    "web": "http://ericasadun.com/",
+    "country": "🇺🇸"
+  },
+  {
+    "id": 1,
+    "name": "Paul Hudson",
+    "image": "paulhudson",
+    "bio": "Paul is the author of Hacking with Swift, Pro Swift, Swift Design Patterns, Testing Swift, Server-Side Swift, Swift Coding Challenges, and more. Suffice it to say, he quite likes Swift. And coffee. (But mostly Swift.) (And coffee.)",
+    "twitter": "https://www.twitter.com/twostraws",
+    "web": "https://www.hackingwithswift.com/",
+    "country": "🇬🇧"
+  },
+  {
+    "id": 2,
+    "name": "Marina Gornostaeva",
+    "image": "marina",
+    "bio": "Marina works as the Lead iOS Developer at Storytel an all-you-can eat book subscription service. She's been professionally making iOS apps since before ARC. Some of her passions are great user experience and high quality code. She loves teaching, speaking at meetups, writing, contributing to OSS and following Swift Evolution. And is also a co-organiser at CopenhagenCocoa. She will beat you at table tennis :)",
+    "twitter": "https://www.twitter.com/hybridcattt",
+    "web": "http://hybridcattt.com/",
+    "country": "🇩🇰"
+  },
+  {
+    "id": 3,
+    "name": "Benedikt Terhechte",
+    "image": "benedikt_terhechte",
+    "bio": "Benedikt works as a Senior iOS Developer at the professional network XING. In previous jobs he developed solutions for customers such as Disney or Daimler-Chrysler. As an Indie Mac developer, he launched successful apps such as PhotoDesk and Hirundo. Benedikt started investigating Swift right after the 2014 release and writes about it on his popular blog. He also initiated the Core Value and SourceKittenDaemon open source projects.",
+    "twitter": "https://www.twitter.com/terhechte",
+    "web": "http://appventure.me/",
+    "country": "🇩🇪"
+  },
+  {
+    "id": 4,
+    "name": "Kateryna Gridina",
+    "image": "kateryna",
+    "bio": "Katerina is a mobile engineer at Zalando, an active member of Women Techmakers Berlin. Fighting for knowledge sharing, good code, and diversity in the tech.",
+    "twitter": "https://www.twitter.com/gridnaka",
+    "country": "🇩🇪"
+  },
+  {
+    "id": 5,
+    "name": "Antoine van der Lee",
+    "image": "twan",
+    "bio": "As a Lead iOS Engineer at WeTransfer, Antoine’s work is focused on code architecture and team processes. He's passionate about contributing to the iOS community where you might know him from his weekly blog posts on his personal blog called SwiftLee. He particularly enjoys speaking on best practices for structuring code architecture in a way that creates sustainability, as well as open sourcing frameworks and how iOS developers can be more successful in their work.",
+    "twitter": "https://www.twitter.com/twannl",
+    "web": "https://avanderlee.com/",
+    "country": "🇳🇱"
+  },
+  {
+    "id": 6,
+    "name": "Sally Shepard",
+    "image": "sally",
+    "bio": "Sally is an iOS developer, accessibility consultant, writer and hardware hacker who has worked on a wide variety of award winning apps. She is currently a Technology Manager at Hotels.com, where she leads the iOS team. She is also currently studying an MSc Internet of Things where she is trying to bring Swift on to more hardware platforms.",
+    "twitter": "https://www.twitter.com/mostgood",
+    "web": "http://www.mostgood.net/",
+    "country": "🇬🇧"
+  },
+  {
+    "id": 7,
+    "name": "Bas Thomas Broek",
+    "image": "bas_broek",
+    "bio": "Bas is an iOS and tooling developer at XING. He is currently curating Swift Weekly Brief and contributing to frameworks, apps and tooling in open source. He likes Swift and experimenting with other programming languages.",
+    "twitter": "https://www.twitter.com/basthomas",
+    "web": "https://basthomas.github.io/",
+    "country": "🇩🇪"
+  }
+]

@@ -23,6 +23,7 @@ enum CacheErrors: Error {
 protocol CacheManaging {
   func get<T: Decodable>(from file: CacheFiles) throws -> T
   func set<T: Encodable>(to file: CacheFiles, data: T) throws
+  func copyFromBundle(file: CacheFiles) throws
 }
 
 final class CacheManager: CacheManaging {
@@ -61,6 +62,14 @@ final class CacheManager: CacheManaging {
 
     let data = try encoder.encode(data)
     try dataWriter.write(data: data, to: path)
+  }
+
+  func copyFromBundle(file: CacheFiles) throws {
+    guard let path = bundle.path(forResource: file.rawValue, ofType: "json") else { throw CacheErrors.fileNotFound }
+    guard let data = fileManager.contents(atPath: path) else { throw CacheErrors.contentNotFound }
+    guard let destinationPath = filePath(for: file) else { throw CacheErrors.fileNotFound }
+
+    try dataWriter.write(data: data, to: destinationPath)
   }
 
   private func filePath(for file: CacheFiles) -> URL? {

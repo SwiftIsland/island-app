@@ -101,6 +101,78 @@ class CacheManagerTests: XCTestCase {
 
     XCTAssertEqual(fileManagerMock.contentsInvokeCount, 0)
   }
+
+  func test_copyFromBundle_success_shouldCopy() {
+    fileManagerMock.urlsReturnValue = [URL(fileURLWithPath: "/homedir")]
+    bundleMock.pathForResourceReturnValue = "/file.json"
+    fileManagerMock.contentsReturnValue.append(#"{"result":"value"}"#.data(using: .utf8))
+
+    try? sut.copyFromBundle(file: .mentors)
+
+    XCTAssertEqual(bundleMock.pathForResourceInvokeCount, 1)
+    XCTAssertEqual(fileManagerMock.contentsInvokeCount, 1)
+    XCTAssertEqual(fileManagerMock.urlsInvokeCount, 1)
+
+    XCTAssertEqual(dataWriterMock.writeInvokeCount, 1)
+    XCTAssertEqual(dataWriterMock.writeTo?.path, "/homedir/mentors.json")
+
+    guard let writeData = dataWriterMock.writeData else { XCTFail("Did not get data written."); return }
+    let dataString = String(data: writeData, encoding: .utf8)
+    XCTAssertEqual(dataString, "{\"result\":\"value\"}")
+  }
+
+  func test_copyFromBundle_bundleFileNotFound_shouldCopy() {
+    fileManagerMock.urlsReturnValue = [URL(fileURLWithPath: "/homedir")]
+    bundleMock.pathForResourceReturnValue = nil
+
+    do {
+      try sut.copyFromBundle(file: .mentors)
+      XCTFail("Exprected error")
+    } catch {
+      XCTAssertEqual(error as? CacheErrors, .fileNotFound)
+    }
+
+    XCTAssertEqual(bundleMock.pathForResourceInvokeCount, 1)
+    XCTAssertEqual(fileManagerMock.contentsInvokeCount, 0)
+    XCTAssertEqual(fileManagerMock.urlsInvokeCount, 0)
+    XCTAssertEqual(dataWriterMock.writeInvokeCount, 0)
+  }
+
+  func test_copyFromBundle_bundleContentsNotFound_shouldCopy() {
+    fileManagerMock.urlsReturnValue = [URL(fileURLWithPath: "/homedir")]
+    bundleMock.pathForResourceReturnValue = "/file.json"
+    fileManagerMock.contentsReturnValue.append(nil)
+
+    do {
+      try sut.copyFromBundle(file: .mentors)
+      XCTFail("Exprected error")
+    } catch {
+      XCTAssertEqual(error as? CacheErrors, .contentNotFound)
+    }
+
+    XCTAssertEqual(bundleMock.pathForResourceInvokeCount, 1)
+    XCTAssertEqual(fileManagerMock.contentsInvokeCount, 1)
+    XCTAssertEqual(fileManagerMock.urlsInvokeCount, 0)
+    XCTAssertEqual(dataWriterMock.writeInvokeCount, 0)
+  }
+
+  func test_copyFromBundle_bundleDestinationPathInvalid_shouldCopy() {
+    fileManagerMock.urlsReturnValue = []
+    bundleMock.pathForResourceReturnValue = "/file.json"
+    fileManagerMock.contentsReturnValue.append(#"{"result":"value"}"#.data(using: .utf8))
+
+    do {
+      try sut.copyFromBundle(file: .mentors)
+      XCTFail("Exprected error")
+    } catch {
+      XCTAssertEqual(error as? CacheErrors, .fileNotFound)
+    }
+
+    XCTAssertEqual(bundleMock.pathForResourceInvokeCount, 1)
+    XCTAssertEqual(fileManagerMock.contentsInvokeCount, 1)
+    XCTAssertEqual(fileManagerMock.urlsInvokeCount, 1)
+    XCTAssertEqual(dataWriterMock.writeInvokeCount, 0)
+  }
 }
 
 public struct DummyCodable: Codable { }

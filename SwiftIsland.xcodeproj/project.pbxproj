@@ -17,6 +17,7 @@
 		2A0C8FD7226D1C97003F8937 /* ScheduleHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */; };
 		2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */; };
 		2A0C8FDE226DE030003F8937 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A0C8FDD226DE030003F8937 /* Theme.xcassets */; };
+		2A41CEC122C23B900001DA4F /* mentors.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A41CEC022C23B900001DA4F /* mentors.json */; };
 		2A5BE94B22BA8B270062D868 /* MentorCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BE94A22BA8B270062D868 /* MentorCollectionView.swift */; };
 		2A5BE94D22BA8B890062D868 /* MentorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BE94C22BA8B890062D868 /* MentorCollectionViewCell.swift */; };
 		2A8863D122BBF06000B4CE86 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8863D022BBF06000B4CE86 /* Reachability.swift */; };
@@ -84,6 +85,7 @@
 		2A0C8FD6226D1C97003F8937 /* ScheduleHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleHeaderCell.swift; sourceTree = "<group>"; };
 		2A0C8FDA226DD9C4003F8937 /* ScheduleFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFooterCell.swift; sourceTree = "<group>"; };
 		2A0C8FDD226DE030003F8937 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		2A41CEC022C23B900001DA4F /* mentors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mentors.json; sourceTree = "<group>"; };
 		2A5BE94A22BA8B270062D868 /* MentorCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCollectionView.swift; sourceTree = "<group>"; };
 		2A5BE94C22BA8B890062D868 /* MentorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCollectionViewCell.swift; sourceTree = "<group>"; };
 		2A8863D022BBF06000B4CE86 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				2ABEC0AB22B9925400C0C8A5 /* Fonts */,
 				2AD36FE7225E830A00AF7542 /* Assets.xcassets */,
 				2A0C8FDD226DE030003F8937 /* Theme.xcassets */,
+				2A41CEC022C23B900001DA4F /* mentors.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				2ABEC0BC22B9925400C0C8A5 /* WorkSans-SemiBold.ttf in Resources */,
 				2A0C8FDE226DE030003F8937 /* Theme.xcassets in Resources */,
 				2AD36FE6225E830800AF7542 /* Main.storyboard in Resources */,
+				2A41CEC122C23B900001DA4F /* mentors.json in Resources */,
 				2ABEC0BE22B9925400C0C8A5 /* WorkSans-Thin.ttf in Resources */,
 				2ABEC0BB22B9925400C0C8A5 /* WorkSans-Medium.ttf in Resources */,
 				2ABEC0B722B9925400C0C8A5 /* WorkSans-Regular.ttf in Resources */,
