@@ -17,7 +17,7 @@ class ScheduleCell: UITableViewCell {
   @IBOutlet weak var timeLabel: UILabel?
 
   lazy var dateFormatter: DateFormatter = {
-    let dateFormatter = DateFormatter.init()
+    let dateFormatter = DateFormatter.dutchTimezone()
     dateFormatter.timeStyle = .short
     dateFormatter.dateStyle = .none
     return dateFormatter
