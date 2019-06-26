@@ -20,6 +20,7 @@
 		2A41CEC122C23B900001DA4F /* mentors.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A41CEC022C23B900001DA4F /* mentors.json */; };
 		2A5BE94B22BA8B270062D868 /* MentorCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BE94A22BA8B270062D868 /* MentorCollectionView.swift */; };
 		2A5BE94D22BA8B890062D868 /* MentorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5BE94C22BA8B890062D868 /* MentorCollectionViewCell.swift */; };
+		2A7BD1B822C418CB0081DCC1 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BD1B722C418CB0081DCC1 /* JSONHelper.swift */; };
 		2A8863D122BBF06000B4CE86 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8863D022BBF06000B4CE86 /* Reachability.swift */; };
 		2A8F7CDD229D1C5A00874B09 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CDC229D1C5A00874B09 /* Mentor.swift */; };
 		2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */; };
@@ -89,6 +90,7 @@
 		2A41CEC022C23B900001DA4F /* mentors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mentors.json; sourceTree = "<group>"; };
 		2A5BE94A22BA8B270062D868 /* MentorCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCollectionView.swift; sourceTree = "<group>"; };
 		2A5BE94C22BA8B890062D868 /* MentorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorCollectionViewCell.swift; sourceTree = "<group>"; };
+		2A7BD1B722C418CB0081DCC1 /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		2A8863D022BBF06000B4CE86 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2A8F7CDC229D1C5A00874B09 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				2A8F7CE4229D3D1D00874B09 /* CardViewController.swift */,
 				2A96CAFC22AAB49E004CED66 /* Theme.swift */,
+				2A7BD1B722C418CB0081DCC1 /* JSONHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				2AD36FE1225E830800AF7542 /* AppDelegate.swift in Sources */,
 				2A0C8FC5226BA218003F8937 /* CacheManager.swift in Sources */,
 				2A8F7CDD229D1C5A00874B09 /* Mentor.swift in Sources */,
+				2A7BD1B822C418CB0081DCC1 /* JSONHelper.swift in Sources */,
 				2A5BE94D22BA8B890062D868 /* MentorCollectionViewCell.swift in Sources */,
 				2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */,
 				2A0C8FD3226D1667003F8937 /* UIViewExtensions.swift in Sources */,

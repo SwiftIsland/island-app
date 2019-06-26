@@ -30,11 +30,6 @@ final class CacheManager: CacheManaging {
   private let fileManager: FileManaging
   private let bundle: Bundle
   private let dataWriter: DataWriting
-  private lazy var dateFormatter: DateFormatter = {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-    return dateFormatter
-  }()
 
   init(fileManager: FileManaging = FileManager.default, bundle: Bundle = Bundle.main, dataWriter: DataWriting = DataWriter()) {
     self.fileManager = fileManager
@@ -49,7 +44,7 @@ final class CacheManager: CacheManaging {
     guard let data = fileManager.contents(atPath: path.path) else { throw CacheErrors.contentNotFound }
 
     let decoder = JSONDecoder()
-    decoder.dateDecodingStrategy = .formatted(dateFormatter)
+    decoder.dutchDecodingStrategy()
 
     return try decoder.decode(T.self, from: data)
   }
@@ -58,7 +53,7 @@ final class CacheManager: CacheManaging {
     guard let path = filePath(for: file) else { throw CacheErrors.fileNotFound }
 
     let encoder = JSONEncoder()
-    encoder.dateEncodingStrategy = .formatted(dateFormatter)
+    encoder.dutchEncodingStrategy()
 
     let data = try encoder.encode(data)
     try dataWriter.write(data: data, to: path)

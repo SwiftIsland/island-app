@@ -64,9 +64,7 @@ final class APIManager: APIManaging {
       }
 
       let decoder = JSONDecoder()
-      let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-      decoder.dateDecodingStrategy = .formatted(dateFormatter)
+      decoder.dutchDecodingStrategy()
 
       do {
         let decoded = try decoder.decode(T.self, from: data)
