@@ -15,6 +15,12 @@ class TimelineViewController: CardViewController {
   private var activities: [[Schedule.Activity]] = []
   private let networkRechability: NetworkReachability = NetworkReachability()
   private let userDefaults: UserDefaults = UserDefaults.standard
+  private var indexPathOfActiveItem: IndexPath? {
+    didSet {
+      guard let indexPath = indexPathOfActiveItem else { return }
+      tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+    }
+  }
 
   @IBOutlet weak var tableView: UITableView! {
     didSet {
@@ -93,6 +99,7 @@ class TimelineViewController: CardViewController {
         self.activities = activities
         self.schedule = schedule
         self.tableView.reloadData()
+        self.setCurrentActiveItem()
       case .failure(let error):
         self.countdownContainer.isHidden = false
         if case .notYetAvailable = error {
@@ -110,9 +117,42 @@ private extension TimelineViewController {
   func showActivity(activity: Schedule.Activity) {
     debugPrint("Show activity \(activity)")
   }
+
+  func findCurrentActiveItem() -> Schedule.Activity? {
+    let currentDate = Date() // Date(timeIntervalSince1970: 1562172780) // For testing purposes
+    let allActivities = activities.reduce([], +).sorted { $0.datefrom > $1.datefrom }
+    return allActivities.first { currentDate.compare($0.datefrom) == .orderedDescending || currentDate.compare($0.datefrom) == .orderedSame }
+  }
+
+  func setCurrentActiveItem() {
+    let currentItem = findCurrentActiveItem()
+
+    var section = 0
+    var indexPath: IndexPath?
+    for activityDay in activities {
+      if let index = activityDay.firstIndex(where: { $0 == currentItem}) {
+        indexPath = IndexPath(row: index, section: section)
+        continue
+      }
+      section += 1
+    }
+
+    indexPathOfActiveItem = indexPath
+  }
+
+  func shouldFade(cellIndexPath: IndexPath) -> Bool {
+    guard let currentItem = indexPathOfActiveItem else { return false }
+
+    if cellIndexPath.section == currentItem.section {
+      return cellIndexPath.row < currentItem.row
+    } else {
+      return cellIndexPath.section < currentItem.section
+    }
+  }
 }
 
 extension TimelineViewController: UITableViewDelegate {
+
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let activity = activities[indexPath.section][indexPath.row]
     showActivity(activity: activity)
@@ -127,7 +167,6 @@ extension TimelineViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return activities[section].count
-//    return schedule[section].activities.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -148,19 +187,21 @@ extension TimelineViewController: UITableViewDataSource {
       activityCell = cell
     }
 
-    activityCell.setup(with: activity)
+    activityCell.setup(with: activity, faded: shouldFade(cellIndexPath: indexPath))
     return activityCell
   }
 
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleHeaderCell") as? ScheduleHeaderCell else { return nil }
     let day = schedule[section]
-    cell.setup(with: day)
+    cell.setup(with: day, faded: shouldFade(cellIndexPath: IndexPath(row: 0, section: section)))
     return cell
   }
 
   func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-    return tableView.dequeueReusableCell(withIdentifier: "ScheduleFooterCell")
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleFooterCell") as? ScheduleFooterCell else { return nil }
+    cell.setup(faded: shouldFade(cellIndexPath: IndexPath(row: activities[section].count-1, section: section)))
+    return cell
   }
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

@@ -33,9 +33,14 @@ extension Theme {
 
     return instanceColor
   }
+
+  static var fadedAlpha: CGFloat {
+    return 0.4
+  }
 }
 
 extension UIColor {
+
   static func themeColor(_ theme: Theme) -> UIColor {
     return theme.color
   }

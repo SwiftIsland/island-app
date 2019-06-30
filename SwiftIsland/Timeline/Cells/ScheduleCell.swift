@@ -36,11 +36,12 @@ class ScheduleCell: UITableViewCell {
     timeLabel?.text = ""
   }
 
-  func setup(with activity: Schedule.Activity) {
+  func setup(with activity: Schedule.Activity, faded: Bool) {
     titleLabel.text = activity.title
     descriptionLabel.text = activity.description
     timeLabel?.text = dateFormatter.string(from: activity.datefrom)
     locationLabel.text = activity.area
     locationPill?.isHidden = activity.area == nil
+    contentView.alpha = faded ? Theme.fadedAlpha : 1
   }
 }

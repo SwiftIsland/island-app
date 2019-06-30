@@ -11,6 +11,7 @@ import UIKit
 class ScheduleHeaderCell: UITableViewCell {
 
   @IBOutlet weak var dateLabel: UILabel!
+  @IBOutlet weak var timelineLine: UIView!
 
   lazy var dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter.init()
@@ -24,7 +25,8 @@ class ScheduleHeaderCell: UITableViewCell {
     dateLabel.text = ""
   }
 
-  func setup(with schedule: Schedule) {
+  func setup(with schedule: Schedule, faded: Bool) {
     dateLabel.text = dateFormatter.string(from: schedule.date)
+    timelineLine.alpha = faded ? Theme.fadedAlpha : 1
   }
 }
