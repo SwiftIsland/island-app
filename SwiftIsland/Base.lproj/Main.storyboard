@@ -219,6 +219,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="dUU-rU-VLJ" id="Trl-po-Tq4"/>
+                                            <outlet property="timelineLine" destination="JNT-6I-q3s" id="iSF-aP-V3A"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ScheduleCell" rowHeight="110" id="2PV-QY-5j5" customClass="ScheduleCell" customModule="SwiftIsland" customModuleProvider="target">
@@ -484,14 +485,14 @@
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QK7-HC-SRi">
                                                             <rect key="frame" x="40.5" y="0.0" width="4" height="16"/>
-                                                            <color key="backgroundColor" red="0.95156532530000004" green="0.80978477000000004" blue="0.2782255709" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="backgroundColor" name="yellow"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="4" id="jc0-qS-Tku"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNs-hY-8xc">
                                                             <rect key="frame" x="38.5" y="16" width="8" height="8"/>
-                                                            <color key="backgroundColor" red="0.95156532530000004" green="0.80978477000000004" blue="0.2782255709" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="backgroundColor" name="yellow"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="zNs-hY-8xc" secondAttribute="height" multiplier="1:1" id="FoX-5F-w73"/>
                                                                 <constraint firstAttribute="width" constant="8" id="Fx7-Xs-h5z"/>
@@ -518,6 +519,9 @@
                                                 <constraint firstItem="emX-h4-phK" firstAttribute="top" secondItem="2SZ-Ea-Hi7" secondAttribute="top" id="QpN-d5-oBH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="timelineLine" destination="emX-h4-phK" id="62R-hr-Oc9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -698,6 +702,9 @@
         </namedColor>
         <namedColor name="textDefault">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow">
+            <color red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

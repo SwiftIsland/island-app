@@ -14,7 +14,7 @@ struct Schedule: Codable {
   let title: String
   let activities: [Activity]
 
-  struct Activity: Codable {
+  struct Activity: Codable, Equatable {
     let id: String
     let title: String
     let description: String
