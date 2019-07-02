@@ -33,7 +33,7 @@ class DataManagerTests: XCTestCase {
   // MARK: getSchedule
 
   func test_getSchedule_successNoScheduleYet_shouldSuccessEmpty() {
-    cacheManagerMock.getReturnValue = [Schedule]()
+    cacheManagerMock.getError = DataManagerTestsError.dummyError
     apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 404)
     let expectation = XCTestExpectation(description: "")
 

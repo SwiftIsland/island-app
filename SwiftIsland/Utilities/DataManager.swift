@@ -47,16 +47,18 @@ extension DataManager: DataManaging {
       case .success(let schedule):
         try? self.cacheManager.set(to: .schedule, data: schedule)
         completion(.success(schedule))
-      case .failure(let error):
-        if let networkError = error as? APIManagerError,
-          case .apiReponseUnhandledStatusCode(let statusCode) = networkError,
-          statusCode == 404 {
-          completion(.failure(.notYetAvailable))
-        } else {
-          do {
-            let schedule: [Schedule] = try self.cacheManager.get(from: .schedule)
-            completion(.success(schedule))
-          } catch {
+      case .failure(let fetchError):
+        // If the fetch failed, first check the cache. If that fails too, then check the
+        // error. Otherwise disregard the error and show the cached result instead.
+        do {
+          let schedule: [Schedule] = try self.cacheManager.get(from: .schedule)
+          completion(.success(schedule))
+        } catch {
+          if let networkError = fetchError as? APIManagerError,
+            case .apiReponseUnhandledStatusCode(let statusCode) = networkError,
+            statusCode == 404 {
+            completion(.failure(.notYetAvailable))
+          } else {
             completion(.failure(.noData))
           }
         }
