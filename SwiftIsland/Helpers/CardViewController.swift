@@ -16,7 +16,11 @@ class CardViewController: UIViewController {
   }
 
   var visualEffectView: UIVisualEffectView?
-  let cardHeight: CGFloat = 600
+  let cardHeight: CGFloat = {
+    let defaultHeight: CGFloat = 600
+    let maxHeight = UIScreen.main.bounds.height * 0.85 // Just to add some spacing to the top, always.
+    return min(defaultHeight, maxHeight)
+  }()
   let defaultDuration = 0.6
   var cardVisible = false
   var nextState: CardState {
