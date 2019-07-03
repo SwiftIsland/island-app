@@ -56,14 +56,19 @@ class CardViewController: UIViewController {
   }
 
   private func setupGestures() {
-    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleCardTap(recognzier:)))
-    tapGestureRecognizer.cancelsTouchesInView = false
     let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleCardPan(recognizer:)))
     panGestureRecognizer.cancelsTouchesInView = false
-
-    cardContent?.handleAreaView.addGestureRecognizer(tapGestureRecognizer)
-    visualEffectView?.addGestureRecognizer(tapGestureRecognizer)
     cardContent?.handleAreaView.addGestureRecognizer(panGestureRecognizer)
+
+    func tapGestureRecognizer() -> UITapGestureRecognizer {
+      let result = UITapGestureRecognizer(target: self, action: #selector(handleCardTap(recognzier:)))
+      result.cancelsTouchesInView = false
+      return result
+    }
+
+    visualEffectView?.addGestureRecognizer(tapGestureRecognizer())
+    cardContent?.handleAreaView.addGestureRecognizer(tapGestureRecognizer())
+    cardContent?.containerView.addGestureRecognizer(tapGestureRecognizer())
   }
 
   @objc
