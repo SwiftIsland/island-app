@@ -18,9 +18,18 @@ class MentorCardViewController: UIViewController {
   @IBOutlet weak var descriptionLabel: UILabel!
   @IBOutlet weak var socialTwitter: UIButton!
   @IBOutlet weak var socialWeb: UIButton!
-
+  @IBOutlet weak var dragHandleImageSpacer: NSLayoutConstraint!
+  
   private var mentor: Mentor?
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Only enable the spacer on small screens.
+    if UIScreen.main.bounds.width > 320.0 {
+      dragHandleImageSpacer.isActive = false
+    }
+  }
+  
   func setup(withMentor mentor: Mentor) {
     self.mentor = mentor
     titleLabel.text = mentor.name
