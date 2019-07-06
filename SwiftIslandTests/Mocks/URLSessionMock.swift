@@ -2,7 +2,7 @@
 //  URLSessionMock.swift
 //  ICATests
 //
-//  Copyright © 2018 ICA Gruppen. All rights reserved.
+//  Copyright © 2019 Paul Peelen. All rights reserved.
 //
 
 import Foundation
