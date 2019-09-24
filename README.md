@@ -15,7 +15,7 @@ This is a simple app made for the event Swift Island, which takes place in July 
 
 The purpose of the app is to show a simple schedule of the two day event, give more information about the workshops and their mentors present at the event, as well as make it easier for attendees to find their bungalow.
 
-The app is made by [Paul Peelen](https://github.com/ppeelen). The source code is available under MIT license. Please contribute!
+The app is made by [Paul Peelen](https://github.com/ppeelen). The source code is available under MIT license. Please [contribute](CONTRIBUTING.md)!
 
 ## Requirements
 In order to get the best result, and not to get rejections on pull requests, please install [Swiftlint](https://www.github.com/realm/SwiftLint) and follow the set rules.
