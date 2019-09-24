@@ -24,3 +24,7 @@ In order to get the best result, and not to get rejections on pull requests, ple
 The app uses an api where it fetches data from. The source for the API can be found here:
 https://github.com/ppeelen/swiftislandapi.
 The API is written in Swift and uses Vapor. For more information, please check the link above.
+
+## Hacktoberfest 2019
+Did you find us via Hacktoberfest 2019? Great to have you here :wave:
+Please read our [contributing guidlines](CONTRIBUTING.md) or start by picking an issue labeled '[hacktoberfest](https://github.com/SwiftIsland/island-app/issues?q=is%3Aopen+is%3Aissue+label%3Ahacktoberfest)'
