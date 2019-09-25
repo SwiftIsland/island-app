@@ -22,7 +22,7 @@ In order to get the best result, and not to get rejections on pull requests, ple
 
 ## API
 The app uses an api where it fetches data from. The source for the API can be found here:
-https://github.com/ppeelen/swiftislandapi.
+https://github.com/SwiftIsland/SwiftIslandAPI.
 The API is written in Swift and uses Vapor. For more information, please check the link above.
 
 ## Hacktoberfest 2019
