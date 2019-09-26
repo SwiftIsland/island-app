@@ -30,14 +30,21 @@ final class MapPolygon: MKPolygonRenderer {
 
     let paragraphStyle = NSMutableParagraphStyle()
     paragraphStyle.alignment = .center
+    let text = "\(area.name)"
+    let font = UIFont.systemFont(ofSize: 50.0)
     let attributes = [NSAttributedString.Key.paragraphStyle: paragraphStyle,
-                      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 50.0),
+                      NSAttributedString.Key.font: font,
                       NSAttributedString.Key.foregroundColor: UIColor.themeColor(.redDark)]
-    let polyRect = self.rect(for: polygon.boundingMapRect)
+    let fontSize = text.size(withAttributes: attributes)
+    let polyRect = CGRect(x: 0,
+                          y: (polygon.boundingMapRect.size.height - Double(fontSize.height)) / 2,
+                          width: polygon.boundingMapRect.size.width,
+                          height: Double(fontSize.height))
 
     UIGraphicsPushContext(context)
-    "\(area.name)".draw(in: polyRect, withAttributes: attributes)
+    text.draw(in: polyRect, withAttributes: attributes)
     UIGraphicsPopContext()
+
   }
 }
 
