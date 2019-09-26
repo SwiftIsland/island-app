@@ -92,3 +92,5 @@ struct Area: Codable {
     self.locationCoordinate2D = locationCoordinate2d
   }
 }
+
+extension Area: Listable {}

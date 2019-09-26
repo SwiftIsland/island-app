@@ -52,7 +52,7 @@ private extension MapViewController {
   func getAreas() {
     loadingSpinner.isHidden = false
     loadingSpinner.startAnimating()
-    dataManager.getArea { result in
+    dataManager.get(ofType: .area) { (result: Result<[Area], DataErrors>) -> Void in
       self.loadingSpinner.stopAnimating()
       switch result {
       case .success(let areas):
