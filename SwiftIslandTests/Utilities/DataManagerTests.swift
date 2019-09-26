@@ -119,7 +119,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 1337)
     let expectation = XCTestExpectation(description: "")
 
-    sut.getArea { result in
+		sut.get(ofType: .area) { (result: Result<[Area], DataErrors>) -> Void in
       if case .success(let value) = result {
         XCTAssertEqual(value.count, 0)
       } else {
@@ -136,7 +136,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerResult = [Area(withName: "test")]
     let expectation = XCTestExpectation(description: "")
 
-    sut.getArea { result in
+    sut.get(ofType: .area) { (result: Result<[Area], DataErrors>) -> Void in
       if case .success(let value) = result {
         XCTAssertEqual(value.count, 1)
         XCTAssertEqual(value.first?.name, "test")
@@ -155,7 +155,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 1337)
     let expectation = XCTestExpectation(description: "")
 
-    sut.getArea { result in
+    sut.get(ofType: .area) { (result: Result<[Area], DataErrors>) -> Void in
       if case .failure(let error) = result {
         XCTAssertEqual(error, DataErrors.noData)
       } else {
@@ -174,7 +174,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 1337)
     let expectation = XCTestExpectation(description: "")
 
-    sut.getMentors { result in
+    sut.get(ofType: .mentor) { (result: Result<[Mentor], DataErrors>) -> Void in
       if case .success(let value) = result {
         XCTAssertEqual(value.count, 0)
       } else {
@@ -191,7 +191,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerResult = [Mentor(id: 0, name: "Test", image: "img", bio: "bio", twitter: nil, web: nil, country: nil)]
     let expectation = XCTestExpectation(description: "")
 
-    sut.getMentors { result in
+    sut.get(ofType: .mentor) { (result: Result<[Mentor], DataErrors>) -> Void in
       if case .success(let value) = result {
         XCTAssertEqual(value.count, 1)
         XCTAssertEqual(value.first?.name, "Test")
@@ -210,7 +210,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 1337)
     let expectation = XCTestExpectation(description: "")
 
-    sut.getMentors { result in
+    sut.get(ofType: .mentor) { (result: Result<[Mentor], DataErrors>) -> Void in
       if case .failure(let error) = result {
         XCTAssertEqual(error, DataErrors.noData)
       } else {
