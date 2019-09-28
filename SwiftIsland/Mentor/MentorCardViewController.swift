@@ -19,7 +19,8 @@ class MentorCardViewController: UIViewController {
   @IBOutlet weak var socialTwitter: UIButton!
   @IBOutlet weak var socialWeb: UIButton!
   @IBOutlet weak var dragHandleImageSpacer: NSLayoutConstraint!
-  
+  @IBOutlet weak var twitterWidthConstraint: NSLayoutConstraint!
+
   private var mentor: Mentor?
 
   override func viewDidLoad() {
@@ -29,7 +30,15 @@ class MentorCardViewController: UIViewController {
       dragHandleImageSpacer.isActive = false
     }
   }
-  
+
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
+
+      let adjustedWidth = UIFontMetrics(forTextStyle: .body).scaledValue(for: 36.0)
+      twitterWidthConstraint.constant = adjustedWidth
+    }
+  }
+
   func setup(withMentor mentor: Mentor) {
     self.mentor = mentor
     titleLabel.text = mentor.name
