@@ -21,7 +21,7 @@ class MentorManager {
   }
 
   func fetchMentors() {
-    dataManager.getMentors { result in
+    dataManager.get(ofType: .mentor) { (result: Result<[Mentor], DataErrors>) -> Void in
       switch result {
       case .success(let mentors):
         self.mentors = mentors
