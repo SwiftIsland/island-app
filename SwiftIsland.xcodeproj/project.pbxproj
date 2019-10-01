@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239DCB9B2343763D00F0CD95 /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DCB9A2343763D00F0CD95 /* UIViewExtensionsTests.swift */; };
 		2A0C8FBE226B9F6A003F8937 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FBD226B9F6A003F8937 /* Schedule.swift */; };
 		2A0C8FC1226BA17B003F8937 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FC0226BA17B003F8937 /* DataManager.swift */; };
 		2A0C8FC3226BA210003F8937 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FC2226BA210003F8937 /* APIManager.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		239DCB9A2343763D00F0CD95 /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		2A0C8FBD226B9F6A003F8937 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		2A0C8FC0226BA17B003F8937 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		2A0C8FC2226BA210003F8937 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		239DCB992343762100F0CD95 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				239DCB9A2343763D00F0CD95 /* UIViewExtensionsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2A0C8FBC226B9F5D003F8937 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +271,7 @@
 		2ABBDD8B226FA26C00D4212C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				239DCB992343762100F0CD95 /* Extensions */,
 				2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */,
 				2ADD085822ADA58000A90D1E /* CacheManagerTests.swift */,
 				2AA81FD922B6E708001F3A58 /* APIManagerTests.swift */,
@@ -524,6 +535,7 @@
 				2AA81FDA22B6E708001F3A58 /* APIManagerTests.swift in Sources */,
 				2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */,
 				2AA81FDE22B83850001F3A58 /* APIManagerMock.swift in Sources */,
+				239DCB9B2343763D00F0CD95 /* UIViewExtensionsTests.swift in Sources */,
 				2AA81FDC22B6E74D001F3A58 /* URLSessionMock.swift in Sources */,
 				2ADD086322ADADBF00A90D1E /* ThemeTests.swift in Sources */,
 				2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */,
