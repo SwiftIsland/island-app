@@ -55,7 +55,7 @@ class MentorCollectionView: CardViewController {
 
   private func fetchMentors() {
     loadingSpinner.startAnimating()
-    dataManager.getMentors { result in
+    dataManager.get(ofType: .mentor) { (result: Result<[Mentor], DataErrors>) -> Void in
       self.loadingSpinner.stopAnimating()
       switch result {
       case .success(let mentors):

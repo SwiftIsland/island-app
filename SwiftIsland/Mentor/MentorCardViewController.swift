@@ -19,7 +19,7 @@ class MentorCardViewController: UIViewController {
   @IBOutlet weak var socialTwitter: UIButton!
   @IBOutlet weak var socialWeb: UIButton!
   @IBOutlet weak var dragHandleImageSpacer: NSLayoutConstraint!
-  
+
   private var mentor: Mentor?
 
   override func viewDidLoad() {
@@ -29,7 +29,7 @@ class MentorCardViewController: UIViewController {
       dragHandleImageSpacer.isActive = false
     }
   }
-  
+
   func setup(withMentor mentor: Mentor) {
     self.mentor = mentor
     titleLabel.text = mentor.name

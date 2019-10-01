@@ -17,3 +17,5 @@ struct Mentor: Codable {
   let web: URL?
   let country: String?
 }
+
+extension Mentor: Listable {}

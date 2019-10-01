@@ -8,10 +8,32 @@
 
 import Foundation
 
+protocol Listable: Codable {}
+enum ListableType {
+  case mentor, area
+
+  var endpoint: APIManager.Endpoint {
+    switch self {
+    case .mentor:
+      return .mentors
+    case .area:
+      return .area
+    }
+  }
+
+  var cacheFiles: CacheFiles {
+    switch self {
+    case .mentor:
+      return .mentors
+    case .area:
+      return .area
+    }
+  }
+}
+
 protocol DataManaging {
   func getSchedule(completion: @escaping (Result<[Schedule], DataErrors>) -> Void)
-  func getArea(completion: @escaping (Result<[Area], DataErrors>) -> Void)
-  func getMentors(completion: @escaping (Result<[Mentor], DataErrors>) -> Void)
+  func get<T: Listable>(ofType type: ListableType, completion: @escaping (Result<[T], DataErrors>) -> Void)
 }
 
 enum DataErrors: Error {
@@ -66,35 +88,16 @@ extension DataManager: DataManaging {
     }
   }
 
-  func getArea(completion: @escaping (Result<[Area], DataErrors>) -> Void) {
-
-    _ = apiManager.get(endpoint: .area) { (result: Result<[Area], Error>) in
+  func get<T: Listable>(ofType type: ListableType, completion: @escaping (Result<[T], DataErrors>) -> Void) {
+    _ = apiManager.get(endpoint: type.endpoint) { (result: Result<[T], Error>) in
       switch result {
-      case .success(let locations):
-        try? self.cacheManager.set(to: .area, data: locations)
-        completion(.success(locations))
+      case .success(let objects):
+        try? self.cacheManager.set(to: type.cacheFiles, data: objects)
+        completion(.success(objects))
       case .failure:
         do {
-          let area: [Area] = try self.cacheManager.get(from: .area)
-          completion(.success(area))
-        } catch {
-          completion(.failure(.noData))
-        }
-      }
-    }
-  }
-
-  func getMentors(completion: @escaping (Result<[Mentor], DataErrors>) -> Void) {
-
-    _ = apiManager.get(endpoint: .mentors) { (result: Result<[Mentor], Error>) in
-      switch result {
-      case .success(let mentors):
-        try? self.cacheManager.set(to: .mentors, data: mentors)
-        completion(.success(mentors))
-      case .failure:
-        do {
-          let mentors: [Mentor] = try self.cacheManager.get(from: .mentors)
-          completion(.success(mentors))
+          let objects: [T] = try self.cacheManager.get(from: type.cacheFiles)
+          completion(.success(objects))
         } catch {
           completion(.failure(.noData))
         }
