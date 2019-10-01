@@ -15,18 +15,18 @@ enum ListableType {
   var endpoint: APIManager.Endpoint {
     switch self {
     case .mentor:
-      return APIManager.Endpoint.mentors
+      return .mentors
     case .area:
-      return APIManager.Endpoint.area
+      return .area
     }
   }
 
   var cacheFiles: CacheFiles {
     switch self {
     case .mentor:
-      return CacheFiles.mentors
+      return .mentors
     case .area:
-      return CacheFiles.area
+      return .area
     }
   }
 }

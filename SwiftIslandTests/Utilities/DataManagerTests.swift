@@ -119,7 +119,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 1337)
     let expectation = XCTestExpectation(description: "")
 
-		sut.get(ofType: .area) { (result: Result<[Area], DataErrors>) -> Void in
+    sut.get(ofType: .area) { (result: Result<[Area], DataErrors>) -> Void in
       if case .success(let value) = result {
         XCTAssertEqual(value.count, 0)
       } else {
