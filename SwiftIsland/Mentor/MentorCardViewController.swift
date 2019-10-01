@@ -10,6 +10,7 @@ import UIKit
 
 class MentorCardViewController: UIViewController {
 
+  @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var handleAreaView: UIView!
   @IBOutlet weak var mentorImageView: UIView!
@@ -41,6 +42,9 @@ class MentorCardViewController: UIViewController {
 
   func setup(withMentor mentor: Mentor) {
     self.mentor = mentor
+
+    scrollView.setContentOffset(.zero, animated: false)
+
     titleLabel.text = mentor.name
     descriptionLabel.text = mentor.bio
 
