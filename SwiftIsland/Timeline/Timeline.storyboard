@@ -478,7 +478,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kR5-5C-CVm">
-                                <rect key="frame" x="25" y="94.5" width="270" height="279.5"/>
+                                <rect key="frame" x="25" y="94" width="270" height="280"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ovu-aC-fJg">
                                         <rect key="frame" x="65" y="0.0" width="140" height="140"/>
@@ -488,7 +488,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUF-J4-16q">
-                                        <rect key="frame" x="0.0" y="165" width="270" height="114.5"/>
+                                        <rect key="frame" x="0.0" y="165" width="270" height="115"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="QwL-7N-d4o">
                                                 <rect key="frame" x="121" y="8" width="28" height="28"/>
@@ -499,13 +499,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule will be available soon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3E-fe-YRj">
-                                                <rect key="frame" x="15" y="42" width="240" height="51.5"/>
+                                                <rect key="frame" x="15" y="42" width="240" height="52"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans Medium" pointSize="22"/>
                                                 <color key="textColor" name="textBody"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at 9am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huz-fP-c06">
-                                                <rect key="frame" x="0.0" y="93.5" width="270" height="21"/>
+                                                <rect key="frame" x="0.0" y="94" width="270" height="21"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="18"/>
                                                 <color key="textColor" name="textBody"/>
                                                 <nil key="highlightedColor"/>
@@ -573,7 +573,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="720"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lHB-zn-jsN">
-                                        <rect key="frame" x="16" y="52" width="288" height="511"/>
+                                        <rect key="frame" x="16" y="52" width="288" height="573"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A cool workshop title, which is pretty long." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuD-W7-ucw">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="63.5"/>
@@ -581,8 +581,47 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="hia-G2-N2R" userLabel="Tag Wrapper" customClass="WorkshopTagView" customModule="SwiftIsland" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="75.5" width="288" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y2O-Nx-cT3" customClass="DesignableView" customModule="SwiftIsland" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6J-M6-V4z">
+                                                                <rect key="frame" x="16" y="4" width="39.5" height="42"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                                <color key="textColor" name="tagFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="tag"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="w6J-M6-V4z" secondAttribute="trailing" constant="16" id="HAl-oQ-5Lo"/>
+                                                            <constraint firstItem="w6J-M6-V4z" firstAttribute="top" secondItem="Y2O-Nx-cT3" secondAttribute="top" constant="4" id="kK9-w4-MQK"/>
+                                                            <constraint firstItem="w6J-M6-V4z" firstAttribute="leading" secondItem="Y2O-Nx-cT3" secondAttribute="leading" constant="16" id="nqI-Fy-ir4"/>
+                                                            <constraint firstAttribute="bottom" secondItem="w6J-M6-V4z" secondAttribute="bottom" constant="4" id="vnc-dD-htT"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="NO"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Y2O-Nx-cT3" secondAttribute="trailing" id="Ivz-4f-WsI"/>
+                                                    <constraint firstItem="Y2O-Nx-cT3" firstAttribute="leading" secondItem="hia-G2-N2R" secondAttribute="leading" id="Jym-iU-HvT"/>
+                                                    <constraint firstItem="Y2O-Nx-cT3" firstAttribute="top" secondItem="hia-G2-N2R" secondAttribute="top" id="KWX-O4-Kfy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Y2O-Nx-cT3" secondAttribute="bottom" id="qcG-D3-0Cz"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="tagLabel" destination="w6J-M6-V4z" id="yFL-iJ-4tY"/>
+                                                </connections>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsr-CB-Bx5" userLabel="Mentor Wrapper" customClass="WorkshopMentorView" customModule="SwiftIsland" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="75.5" width="288" height="246"/>
+                                                <rect key="frame" x="0.0" y="137.5" width="288" height="246"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="r54-hh-bFd">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="246"/>
@@ -630,7 +669,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TL-Zz-nt7" userLabel="Description Wrapper" customClass="WorkshopDescriptionView" customModule="SwiftIsland" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="333.5" width="288" height="177.5"/>
+                                                <rect key="frame" x="0.0" y="395.5" width="288" height="177.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S3P-ZZ-mDs">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="177.5"/>
@@ -693,6 +732,7 @@
                     <connections>
                         <outlet property="descriptionView" destination="1TL-Zz-nt7" id="qYb-th-im6"/>
                         <outlet property="mentorView" destination="xsr-CB-Bx5" id="gU9-ua-CB6"/>
+                        <outlet property="tagView" destination="hia-G2-N2R" id="HIz-n8-Yly"/>
                         <outlet property="titleLabel" destination="IuD-W7-ucw" id="s2i-IM-hgb"/>
                     </connections>
                 </viewController>

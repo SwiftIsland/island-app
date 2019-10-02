@@ -4,9 +4,10 @@ class WorkshopDetailsViewController: UIViewController {
 
   static var StoryboardIdentifier: String = "WorkshopDetailsViewController"
 
-  @IBOutlet var titleLabel: UILabel!
-  @IBOutlet fileprivate var mentorView: WorkshopMentorView!
-  @IBOutlet fileprivate var descriptionView: WorkshopDescriptionView!
+  @IBOutlet private var titleLabel: UILabel!
+  @IBOutlet private var tagView: WorkshopTagView!
+  @IBOutlet private var mentorView: WorkshopMentorView!
+  @IBOutlet private var descriptionView: WorkshopDescriptionView!
 
   var activity: Schedule.Activity? {
     didSet {
@@ -25,6 +26,14 @@ class WorkshopDetailsViewController: UIViewController {
     }
     titleLabel.text = activity.title
 
+    if let area = activity.area,
+      area.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false {
+      tagView.isHidden = false
+      tagView.text = area
+    } else {
+      tagView.isHidden = true
+    }
+
     let mentors = MentorManager.shared.mentors
     if let mentorId = activity.mentor,
       let mentor = mentors.first(where: { $0.id == mentorId }) {
@@ -42,6 +51,16 @@ class WorkshopDetailsViewController: UIViewController {
     }
 
     navigationItem.title = DateFormatter.dutchShortTime.string(from: activity.datefrom)
+  }
+}
+
+class WorkshopTagView: UIView {
+  @IBOutlet var tagLabel: UILabel!
+
+  var text: String? {
+    didSet {
+      tagLabel.text = text
+    }
   }
 }
 
