@@ -28,27 +28,41 @@ final class MapPolygon: MKPolygonRenderer {
   override func draw(_ mapRect: MKMapRect, zoomScale: MKZoomScale, in context: CGContext) {
     super.draw(mapRect, zoomScale: zoomScale, in: context)
 
-    let paragraphStyle = NSMutableParagraphStyle()
-    paragraphStyle.alignment = .center
-    let text = "\(area.name)"
-    let font = UIFont.systemFont(ofSize: 50.0)
-    let attributes = [NSAttributedString.Key.paragraphStyle: paragraphStyle,
-                      NSAttributedString.Key.font: font,
-                      NSAttributedString.Key.foregroundColor: UIColor.themeColor(.redDark)]
-    let fontSize = text.size(withAttributes: attributes)
+    let attributes = textAttributes(with: UIFont.systemFont(ofSize: 50.0),
+                                    textAlignment: .center,
+                                    color: UIColor.themeColor(.redDark))
+    let text = NSString(string: "\(area.name)")
+    let textSize = text.size(withAttributes: attributes)
+    let boundingSize = polygon.boundingSize
     let polyRect = CGRect(x: 0,
-                          y: (polygon.boundingMapRect.size.height - Double(fontSize.height)) / 2,
-                          width: polygon.boundingMapRect.size.width,
-                          height: Double(fontSize.height))
+                          y: (boundingSize.height - textSize.height) / 2,
+                          width: CGFloat(boundingSize.width),
+                          height: textSize.height)
 
     UIGraphicsPushContext(context)
     text.draw(in: polyRect, withAttributes: attributes)
     UIGraphicsPopContext()
+  }
 
+  private func textAttributes(with font: UIFont, textAlignment: NSTextAlignment, color: UIColor) -> [NSAttributedString.Key: Any] {
+    let paragraphStyle: NSParagraphStyle = {
+      let result = NSMutableParagraphStyle()
+      result.alignment = textAlignment
+      return result
+    }()
+    return [.paragraphStyle: paragraphStyle,
+            .font: font,
+            .foregroundColor: color]
   }
 }
 
 final class CottagePolygon: MKPolygon {
   var cottageArea: Area?
   var selected: Bool = true
+}
+
+private extension MKPolygon {
+  var boundingSize: CGSize {
+    return CGSize(width: boundingMapRect.width, height: boundingMapRect.height)
+  }
 }
