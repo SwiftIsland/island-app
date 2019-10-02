@@ -166,16 +166,34 @@ extension TimelineViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return activities[section].count
+    return activities[section].count + 2
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  
+    let rowCount = self.tableView(tableView, numberOfRowsInSection: indexPath.section)
+    switch indexPath.row {
+    case 0: // Header
+      return headerCell(for: indexPath.section)
+    case 1..<rowCount-1: // Schedule
+      let adjustedIndexPath = IndexPath(item: indexPath.item - 1, section: indexPath.section)
+      return scheduleCell(for: adjustedIndexPath)
+    case rowCount-1: // Footer
+      return footerCell(for: indexPath.section)
+    default:
+      fatalError("No row available.")
+    }
+  }
+
+  private func scheduleCell(for indexPath: IndexPath) -> UITableViewCell {
     let activity = activities[indexPath.section][indexPath.row]
     let isConcurrent = schedule[indexPath.section].activities.first(where: { $0.id == activity.id }) == nil
 
     let activityCell: ScheduleCell
     if isConcurrent {
-      guard let cell = tableView.dequeueReusableCell(withIdentifier: "ConcurrentCell") as? ConcurrentCell else { return UITableViewCell() }
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "ConcurrentCell") as? ConcurrentCell else {
+        fatalError("This should always return a cell.")
+      }
       activityCell = cell
 
       cell.didSelectMentor = { mentor in
@@ -183,32 +201,35 @@ extension TimelineViewController: UITableViewDataSource {
         self.animateTransitionIfNeeded(state: .expanded, duration: 0.6)
       }
     } else {
-      guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell") as? ScheduleCell else { return UITableViewCell() }
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell") as? ScheduleCell else {
+        fatalError("This should always return a cell.")
+      }
       activityCell = cell
     }
 
     activityCell.setup(with: activity, faded: shouldFade(cellIndexPath: indexPath))
     return activityCell
   }
-
-  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleHeaderCell") as? ScheduleHeaderCell else { return nil }
+  
+  private func headerCell(for section: Int) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleHeaderCell") as? ScheduleHeaderCell else {
+      fatalError("This should always return a cell.")
+    }
+    
     let day = schedule[section]
     cell.setup(with: day, faded: shouldFade(cellIndexPath: IndexPath(row: 0, section: section)))
     return cell
   }
 
-  func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleFooterCell") as? ScheduleFooterCell else { return nil }
+  func footerCell(for section: Int) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleFooterCell") as? ScheduleFooterCell else {
+      fatalError("This should always return a cell.")
+    }
     cell.setup(faded: shouldFade(cellIndexPath: IndexPath(row: activities[section].count-1, section: section)))
     return cell
   }
-
-  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 40
-  }
-
-  func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-    return 40
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return UITableView.automaticDimension
   }
 }
