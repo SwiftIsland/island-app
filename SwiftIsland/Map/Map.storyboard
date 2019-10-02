@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cMu-X8-wvX">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="PLP-Sf-2hD">
+            <objects>
+                <viewController title="Map" id="cMu-X8-wvX" customClass="MapViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ra4-ju-eIQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DhD-v1-p5n">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cMu-X8-wvX" id="TzH-ac-UsH"/>
+                                </connections>
+                            </mapView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Daw-L8-dbh">
+                                <rect key="frame" x="20" y="40" width="280" height="95"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfU-J7-nKJ">
+                                        <rect key="frame" x="180" y="0.0" width="100" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Ttx-VG-3pa"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="cMu-X8-wvX" id="PCi-u8-zHa"/>
+                                            <outlet property="delegate" destination="cMu-X8-wvX" id="evC-LN-RFq"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show cottage location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX3-6K-1og">
+                                        <rect key="frame" x="8" y="37" width="164" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="0fO-vo-e92"/>
+                                    <constraint firstItem="vfU-J7-nKJ" firstAttribute="height" secondItem="Daw-L8-dbh" secondAttribute="height" id="CzP-RI-BZv"/>
+                                    <constraint firstAttribute="bottom" secondItem="vfU-J7-nKJ" secondAttribute="bottom" id="KjC-if-coL"/>
+                                    <constraint firstItem="vfU-J7-nKJ" firstAttribute="top" secondItem="Daw-L8-dbh" secondAttribute="top" id="YAj-oh-3E4"/>
+                                    <constraint firstItem="aX3-6K-1og" firstAttribute="centerY" secondItem="Daw-L8-dbh" secondAttribute="centerY" id="cP6-2H-xxW"/>
+                                    <constraint firstItem="vfU-J7-nKJ" firstAttribute="leading" secondItem="aX3-6K-1og" secondAttribute="trailing" constant="8" id="ikt-P4-3QA"/>
+                                    <constraint firstItem="aX3-6K-1og" firstAttribute="leading" secondItem="Daw-L8-dbh" secondAttribute="leading" constant="8" id="qce-Cs-lyK"/>
+                                    <constraint firstAttribute="trailing" secondItem="vfU-J7-nKJ" secondAttribute="trailing" id="twY-W7-fjz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="orange"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="r02-Oi-ZfG">
+                                <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
+                                <color key="color" name="tag"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r02-Oi-ZfG" firstAttribute="centerX" secondItem="h0a-wK-8s4" secondAttribute="centerX" id="7Km-aL-Lk0"/>
+                            <constraint firstItem="r02-Oi-ZfG" firstAttribute="centerY" secondItem="h0a-wK-8s4" secondAttribute="centerY" id="AvM-mF-BH6"/>
+                            <constraint firstItem="DhD-v1-p5n" firstAttribute="leading" secondItem="h0a-wK-8s4" secondAttribute="leading" id="CVL-rM-dfH"/>
+                            <constraint firstItem="h0a-wK-8s4" firstAttribute="trailing" secondItem="DhD-v1-p5n" secondAttribute="trailing" id="GNY-WP-9z6"/>
+                            <constraint firstItem="Daw-L8-dbh" firstAttribute="leading" secondItem="h0a-wK-8s4" secondAttribute="leading" constant="20" id="HGb-Ix-Ryd"/>
+                            <constraint firstAttribute="bottom" secondItem="DhD-v1-p5n" secondAttribute="bottom" id="R7w-qu-0c4"/>
+                            <constraint firstItem="h0a-wK-8s4" firstAttribute="trailing" secondItem="Daw-L8-dbh" secondAttribute="trailing" constant="20" id="gBO-C2-V0N"/>
+                            <constraint firstItem="Daw-L8-dbh" firstAttribute="top" secondItem="h0a-wK-8s4" secondAttribute="top" constant="40" id="m42-Gj-bx7"/>
+                            <constraint firstItem="DhD-v1-p5n" firstAttribute="top" secondItem="Ra4-ju-eIQ" secondAttribute="top" id="yi3-2S-S9v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h0a-wK-8s4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="tL7-K5-55V"/>
+                    <connections>
+                        <outlet property="cottagePicker" destination="vfU-J7-nKJ" id="WGp-P9-u10"/>
+                        <outlet property="cottagePickerView" destination="Daw-L8-dbh" id="YQg-vE-W7I"/>
+                        <outlet property="loadingSpinner" destination="r02-Oi-ZfG" id="KaG-kL-2nZ"/>
+                        <outlet property="mapView" destination="DhD-v1-p5n" id="IvT-gU-SdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzh-d7-2Ph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727.536231884058" y="9.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map" width="34" height="34"/>
+        <namedColor name="orange">
+            <color red="1" green="0.53333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tag">
+            <color red="0.57647058823529407" green="0.81568627450980391" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
