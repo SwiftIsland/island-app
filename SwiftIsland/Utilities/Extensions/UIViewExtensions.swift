@@ -23,7 +23,9 @@ extension UIView {
 
   @IBInspectable var isCircle: Bool {
     get {
-      return  abs(layer.cornerRadius - frame.size.width) < 1.0
+      let difference = layer.cornerRadius - (frame.size.width / 2)
+      let absolute = abs(difference)
+      return absolute < 1
     }
     set {
       if newValue {
