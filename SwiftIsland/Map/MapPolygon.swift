@@ -31,7 +31,7 @@ final class MapPolygon: MKPolygonRenderer {
     let attributes = textAttributes(with: UIFont.systemFont(ofSize: 50.0),
                                     textAlignment: .center,
                                     color: UIColor.themeColor(.redDark))
-    let text = NSString(string: "\(area.name)")
+    let text = area.name
     let textSize = text.size(withAttributes: attributes)
     let boundingSize = polygon.boundingSize
     let polyRect = CGRect(x: 0,
