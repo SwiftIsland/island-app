@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239DCB9F2344874C00F0CD95 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239DCB9E2344874C00F0CD95 /* Timeline.storyboard */; };
+		239DCBA12344895600F0CD95 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239DCBA02344895600F0CD95 /* Map.storyboard */; };
 		2A0C8FBE226B9F6A003F8937 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FBD226B9F6A003F8937 /* Schedule.swift */; };
 		2A0C8FC1226BA17B003F8937 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FC0226BA17B003F8937 /* DataManager.swift */; };
 		2A0C8FC3226BA210003F8937 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FC2226BA210003F8937 /* APIManager.swift */; };
@@ -77,6 +79,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		239DCB9E2344874C00F0CD95 /* Timeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
+		239DCBA02344895600F0CD95 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		2A0C8FBD226B9F6A003F8937 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		2A0C8FC0226BA17B003F8937 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		2A0C8FC2226BA210003F8937 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 			children = (
 				2AF63103226DE96D00509053 /* MapViewController.swift */,
 				2A96CAFA22AAA26E004CED66 /* MapPolygon.swift */,
+				239DCBA02344895600F0CD95 /* Map.storyboard */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				2A9D2AC222A3E86500AC960D /* Cells */,
 				2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */,
 				2ABEC0C122B996DE00C0C8A5 /* CountdownViewController.swift */,
+				239DCB9E2344874C00F0CD95 /* Timeline.storyboard */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -480,9 +486,11 @@
 				2A0C8FDE226DE030003F8937 /* Theme.xcassets in Resources */,
 				2AD36FE6225E830800AF7542 /* Main.storyboard in Resources */,
 				2A41CEC122C23B900001DA4F /* mentors.json in Resources */,
+				239DCBA12344895600F0CD95 /* Map.storyboard in Resources */,
 				2ABEC0BE22B9925400C0C8A5 /* WorkSans-Thin.ttf in Resources */,
 				ED8C140122C2063900E6DE6E /* Mentor.storyboard in Resources */,
 				2ABEC0BB22B9925400C0C8A5 /* WorkSans-Medium.ttf in Resources */,
+				239DCB9F2344874C00F0CD95 /* Timeline.storyboard in Resources */,
 				2ABEC0B722B9925400C0C8A5 /* WorkSans-Regular.ttf in Resources */,
 				2ABEC0C022B9925400C0C8A5 /* WorkSans-Bold.ttf in Resources */,
 			);
