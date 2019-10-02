@@ -112,10 +112,17 @@ class TimelineViewController: CardViewController {
   }
 }
 
+// MARK: Displaying activities
 private extension TimelineViewController {
 
   func showActivity(activity: Schedule.Activity) {
     debugPrint("Show activity \(activity)")
+    guard let viewController = UIStoryboard(name: "Timeline", bundle: nil)
+      .instantiateViewController(withIdentifier: WorkshopDetailsViewController.StoryboardIdentifier) as? WorkshopDetailsViewController else {
+        fatalError("We expect a view controller here.")
+    }
+    viewController.activity = activity
+    navigationController?.pushViewController(viewController, animated: true)
   }
 
   func findCurrentActiveItem() -> Schedule.Activity? {
@@ -151,14 +158,21 @@ private extension TimelineViewController {
   }
 }
 
+// MARK: UITableViewDelegate
 extension TimelineViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let activity = activities[indexPath.section][indexPath.row]
+    let rowCount = self.tableView(tableView, numberOfRowsInSection: indexPath.section)
+    guard indexPath.row > 0, indexPath.row < rowCount - 1 else {
+      return
+    }
+    let adjustedIndexPath = IndexPath(item: indexPath.item - 1, section: indexPath.section)
+    let activity = activities[adjustedIndexPath.section][adjustedIndexPath.row]
     showActivity(activity: activity)
   }
 }
 
+// MARK: UITableViewDataSource
 extension TimelineViewController: UITableViewDataSource {
 
   func numberOfSections(in tableView: UITableView) -> Int {
@@ -170,8 +184,10 @@ extension TimelineViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-  
+
     let rowCount = self.tableView(tableView, numberOfRowsInSection: indexPath.section)
+    // We avoid using a section header and footer view, opting for actual cells instead.
+    // This way, we can avoid auto layout complications when self-sizing.
     switch indexPath.row {
     case 0: // Header
       return headerCell(for: indexPath.section)
@@ -210,12 +226,12 @@ extension TimelineViewController: UITableViewDataSource {
     activityCell.setup(with: activity, faded: shouldFade(cellIndexPath: indexPath))
     return activityCell
   }
-  
+
   private func headerCell(for section: Int) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleHeaderCell") as? ScheduleHeaderCell else {
       fatalError("This should always return a cell.")
     }
-    
+
     let day = schedule[section]
     cell.setup(with: day, faded: shouldFade(cellIndexPath: IndexPath(row: 0, section: section)))
     return cell
@@ -228,7 +244,7 @@ extension TimelineViewController: UITableViewDataSource {
     cell.setup(faded: shouldFade(cellIndexPath: IndexPath(row: activities[section].count-1, section: section)))
     return cell
   }
-  
+
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return UITableView.automaticDimension
   }

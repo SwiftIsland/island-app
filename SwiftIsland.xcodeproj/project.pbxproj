@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		239DCB9F2344874C00F0CD95 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239DCB9E2344874C00F0CD95 /* Timeline.storyboard */; };
 		239DCBA12344895600F0CD95 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239DCBA02344895600F0CD95 /* Map.storyboard */; };
+		239DCBA32344A3D100F0CD95 /* WorkshopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DCBA22344A3D100F0CD95 /* WorkshopDetailViewController.swift */; };
+		239DCBA52344AB8200F0CD95 /* DateFormatter+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DCBA42344AB8200F0CD95 /* DateFormatter+Convenience.swift */; };
 		2A0C8FBE226B9F6A003F8937 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FBD226B9F6A003F8937 /* Schedule.swift */; };
 		2A0C8FC1226BA17B003F8937 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FC0226BA17B003F8937 /* DataManager.swift */; };
 		2A0C8FC3226BA210003F8937 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FC2226BA210003F8937 /* APIManager.swift */; };
@@ -81,6 +83,8 @@
 /* Begin PBXFileReference section */
 		239DCB9E2344874C00F0CD95 /* Timeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
 		239DCBA02344895600F0CD95 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		239DCBA22344A3D100F0CD95 /* WorkshopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailViewController.swift; sourceTree = "<group>"; };
+		239DCBA42344AB8200F0CD95 /* DateFormatter+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Convenience.swift"; sourceTree = "<group>"; };
 		2A0C8FBD226B9F6A003F8937 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		2A0C8FC0226BA17B003F8937 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		2A0C8FC2226BA210003F8937 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 				2A0C8FC7226BA741003F8937 /* FileManaging.swift */,
 				2A0C8FD2226D1667003F8937 /* UIViewExtensions.swift */,
 				2ADD085E22ADABFA00A90D1E /* CollectionExtension.swift */,
+				239DCBA42344AB8200F0CD95 /* DateFormatter+Convenience.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				2A9D2AC222A3E86500AC960D /* Cells */,
 				2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */,
 				2ABEC0C122B996DE00C0C8A5 /* CountdownViewController.swift */,
+				239DCBA22344A3D100F0CD95 /* WorkshopDetailViewController.swift */,
 				239DCB9E2344874C00F0CD95 /* Timeline.storyboard */,
 			);
 			path = Timeline;
@@ -553,6 +559,7 @@
 				2A96CAFB22AAA26E004CED66 /* MapPolygon.swift in Sources */,
 				2A8863D122BBF06000B4CE86 /* Reachability.swift in Sources */,
 				2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */,
+				239DCBA52344AB8200F0CD95 /* DateFormatter+Convenience.swift in Sources */,
 				2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */,
 				2A0C8FC8226BA741003F8937 /* FileManaging.swift in Sources */,
 				2ABEC08222B97A3300C0C8A5 /* DataWriter.swift in Sources */,
@@ -560,6 +567,7 @@
 				2AF63104226DE96D00509053 /* MapViewController.swift in Sources */,
 				2A0C8FC3226BA210003F8937 /* APIManager.swift in Sources */,
 				2A5BE94B22BA8B270062D868 /* MentorCollectionView.swift in Sources */,
+				239DCBA32344A3D100F0CD95 /* WorkshopDetailViewController.swift in Sources */,
 				2AF63107226E5CA300509053 /* Area.swift in Sources */,
 				2ACB133B229BA44F0072BB1D /* MentorCardViewController.swift in Sources */,
 				2AD36FE1225E830800AF7542 /* AppDelegate.swift in Sources */,
