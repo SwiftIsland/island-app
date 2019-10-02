@@ -38,19 +38,20 @@ class MentorCollectionView: CardViewController {
   }
 
   private func setupCollectionView() {
-    if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-
-      let frameWidth = view.frame.width
-      let horizontalSpacing = flowLayout.scrollDirection == .vertical ? flowLayout.minimumInteritemSpacing : flowLayout.minimumLineSpacing
-      let isAccessibility = traitCollection.preferredContentSizeCategory.isAccessibilityCategory
-      let ratio: CGFloat = isAccessibility ? 1 : 1.6
-      let numberOfCellsPerRow = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? 1 : 2
-      let totalSpacing = horizontalSpacing * CGFloat(numberOfCellsPerRow - 1)
-      let padding = CGFloat(12 * 2) // padding left and right
-      let cellWidth = (frameWidth - padding - totalSpacing) / CGFloat(numberOfCellsPerRow)
-
-      flowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth * ratio)
+    guard let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else {
+      return
     }
+
+    let frameWidth = view.frame.width
+    let horizontalSpacing = flowLayout.scrollDirection == .vertical ? flowLayout.minimumInteritemSpacing : flowLayout.minimumLineSpacing
+    let isAccessibility = traitCollection.preferredContentSizeCategory.isAccessibilityCategory
+    let ratio: CGFloat = isAccessibility ? 1 : 1.6
+    let numberOfCellsPerRow: CGFloat = traitCollection.preferredContentSizeCategory.isAccessibilityCategory ? 1 : 2
+    let totalSpacing = horizontalSpacing * CGFloat(numberOfCellsPerRow - 1)
+    let padding = CGFloat(12 * 2) // padding left and right
+    let cellWidth = (frameWidth - padding - totalSpacing) / CGFloat(numberOfCellsPerRow)
+
+    flowLayout.itemSize = CGSize(width: cellWidth, height: cellWidth * ratio)
   }
 
   private func fetchMentors() {

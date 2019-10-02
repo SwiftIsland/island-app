@@ -31,3 +31,11 @@ class MentorManager {
     }
   }
 }
+
+extension MentorManager {
+
+  /// Returns the mentor with the given `mentorId`, if already fetched.
+  func mentor(withId mentorId: Int) -> Mentor? {
+    return mentors.first { $0.id == mentorId }
+  }
+}

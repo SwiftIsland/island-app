@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239DCB9B2343763D00F0CD95 /* UIViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DCB9A2343763D00F0CD95 /* UIViewExtensionsTests.swift */; };
 		239DCB9F2344874C00F0CD95 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239DCB9E2344874C00F0CD95 /* Timeline.storyboard */; };
 		239DCBA12344895600F0CD95 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239DCBA02344895600F0CD95 /* Map.storyboard */; };
 		2A0C8FBE226B9F6A003F8937 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C8FBD226B9F6A003F8937 /* Schedule.swift */; };
@@ -79,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		239DCB9A2343763D00F0CD95 /* UIViewExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTests.swift; sourceTree = "<group>"; };
 		239DCB9E2344874C00F0CD95 /* Timeline.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
 		239DCBA02344895600F0CD95 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		2A0C8FBD226B9F6A003F8937 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
@@ -162,6 +164,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		239DCB992343762100F0CD95 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				239DCB9A2343763D00F0CD95 /* UIViewExtensionsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2A0C8FBC226B9F5D003F8937 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +276,7 @@
 		2ABBDD8B226FA26C00D4212C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				239DCB992343762100F0CD95 /* Extensions */,
 				2ABBDD8C226FA28000D4212C /* DataManagerTests.swift */,
 				2ADD085822ADA58000A90D1E /* CacheManagerTests.swift */,
 				2AA81FD922B6E708001F3A58 /* APIManagerTests.swift */,
@@ -532,6 +543,7 @@
 				2AA81FDA22B6E708001F3A58 /* APIManagerTests.swift in Sources */,
 				2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */,
 				2AA81FDE22B83850001F3A58 /* APIManagerMock.swift in Sources */,
+				239DCB9B2343763D00F0CD95 /* UIViewExtensionsTests.swift in Sources */,
 				2AA81FDC22B6E74D001F3A58 /* URLSessionMock.swift in Sources */,
 				2ADD086322ADADBF00A90D1E /* ThemeTests.swift in Sources */,
 				2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */,
@@ -699,7 +711,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "$(inherited) -Xfrontend -debug-time-function-bodies -Xfrontend -warn-long-expression-type-checking=200 -Xfrontend -warn-long-function-bodies=200";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xfrontend -debug-time-function-bodies -Xfrontend -warn-long-expression-type-checking=400 -Xfrontend -warn-long-function-bodies=400";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
