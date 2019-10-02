@@ -10,6 +10,7 @@ import UIKit
 
 class MentorCardViewController: UIViewController {
 
+  @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var handleAreaView: UIView!
   @IBOutlet weak var mentorImageView: UIView!
@@ -19,6 +20,7 @@ class MentorCardViewController: UIViewController {
   @IBOutlet weak var socialTwitter: UIButton!
   @IBOutlet weak var socialWeb: UIButton!
   @IBOutlet weak var dragHandleImageSpacer: NSLayoutConstraint!
+  @IBOutlet weak var twitterWidthConstraint: NSLayoutConstraint!
 
   private var mentor: Mentor?
 
@@ -30,8 +32,19 @@ class MentorCardViewController: UIViewController {
     }
   }
 
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
+
+      let adjustedWidth = UIFontMetrics(forTextStyle: .body).scaledValue(for: 36.0)
+      twitterWidthConstraint.constant = adjustedWidth
+    }
+  }
+
   func setup(withMentor mentor: Mentor) {
     self.mentor = mentor
+
+    scrollView.setContentOffset(.zero, animated: false)
+
     titleLabel.text = mentor.name
     descriptionLabel.text = mentor.bio
 
