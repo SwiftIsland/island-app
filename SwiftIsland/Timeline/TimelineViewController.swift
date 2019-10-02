@@ -118,7 +118,7 @@ private extension TimelineViewController {
   func showActivity(activity: Schedule.Activity) {
     debugPrint("Show activity \(activity)")
     guard let viewController = UIStoryboard(name: "Timeline", bundle: nil)
-      .instantiateViewController(withIdentifier: WorkshopDetailsViewController.StoryboardIdentifier) as? WorkshopDetailsViewController else {
+      .instantiateViewController(withIdentifier: ActivityDetailsViewController.StoryboardIdentifier) as? ActivityDetailsViewController else {
         fatalError("We expect a view controller here.")
     }
     viewController.activity = activity

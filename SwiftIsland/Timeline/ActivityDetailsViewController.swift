@@ -1,13 +1,13 @@
 import UIKit
 
-class WorkshopDetailsViewController: UIViewController {
+class ActivityDetailsViewController: UIViewController {
 
   static var StoryboardIdentifier: String = "WorkshopDetailsViewController"
 
   @IBOutlet private var titleLabel: UILabel!
-  @IBOutlet private var tagView: WorkshopTagView!
-  @IBOutlet private var mentorView: WorkshopMentorView!
-  @IBOutlet private var descriptionView: WorkshopDescriptionView!
+  @IBOutlet private var tagView: ActivityTagView!
+  @IBOutlet private var mentorView: ActivityMentorView!
+  @IBOutlet private var descriptionView: ActivityDescriptionView!
 
   var activity: Schedule.Activity? {
     didSet {
@@ -66,7 +66,7 @@ class WorkshopDetailsViewController: UIViewController {
   }
 }
 
-class WorkshopTagView: UIView {
+class ActivityTagView: UIView {
   @IBOutlet var tagLabel: UILabel!
 
   var text: String? {
@@ -82,7 +82,7 @@ class WorkshopTagView: UIView {
   }
 }
 
-class WorkshopMentorView: UIView {
+class ActivityMentorView: UIView {
   @IBOutlet var nameLabel: UILabel!
   @IBOutlet var avatarImageView: UIImageView!
 
@@ -100,7 +100,7 @@ class WorkshopMentorView: UIView {
   }
 }
 
-class WorkshopDescriptionView: UIView {
+class ActivityDescriptionView: UIView {
   @IBOutlet var descriptionLabel: UILabel!
 
   var text: String? {

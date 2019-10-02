@@ -555,10 +555,10 @@
             </objects>
             <point key="canvasLocation" x="1695.6521739130435" y="-638.16964285714278"/>
         </scene>
-        <!--Workshop Details View Controller-->
+        <!--Activity Details View Controller-->
         <scene sceneID="R8o-ph-WT9">
             <objects>
-                <viewController storyboardIdentifier="WorkshopDetailsViewController" id="owh-HM-mWg" customClass="WorkshopDetailsViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorkshopDetailsViewController" id="owh-HM-mWg" customClass="ActivityDetailsViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H1a-tj-i5M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="720"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -581,7 +581,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="hia-G2-N2R" userLabel="Tag Wrapper" customClass="WorkshopTagView" customModule="SwiftIsland" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="hia-G2-N2R" userLabel="Tag Wrapper" customClass="ActivityTagView" customModule="SwiftIsland" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="75.5" width="288" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y2O-Nx-cT3" customClass="DesignableView" customModule="SwiftIsland" customModuleProvider="target">
@@ -620,7 +620,7 @@
                                                     <outlet property="tagLabel" destination="w6J-M6-V4z" id="yFL-iJ-4tY"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsr-CB-Bx5" userLabel="Mentor Wrapper" customClass="WorkshopMentorView" customModule="SwiftIsland" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsr-CB-Bx5" userLabel="Mentor Wrapper" customClass="ActivityMentorView" customModule="SwiftIsland" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="137.5" width="288" height="246"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="r54-hh-bFd">
@@ -668,7 +668,7 @@
                                                     <outlet property="nameLabel" destination="tV7-DW-wol" id="GIz-5M-Qr4"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TL-Zz-nt7" userLabel="Description Wrapper" customClass="WorkshopDescriptionView" customModule="SwiftIsland" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TL-Zz-nt7" userLabel="Description Wrapper" customClass="ActivityDescriptionView" customModule="SwiftIsland" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="395.5" width="288" height="177.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S3P-ZZ-mDs">
