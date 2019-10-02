@@ -63,6 +63,8 @@
 		2ADD086B22ADB01400A90D1E /* TestDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD086A22ADB01400A90D1E /* TestDataManager.swift */; };
 		2AF63104226DE96D00509053 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63103226DE96D00509053 /* MapViewController.swift */; };
 		2AF63107226E5CA300509053 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63106226E5CA300509053 /* Area.swift */; };
+		CE84EA252343D63400C9C82E /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EA242343D63400C9C82E /* About.swift */; };
+		CE84EA282343DA9A00C9C82E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EA272343DA9A00C9C82E /* AboutViewController.swift */; };
 		ED8C140122C2063900E6DE6E /* Mentor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8C140022C2063900E6DE6E /* Mentor.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +139,8 @@
 		2ADD086A22ADB01400A90D1E /* TestDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataManager.swift; sourceTree = "<group>"; };
 		2AF63103226DE96D00509053 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2AF63106226E5CA300509053 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		CE84EA242343D63400C9C82E /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		CE84EA272343DA9A00C9C82E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		ED8C140022C2063900E6DE6E /* Mentor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mentor.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +167,7 @@
 			children = (
 				2A0C8FBD226B9F6A003F8937 /* Schedule.swift */,
 				2AF63106226E5CA300509053 /* Area.swift */,
+				CE84EA242343D63400C9C82E /* About.swift */,
 				2A8F7CDC229D1C5A00874B09 /* Mentor.swift */,
 			);
 			path = Entities;
@@ -333,6 +338,7 @@
 				2A0C8FBC226B9F5D003F8937 /* Entities */,
 				2A0C8FDC226DE00D003F8937 /* Map */,
 				2AA290E5225F1A0400B289BE /* Resources */,
+				CE84EA262343DA5200C9C82E /* About */,
 				2AD36FF3225E84D300AF7542 /* Timeline */,
 				2A8F7CE0229D3C6800874B09 /* Mentor */,
 				2A0C8FBF226BA16C003F8937 /* Utilities */,
@@ -377,6 +383,14 @@
 				2ADD086A22ADB01400A90D1E /* TestDataManager.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE84EA262343DA5200C9C82E /* About */ = {
+			isa = PBXGroup;
+			children = (
+				CE84EA272343DA9A00C9C82E /* AboutViewController.swift */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,6 +559,7 @@
 				2A96CAFB22AAA26E004CED66 /* MapPolygon.swift in Sources */,
 				2A8863D122BBF06000B4CE86 /* Reachability.swift in Sources */,
 				2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */,
+				CE84EA252343D63400C9C82E /* About.swift in Sources */,
 				2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */,
 				2A0C8FC8226BA741003F8937 /* FileManaging.swift in Sources */,
 				2ABEC08222B97A3300C0C8A5 /* DataWriter.swift in Sources */,
@@ -561,6 +576,7 @@
 				2A5BE94D22BA8B890062D868 /* MentorCollectionViewCell.swift in Sources */,
 				2A8F7CE5229D3D1D00874B09 /* CardViewController.swift in Sources */,
 				2A0C8FD3226D1667003F8937 /* UIViewExtensions.swift in Sources */,
+				CE84EA282343DA9A00C9C82E /* AboutViewController.swift in Sources */,
 				2AD36FF5225E84F400AF7542 /* TimelineViewController.swift in Sources */,
 				2A0C8FD7226D1C97003F8937 /* ScheduleHeaderCell.swift in Sources */,
 			);

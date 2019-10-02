@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aia-tD-VjM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aia-tD-VjM">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +17,22 @@
         </array>
     </customFonts>
     <scenes>
+        <!--About-->
+        <scene sceneID="Wsv-mI-eDc">
+            <objects>
+                <viewController id="BwZ-Ak-nDK" customClass="AboutViewController" customModule="SwiftIsland" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xZ3-uh-4u7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WCM-TJ-8LG"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="about" id="sTp-0O-EeB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3UY-Ha-Yfq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="686"/>
+        </scene>
         <!--Map-->
         <scene sceneID="qid-Ge-Pdo">
             <objects>
@@ -570,7 +586,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTb-O0-1M0">
-                                <rect key="frame" x="25" y="143.5" width="325" height="280"/>
+                                <rect key="frame" x="25" y="144" width="325" height="279.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="W68-YO-qIz">
                                         <rect key="frame" x="92.5" y="0.0" width="140" height="140"/>
@@ -580,7 +596,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vER-8B-uVn">
-                                        <rect key="frame" x="0.0" y="165" width="325" height="115"/>
+                                        <rect key="frame" x="0.0" y="165" width="325" height="114.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="Bqv-e6-OeM">
                                                 <rect key="frame" x="148.5" y="8" width="28" height="28"/>
@@ -591,13 +607,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule will be available soon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejd-jR-X71">
-                                                <rect key="frame" x="15" y="42" width="295" height="52"/>
+                                                <rect key="frame" x="15" y="42" width="295" height="51.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans Medium" pointSize="22"/>
                                                 <color key="textColor" name="textBody"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at 9am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoN-HG-8uE">
-                                                <rect key="frame" x="0.0" y="94" width="325" height="21"/>
+                                                <rect key="frame" x="0.0" y="93.5" width="325" height="21"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="18"/>
                                                 <color key="textColor" name="textBody"/>
                                                 <nil key="highlightedColor"/>
@@ -661,6 +677,7 @@
                         <segue destination="xhZ-Lo-pSD" kind="relationship" relationship="viewControllers" id="xsj-zS-j39"/>
                         <segue destination="OIQ-Dk-xHv" kind="relationship" relationship="viewControllers" id="TCt-Zg-i2G"/>
                         <segue destination="ets-Ti-byf" kind="relationship" relationship="viewControllers" id="q0G-Yy-mct"/>
+                        <segue destination="BwZ-Ak-nDK" kind="relationship" relationship="viewControllers" id="8tD-WX-xAy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wt-ax-eXL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -670,6 +687,7 @@
     </scenes>
     <resources>
         <image name="Calendar" width="48" height="48"/>
+        <image name="about" width="34" height="34"/>
         <image name="logo" width="140" height="140"/>
         <image name="map" width="34" height="34"/>
         <image name="paulhudson" width="400" height="400"/>
