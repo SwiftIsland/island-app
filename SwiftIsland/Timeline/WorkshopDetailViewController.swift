@@ -25,7 +25,14 @@ class WorkshopDetailsViewController: UIViewController {
       return
     }
     titleLabel.text = activity.title
+    titleLabel.accessibilityHint = startsAtSpoken(activity.datefrom)
 
+    configureArea(with: activity)
+    configureMentor(with: activity)
+    configureDescription(with: activity)
+  }
+
+  private func configureArea(with activity: Schedule.Activity) {
     if let area = activity.area,
       area.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false {
       tagView.isHidden = false
@@ -33,7 +40,9 @@ class WorkshopDetailsViewController: UIViewController {
     } else {
       tagView.isHidden = true
     }
+  }
 
+  private func configureMentor(with activity: Schedule.Activity) {
     let mentors = MentorManager.shared.mentors
     if let mentorId = activity.mentor,
       let mentor = mentors.first(where: { $0.id == mentorId }) {
@@ -42,7 +51,9 @@ class WorkshopDetailsViewController: UIViewController {
     } else {
       mentorView.isHidden = true
     }
+  }
 
+  private func configureDescription(with activity: Schedule.Activity) {
     if activity.description.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty == false {
       descriptionView.isHidden = false
       descriptionView.text = activity.description
@@ -51,6 +62,7 @@ class WorkshopDetailsViewController: UIViewController {
     }
 
     navigationItem.title = DateFormatter.dutchShortTime.string(from: activity.datefrom)
+    navigationItem.accessibilityLabel = startsAtSpoken(activity.datefrom)
   }
 }
 
@@ -59,7 +71,13 @@ class WorkshopTagView: UIView {
 
   var text: String? {
     didSet {
+      guard let text = text, text.isEmpty == false else {
+        return
+      }
       tagLabel.text = text
+
+      isAccessibilityElement = true
+      accessibilityLabel = "Location: \(text)."
     }
   }
 }
@@ -75,6 +93,9 @@ class WorkshopMentorView: UIView {
       }
       nameLabel.text = mentor.name
       avatarImageView.image = UIImage(named: mentor.image)
+
+      isAccessibilityElement = true
+      accessibilityLabel = "Mentor: \(mentor.name)."
     }
   }
 }
@@ -84,7 +105,17 @@ class WorkshopDescriptionView: UIView {
 
   var text: String? {
     didSet {
+      guard let text = text, text.isEmpty == false else {
+        return
+      }
       descriptionLabel.text = text
+
+      isAccessibilityElement = true
+      accessibilityLabel = text
     }
   }
+}
+
+private func startsAtSpoken(_ date: Date) -> String {
+  return "Starts at \(DateFormatter.dutchShortTimeSpoken.string(from: date))."
 }

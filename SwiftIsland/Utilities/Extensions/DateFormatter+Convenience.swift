@@ -7,4 +7,10 @@ extension DateFormatter {
     result.dateStyle = .none
     return result
   }
+
+  static var dutchShortTimeSpoken: DateFormatter {
+    let result = DateFormatter.dutchShortTime
+    result.timeStyle = .medium
+    return result
+  }
 }
