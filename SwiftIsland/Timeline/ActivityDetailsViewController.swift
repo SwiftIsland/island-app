@@ -8,6 +8,7 @@ class ActivityDetailsViewController: UIViewController {
   @IBOutlet private var tagView: ActivityTagView!
   @IBOutlet private var mentorView: ActivityMentorView!
   @IBOutlet private var descriptionView: ActivityDescriptionView!
+  private var mentorManager: MentorManager = .shared
 
   var activity: Schedule.Activity? {
     didSet {
@@ -43,9 +44,8 @@ class ActivityDetailsViewController: UIViewController {
   }
 
   private func configureMentor(with activity: Schedule.Activity) {
-    let mentors = MentorManager.shared.mentors
     if let mentorId = activity.mentor,
-      let mentor = mentors.first(where: { $0.id == mentorId }) {
+      let mentor = mentorManager.mentor(withId: mentorId) {
       mentorView.isHidden = false
       mentorView.mentor = mentor
     } else {

@@ -682,7 +682,7 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWZ-Zb-8l2" userLabel="Descripion Label">
                                                                 <rect key="frame" x="0.0" y="28.5" width="288" height="149"/>
-                                                                <string key="text">In this workshop, John will explain the poor life choices he made that caused him to collapse headfirst into the swamp, only to be found three weeks later.</string>
+                                                                <string key="text">In this workshop, John will explain the poor life choices he made that caused him to collapse head first into the swamp, only to be found three weeks later.</string>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
