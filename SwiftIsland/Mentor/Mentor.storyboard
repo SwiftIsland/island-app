@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gww-TT-ySC">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gww-TT-ySC">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L8K-MF-PBi">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="M38-vk-NpX">
                                     <size key="itemSize" width="194" height="248"/>
@@ -36,16 +35,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="zN1-sA-1ei">
-                                                    <rect key="frame" x="8" y="28" width="178" height="212"/>
+                                                    <rect key="frame" x="8" y="8" width="178" height="232"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="TfK-Vy-io5">
-                                                            <rect key="frame" x="8" y="8" width="162" height="196"/>
+                                                            <rect key="frame" x="8" y="8" width="162" height="216"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9f-D7-KI5">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="130.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="151.5"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" placeholderIntrinsicWidth="120" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="Iql-yM-FQN">
-                                                                            <rect key="frame" x="16" y="0.0" width="130" height="130.5"/>
+                                                                            <rect key="frame" x="5.5" y="0.0" width="151" height="151.5"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="Iql-yM-FQN" secondAttribute="height" id="YXn-iA-3Vj"/>
                                                                                 <constraint firstAttribute="width" constant="87.5" id="eBI-cQ-62J"/>
@@ -68,7 +67,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="254" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="754" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4se-td-KEP">
-                                                                    <rect key="frame" x="0.0" y="130.5" width="162" height="65.5"/>
+                                                                    <rect key="frame" x="0.0" y="151.5" width="162" height="64.5"/>
                                                                     <string key="text">John Appleseed John Appleseed
 🇳🇱</string>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
@@ -107,7 +106,7 @@
                                 </connections>
                             </collectionView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="O83-Nm-fwk">
-                                <rect key="frame" x="141.5" y="275.5" width="37" height="37"/>
+                                <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
                                 <color key="color" name="orange"/>
                             </activityIndicatorView>
                         </subviews>
@@ -304,7 +303,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mentor" width="34" height="34"/>
+        <image name="mentor" width="21" height="26"/>
         <image name="social-twitter" width="512" height="512"/>
         <image name="world-outline" width="512" height="512"/>
         <namedColor name="orange">
