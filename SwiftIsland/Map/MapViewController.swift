@@ -31,6 +31,7 @@ class MapViewController: UIViewController {
 
   private let dataManager = DataManager.shared
   private var areas: [Area] = []
+  private let locationManager = CLLocationManager()
   private var selectedArea: Area? {
     didSet {
       if let selectedArea = selectedArea {
@@ -52,6 +53,7 @@ class MapViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupLocationManager()
     setupMap()
   }
 
@@ -64,7 +66,14 @@ class MapViewController: UIViewController {
 private extension MapViewController {
 
   func setupMap() {
-    centerOnVenue()
+    mapView.showsUserLocation = true
+  }
+
+  func setupLocationManager() {
+    locationManager.requestWhenInUseAuthorization()
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    locationManager.distanceFilter = kCLDistanceFilterNone
+    locationManager.startUpdatingLocation()
   }
 
   func getAreas() {
