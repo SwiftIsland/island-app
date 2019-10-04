@@ -51,6 +51,8 @@ class MapViewController: UIViewController {
   }
   @IBOutlet weak var cottagePicker: UIPickerView!
 
+  private var didDetectUserLocation = false
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setupLocationManager()
@@ -153,6 +155,34 @@ extension MapViewController: MKMapViewDelegate {
     }
 
     return MKPolylineRenderer(overlay: overlay)
+  }
+
+  func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+    if !didDetectUserLocation {
+      guard let location = userLocation.location else {
+        return
+      }
+
+      if !Regions.island.contains(location: location) || Regions.venue.contains(location: location) {
+        centerOnVenue()
+        didDetectUserLocation = true
+
+        return
+      }
+
+      let region = regionContaining(coordinateA: Coordinates.venue, coordianteB: location.coordinate)
+      mapView.setRegion(region, animated: true)
+
+      let annotation = MKPointAnnotation()
+      annotation.coordinate = Coordinates.venue
+      mapView.addAnnotation(annotation)
+
+      didDetectUserLocation = true
+    }
+  }
+
+  func mapView(_ mapView: MKMapView, didFailToLocateUserWithError error: Error) {
+    centerOnVenue()
   }
 }
 
