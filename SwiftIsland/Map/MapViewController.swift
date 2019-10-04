@@ -10,6 +10,24 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
+  private enum Regions {
+    static let island: MKCoordinateRegion = {
+      let center = CLLocationCoordinate2D(latitude: 53.083167, longitude: 4.813895)
+      let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+
+      return MKCoordinateRegion(center: center, span: span)
+    }()
+
+    static let venue: MKCoordinateRegion = {
+      let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+
+      return MKCoordinateRegion(center: Coordinates.venue, span: span)
+    }()
+  }
+
+  private enum Coordinates {
+    static let venue = CLLocationCoordinate2D(latitude: 53.11492071953518, longitude: 4.89718462979863)
+  }
 
   private let dataManager = DataManager.shared
   private var areas: [Area] = []
@@ -81,7 +99,7 @@ private extension MapViewController {
   }
 
   func centerOnVenue() {
-    let location = CLLocation(latitude: 53.11492071953518, longitude: 4.89718462979863)
+    let location = CLLocation(latitude: Coordinates.venue.latitude, longitude: Coordinates.venue.longitude)
     centerMapOnLocation(location: location)
   }
 
