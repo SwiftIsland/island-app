@@ -67,6 +67,7 @@
 		2AF63104226DE96D00509053 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63103226DE96D00509053 /* MapViewController.swift */; };
 		2AF63107226E5CA300509053 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63106226E5CA300509053 /* Area.swift */; };
 		4555A97923476EFE006B4DDC /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555A97823476EFE006B4DDC /* MKCoordinateRegionExtension.swift */; };
+		4592B5F32349C97100C38256 /* MKCoordinateRegionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592B5F22349C97100C38256 /* MKCoordinateRegionExtensionTests.swift */; };
 		ED8C140122C2063900E6DE6E /* Mentor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8C140022C2063900E6DE6E /* Mentor.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,7 @@
 		2AF63103226DE96D00509053 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2AF63106226E5CA300509053 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		4555A97823476EFE006B4DDC /* MKCoordinateRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtension.swift; sourceTree = "<group>"; };
+		4592B5F22349C97100C38256 /* MKCoordinateRegionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtensionTests.swift; sourceTree = "<group>"; };
 		ED8C140022C2063900E6DE6E /* Mentor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mentor.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -378,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				2ADD086222ADADBF00A90D1E /* ThemeTests.swift */,
+				4592B5F22349C97100C38256 /* MKCoordinateRegionExtensionTests.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */,
 				2ADD086622ADAF7400A90D1E /* AreaTests.swift in Sources */,
 				2ADD085B22ADA5F100A90D1E /* FileManagerMock.swift in Sources */,
+				4592B5F32349C97100C38256 /* MKCoordinateRegionExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

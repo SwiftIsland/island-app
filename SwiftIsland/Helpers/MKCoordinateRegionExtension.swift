@@ -10,7 +10,7 @@ import MapKit
 
 extension MKCoordinateRegion {
   /**
-   Costructor returns instace, containing both coordinates (A, B).
+   Returns instace, containing both coordinates (A, B).
    */
   init(coordinateA: CLLocationCoordinate2D, coordinateB: CLLocationCoordinate2D) {
     let latDelta = abs(coordinateA.latitude - coordinateB.latitude)
