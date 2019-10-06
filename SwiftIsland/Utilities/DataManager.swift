@@ -87,6 +87,33 @@ extension DataManager: DataManaging {
       }
     }
   }
+  
+  // Todo: Refactor together with get schedule
+  func getAbout(completion: @escaping (Result<About, DataErrors>) -> Void) {
+
+    _ = apiManager.get(endpoint: .about) { (result: Result<About, Error>) in
+      switch result {
+      case .success(let about):
+        try? self.cacheManager.set(to: .about, data: about)
+        completion(.success(about))
+      case .failure(let fetchError):
+        // If the fetch failed, first check the cache. If that fails too, then check the
+        // error. Otherwise disregard the error and show the cached result instead.
+        do {
+          let about: About = try self.cacheManager.get(from: .about)
+          completion(.success(about))
+        } catch {
+          if let networkError = fetchError as? APIManagerError,
+            case .apiReponseUnhandledStatusCode(let statusCode) = networkError,
+            statusCode == 404 {
+            completion(.failure(.notYetAvailable))
+          } else {
+            completion(.failure(.noData))
+          }
+        }
+      }
+    }
+  }
 
   func get<T: Listable>(ofType type: ListableType, completion: @escaping (Result<[T], DataErrors>) -> Void) {
     _ = apiManager.get(endpoint: type.endpoint) { (result: Result<[T], Error>) in

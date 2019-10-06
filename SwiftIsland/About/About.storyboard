@@ -102,6 +102,7 @@
                         <outlet property="contributorsLabel" destination="Pzx-bl-4Ro" id="mww-zf-elf"/>
                         <outlet property="eventInfoLabel" destination="hoi-tQ-y2f" id="SFn-kQ-l7a"/>
                         <outlet property="githubLinkButton" destination="nmB-Xz-2RF" id="00B-Cg-7fk"/>
+                        <outlet property="scrollView" destination="KQE-wO-IkW" id="nAv-Bu-nyF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OfS-If-E8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

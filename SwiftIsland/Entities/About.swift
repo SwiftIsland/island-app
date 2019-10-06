@@ -17,7 +17,15 @@ struct About: Codable {
 
 struct AppInfo: Codable {
   let appName: String
-  let appVersion: String
+  let latestAppVersion: String
   let appDescription: String
-  let organisers: [String]
+  let organisers: [Organiser]
+}
+
+struct Organiser: Codable {
+  let handle: String
+  let name: String
+  let twitter: String
+  let url: String
+  let linkedin: String
 }

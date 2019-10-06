@@ -71,7 +71,6 @@
 		CE84EA2A234783DF00C9C82E /* About_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = CE84EA29234783DF00C9C82E /* About_valid.json */; };
 		CE84EA2C2347843E00C9C82E /* AboutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EA2B2347843E00C9C82E /* AboutTests.swift */; };
 		CE84EA2E23478B2E00C9C82E /* About_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = CE84EA29234783DF00C9C82E /* About_valid.json */; };
-		CE84EA2F23478B4000C9C82E /* TestDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD086A22ADB01400A90D1E /* TestDataManager.swift */; };
 		CE84EA3123478C9400C9C82E /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE84EA3023478C9400C9C82E /* About.storyboard */; };
 		ED8C140122C2063900E6DE6E /* Mentor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8C140022C2063900E6DE6E /* Mentor.storyboard */; };
 /* End PBXBuildFile section */
@@ -600,7 +599,6 @@
 				2ABEC08222B97A3300C0C8A5 /* DataWriter.swift in Sources */,
 				2ABEC0C222B996DE00C0C8A5 /* CountdownViewController.swift in Sources */,
 				2AF63104226DE96D00509053 /* MapViewController.swift in Sources */,
-				CE84EA2F23478B4000C9C82E /* TestDataManager.swift in Sources */,
 				2A0C8FC3226BA210003F8937 /* APIManager.swift in Sources */,
 				2A5BE94B22BA8B270062D868 /* MentorCollectionView.swift in Sources */,
 				2AF63107226E5CA300509053 /* Area.swift in Sources */,

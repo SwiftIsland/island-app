@@ -17,18 +17,13 @@ class AboutTests: XCTestCase {
     
     XCTAssertNotNil(aboutContent)
     XCTAssertEqual(aboutContent?.appInfo.appName, "SwiftIsland")
-    XCTAssertEqual(aboutContent?.appInfo.appVersion, "1.1.1")
+    XCTAssertEqual(aboutContent?.appInfo.latestAppVersion, "1.1.1")
     XCTAssertEqual(aboutContent?.appInfo.appDescription, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.")
-    
-    XCTAssertEqual(aboutContent?.appInfo.organisers[0], "@funky-monkey")
-    XCTAssertEqual(aboutContent?.appInfo.organisers[1], "@nvh")
-    
+    XCTAssertEqual(aboutContent?.appInfo.organisers[0].handle, "@funky-monkey")
+    XCTAssertEqual(aboutContent?.appInfo.organisers[1].handle, "@nvh")
     XCTAssertEqual(aboutContent?.eventInfo, "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.")
-    
     XCTAssertEqual(aboutContent?.githubLink, "https://github.com/SwiftIsland/island-app")
-    
     XCTAssertEqual(aboutContent?.contributors.count, 5)
-    
   }
   
 }
