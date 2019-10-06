@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -83,10 +84,16 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Ehc-iZ-txV"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="sV5-hw-PQ3"/>
                             </scrollView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="RwC-GG-GzU">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="orange"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="lkz-rR-4KS" firstAttribute="bottom" secondItem="KQE-wO-IkW" secondAttribute="bottom" id="6aU-O0-FPf"/>
+                            <constraint firstItem="RwC-GG-GzU" firstAttribute="centerY" secondItem="QYa-AC-4uQ" secondAttribute="centerY" id="BNJ-0C-02O"/>
+                            <constraint firstItem="RwC-GG-GzU" firstAttribute="centerX" secondItem="QYa-AC-4uQ" secondAttribute="centerX" id="Sgh-SE-afS"/>
                             <constraint firstItem="KQE-wO-IkW" firstAttribute="top" secondItem="lkz-rR-4KS" secondAttribute="top" id="goO-Yy-Qp7"/>
                             <constraint firstItem="KQE-wO-IkW" firstAttribute="leading" secondItem="lkz-rR-4KS" secondAttribute="leading" constant="16" id="riW-c9-Bpe"/>
                             <constraint firstItem="lkz-rR-4KS" firstAttribute="trailing" secondItem="KQE-wO-IkW" secondAttribute="trailing" constant="16" id="s8z-wP-I2J"/>
@@ -95,6 +102,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="about" id="NCn-QC-USN"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="RwC-GG-GzU" id="yaM-mu-jv7"/>
                         <outlet property="appDescriptionLabel" destination="mP6-x8-dz3" id="Zrq-mQ-vfK"/>
                         <outlet property="appNameLabel" destination="yH6-1b-rkR" id="Ee9-3q-tlk"/>
                         <outlet property="appOrganisersLabel" destination="nEh-oG-oSc" id="Xdb-DP-1ar"/>
@@ -112,5 +120,8 @@
     </scenes>
     <resources>
         <image name="about" width="25" height="26"/>
+        <namedColor name="orange">
+            <color red="1" green="0.53333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

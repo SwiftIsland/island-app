@@ -14,9 +14,11 @@ class AboutViewController: UIViewController {
   private var about: About? {
     didSet {
       updateLabels()
+      activityIndicator.isHidden = true
     }
   }
   
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var appNameLabel: UILabel!
   @IBOutlet weak var appVersionLabel: UILabel!
   @IBOutlet weak var appDescriptionLabel: UILabel!
@@ -28,6 +30,7 @@ class AboutViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    scrollView.isHidden = true
     fetchAbout()
   }
     
@@ -44,6 +47,8 @@ class AboutViewController: UIViewController {
     eventInfoLabel.text = "About the event:\n\(about.eventInfo)"
     githubLinkButton.setTitle(about.githubLink, for: .normal)
     contributorsLabel.text = "Contributors: \( about.contributors.joined(separator: ", "))"
+    activityIndicator.isHidden = true
+    scrollView.isHidden = false
   }
   
   @IBAction func openGithubUrl(_ sender: Any) {
@@ -59,6 +64,7 @@ class AboutViewController: UIViewController {
         self.about = about
       case .failure(let error):
         self.scrollView.isHidden = true
+        self.activityIndicator.isHidden = true
         debugPrint(error.localizedDescription)
       }
     }

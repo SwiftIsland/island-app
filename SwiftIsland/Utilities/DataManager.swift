@@ -33,6 +33,7 @@ enum ListableType {
 
 protocol DataManaging {
   func getSchedule(completion: @escaping (Result<[Schedule], DataErrors>) -> Void)
+  func getAbout(completion: @escaping (Result<About, DataErrors>) -> Void)
   func get<T: Listable>(ofType type: ListableType, completion: @escaping (Result<[T], DataErrors>) -> Void)
 }
 
