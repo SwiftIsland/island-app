@@ -119,10 +119,14 @@ private extension MapViewController {
                                     span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
     DispatchQueue.main.async {
       self.mapView.setRegion(region, animated: true)
-      let annotation = MKPointAnnotation()
-      annotation.coordinate = location.coordinate
-      self.mapView.addAnnotation(annotation)
+      self.setPointAnnotation(for: location.coordinate)
     }
+  }
+
+  func setPointAnnotation(for coordinate: CLLocationCoordinate2D) {
+    let annotation = MKPointAnnotation()
+    annotation.coordinate = coordinate
+    self.mapView.addAnnotation(annotation)
   }
 }
 
@@ -157,10 +161,7 @@ extension MapViewController: MKMapViewDelegate {
 
       let region = MKCoordinateRegion(coordinateA: Coordinates.venue, coordinateB: location.coordinate)
       mapView.setRegion(region, animated: true)
-
-      let annotation = MKPointAnnotation()
-      annotation.coordinate = Coordinates.venue
-      mapView.addAnnotation(annotation)
+      setPointAnnotation(for: Coordinates.venue)
 
       didDetectUserLocation = true
     }
