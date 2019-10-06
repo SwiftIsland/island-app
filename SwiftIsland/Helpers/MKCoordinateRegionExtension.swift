@@ -9,6 +9,24 @@
 import MapKit
 
 extension MKCoordinateRegion {
+  /**
+   Costructor returns instace, containing both coordinates (A, B).
+   */
+  init(coordinateA: CLLocationCoordinate2D, coordinateB: CLLocationCoordinate2D) {
+    let latDelta = abs(coordinateA.latitude - coordinateB.latitude)
+    let lonDelta = abs(coordinateA.longitude - coordinateB.longitude)
+
+    let minLat = fmin(coordinateA.latitude, coordinateB.latitude)
+    let minLon = fmin(coordinateA.longitude, coordinateB.longitude)
+
+    let center = CLLocationCoordinate2D(latitude: minLat + latDelta / 2,
+                                        longitude: minLon + lonDelta / 2)
+    let span = MKCoordinateSpan(latitudeDelta: latDelta * 1.1,
+                                longitudeDelta: lonDelta * 1.1)
+
+    self.init(center: center, span: span)
+  }
+
   func contains(location: CLLocation) -> Bool {
     let nwCoordinate = northWestCoordinate
     let seCoordinate = southEastCoordinate

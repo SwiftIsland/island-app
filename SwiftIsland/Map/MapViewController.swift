@@ -124,21 +124,6 @@ private extension MapViewController {
       self.mapView.addAnnotation(annotation)
     }
   }
-
-  func regionContaining(coordinateA: CLLocationCoordinate2D, coordianteB: CLLocationCoordinate2D) -> MKCoordinateRegion {
-    let latDelta = abs(coordinateA.latitude - coordianteB.latitude)
-    let lonDelta = abs(coordinateA.longitude - coordianteB.longitude)
-
-    let minLat = fmin(coordinateA.latitude, coordianteB.latitude)
-    let minLon = fmin(coordinateA.longitude, coordianteB.longitude)
-
-    let center = CLLocationCoordinate2D(latitude: minLat + latDelta / 2,
-                                        longitude: minLon + lonDelta / 2)
-    let span = MKCoordinateSpan(latitudeDelta: latDelta * 1.1,
-                                longitudeDelta: lonDelta * 1.1)
-
-    return MKCoordinateRegion(center: center, span: span)
-  }
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -170,7 +155,7 @@ extension MapViewController: MKMapViewDelegate {
         return
       }
 
-      let region = regionContaining(coordinateA: Coordinates.venue, coordianteB: location.coordinate)
+      let region = MKCoordinateRegion(coordinateA: Coordinates.venue, coordinateB: location.coordinate)
       mapView.setRegion(region, animated: true)
 
       let annotation = MKPointAnnotation()
