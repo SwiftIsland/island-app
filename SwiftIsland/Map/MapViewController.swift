@@ -160,8 +160,11 @@ extension MapViewController: MKMapViewDelegate {
       }
 
       let region = MKCoordinateRegion(coordinateA: Coordinates.venue, coordinateB: location.coordinate)
-      mapView.setRegion(region, animated: true)
-      setPointAnnotation(for: Coordinates.venue)
+
+      DispatchQueue.main.async {
+        self.mapView.setRegion(region, animated: true)
+        self.setPointAnnotation(for: Coordinates.venue)
+      }
 
       didDetectUserLocation = true
     }
