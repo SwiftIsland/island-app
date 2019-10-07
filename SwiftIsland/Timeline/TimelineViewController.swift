@@ -119,7 +119,8 @@ private extension TimelineViewController {
     debugPrint("Show activity \(activity)")
     guard let viewController = UIStoryboard(name: "Timeline", bundle: nil)
       .instantiateViewController(withIdentifier: ActivityDetailsViewController.StoryboardIdentifier) as? ActivityDetailsViewController else {
-        fatalError("We expect a view controller here.")
+        assertionFailure("We expect a view controller here.")
+        return
     }
     viewController.activity = activity
     navigationController?.pushViewController(viewController, animated: true)
@@ -195,7 +196,8 @@ extension TimelineViewController: UITableViewDataSource {
     case rowCount-1: // Footer
       return footerCell(for: indexPath.section)
     default:
-      fatalError("No row available.")
+      assertionFailure("No row available.")
+      return UITableViewCell()
     }
   }
 
@@ -206,7 +208,8 @@ extension TimelineViewController: UITableViewDataSource {
     let activityCell: ScheduleCell
     if isConcurrent {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "ConcurrentCell") as? ConcurrentCell else {
-        fatalError("This should always return a cell.")
+        assertionFailure("This should always return a cell.")
+        return UITableViewCell()
       }
       activityCell = cell
 
@@ -216,7 +219,8 @@ extension TimelineViewController: UITableViewDataSource {
       }
     } else {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell") as? ScheduleCell else {
-        fatalError("This should always return a cell.")
+        assertionFailure("This should always return a cell.")
+        return UITableViewCell()
       }
       activityCell = cell
     }
@@ -227,7 +231,8 @@ extension TimelineViewController: UITableViewDataSource {
 
   private func headerCell(for section: Int) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleHeaderCell") as? ScheduleHeaderCell else {
-      fatalError("This should always return a cell.")
+      assertionFailure("This should always return a cell.")
+      return UITableViewCell()
     }
 
     let day = schedule[section]
@@ -237,7 +242,8 @@ extension TimelineViewController: UITableViewDataSource {
 
   func footerCell(for section: Int) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleFooterCell") as? ScheduleFooterCell else {
-      fatalError("This should always return a cell.")
+      assertionFailure("This should always return a cell.")
+      return UITableViewCell()
     }
     cell.setup(faded: shouldFade(cellIndexPath: IndexPath(row: activities[section].count-1, section: section)))
     return cell
