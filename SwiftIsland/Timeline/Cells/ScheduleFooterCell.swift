@@ -12,15 +12,8 @@ class ScheduleFooterCell: UITableViewCell {
 
   @IBOutlet weak var timelineLine: UIView!
 
-  override func awakeFromNib() {
-    super.awakeFromNib()
-  }
-
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-  }
-
   func setup(faded: Bool) {
+    selectionStyle = .none
     timelineLine.alpha = faded ? Theme.fadedAlpha : 1
   }
 }

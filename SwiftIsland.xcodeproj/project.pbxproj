@@ -71,6 +71,8 @@
 		CE84EA2A234783DF00C9C82E /* About_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = CE84EA29234783DF00C9C82E /* About_valid.json */; };
 		CE84EA2C2347843E00C9C82E /* AboutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EA2B2347843E00C9C82E /* AboutTests.swift */; };
 		CE84EA3123478C9400C9C82E /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE84EA3023478C9400C9C82E /* About.storyboard */; };
+		CE902FBA234BA3A200E67551 /* ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE902FB9234BA3A200E67551 /* ActivityDetailsViewController.swift */; };
+		CE902FBC234BA47000E67551 /* DateFormatter+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE902FBB234BA47000E67551 /* DateFormatter+Convenience.swift */; };
 		ED8C140122C2063900E6DE6E /* Mentor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8C140022C2063900E6DE6E /* Mentor.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +155,8 @@
 		CE84EA29234783DF00C9C82E /* About_valid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = About_valid.json; sourceTree = "<group>"; };
 		CE84EA2B2347843E00C9C82E /* AboutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTests.swift; sourceTree = "<group>"; };
 		CE84EA3023478C9400C9C82E /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		CE902FB9234BA3A200E67551 /* ActivityDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewController.swift; sourceTree = "<group>"; };
+		CE902FBB234BA47000E67551 /* DateFormatter+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Convenience.swift"; sourceTree = "<group>"; };
 		ED8C140022C2063900E6DE6E /* Mentor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mentor.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +213,7 @@
 		2A0C8FC6226BA738003F8937 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CE902FBB234BA47000E67551 /* DateFormatter+Convenience.swift */,
 				2A0C8FC7226BA741003F8937 /* FileManaging.swift */,
 				2A0C8FD2226D1667003F8937 /* UIViewExtensions.swift */,
 				2ADD085E22ADABFA00A90D1E /* CollectionExtension.swift */,
@@ -379,6 +384,7 @@
 				2AD36FF4225E84F400AF7542 /* TimelineViewController.swift */,
 				2ABEC0C122B996DE00C0C8A5 /* CountdownViewController.swift */,
 				239DCB9E2344874C00F0CD95 /* Timeline.storyboard */,
+				CE902FB9234BA3A200E67551 /* ActivityDetailsViewController.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -592,11 +598,13 @@
 				2A8863D122BBF06000B4CE86 /* Reachability.swift in Sources */,
 				2A0C8FDB226DD9C4003F8937 /* ScheduleFooterCell.swift in Sources */,
 				CE84EA252343D63400C9C82E /* About.swift in Sources */,
+				CE902FBA234BA3A200E67551 /* ActivityDetailsViewController.swift in Sources */,
 				2A0C8FD1226D13FE003F8937 /* ScheduleCell.swift in Sources */,
 				2A0C8FC8226BA741003F8937 /* FileManaging.swift in Sources */,
 				2ABEC08222B97A3300C0C8A5 /* DataWriter.swift in Sources */,
 				2ABEC0C222B996DE00C0C8A5 /* CountdownViewController.swift in Sources */,
 				2AF63104226DE96D00509053 /* MapViewController.swift in Sources */,
+				CE902FBC234BA47000E67551 /* DateFormatter+Convenience.swift in Sources */,
 				2A0C8FC3226BA210003F8937 /* APIManager.swift in Sources */,
 				2A5BE94B22BA8B270062D868 /* MentorCollectionView.swift in Sources */,
 				2AF63107226E5CA300509053 /* Area.swift in Sources */,
@@ -808,7 +816,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6B3SHVL3L5;
+				DEVELOPMENT_TEAM = 6T68RPD4WZ;
 				INFOPLIST_FILE = SwiftIsland/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -826,7 +834,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6B3SHVL3L5;
+				DEVELOPMENT_TEAM = 6T68RPD4WZ;
 				INFOPLIST_FILE = SwiftIsland/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

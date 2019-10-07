@@ -16,13 +16,6 @@ class ScheduleCell: UITableViewCell {
   @IBOutlet weak var locationPill: DesignableView?
   @IBOutlet weak var timeLabel: UILabel?
 
-  lazy var dateFormatter: DateFormatter = {
-    let dateFormatter = DateFormatter.dutchTimezone()
-    dateFormatter.timeStyle = .short
-    dateFormatter.dateStyle = .none
-    return dateFormatter
-  }()
-
   override func awakeFromNib() {
     super.awakeFromNib()
   }
@@ -39,7 +32,7 @@ class ScheduleCell: UITableViewCell {
   func setup(with activity: Schedule.Activity, faded: Bool) {
     titleLabel.text = activity.title
     descriptionLabel.text = activity.description
-    timeLabel?.text = dateFormatter.string(from: activity.datefrom)
+    timeLabel?.text = DateFormatter.dutchShortTime.string(from: activity.datefrom)
     locationLabel.text = activity.area
     locationPill?.isHidden = activity.area == nil
     contentView.alpha = faded ? Theme.fadedAlpha : 1
