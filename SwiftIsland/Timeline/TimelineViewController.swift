@@ -15,10 +15,10 @@ class TimelineViewController: CardViewController {
   private var activities: [[Schedule.Activity]] = []
   private let networkRechability: NetworkReachability = NetworkReachability()
   private let userDefaults: UserDefaults = UserDefaults.standard
+  private var shouldScrollToActiveIndex = true
   private var indexPathOfActiveItem: IndexPath? {
     didSet {
-      guard let indexPath = indexPathOfActiveItem else { return }
-      tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+      scrollToActiveIndex()
     }
   }
 
@@ -123,6 +123,7 @@ private extension TimelineViewController {
         return
     }
     viewController.activity = activity
+    shouldScrollToActiveIndex = false
     navigationController?.pushViewController(viewController, animated: true)
   }
 
@@ -146,6 +147,14 @@ private extension TimelineViewController {
     }
 
     indexPathOfActiveItem = indexPath
+  }
+
+  func scrollToActiveIndex() {
+    defer {
+      shouldScrollToActiveIndex = true
+    }
+    guard shouldScrollToActiveIndex, let indexPath = indexPathOfActiveItem else { return }
+    tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
   }
 
   func shouldFade(cellIndexPath: IndexPath) -> Bool {
