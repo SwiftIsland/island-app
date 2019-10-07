@@ -29,3 +29,5 @@ struct Organiser: Codable {
   let url: String
   let linkedin: String
 }
+
+extension About: Listable {}

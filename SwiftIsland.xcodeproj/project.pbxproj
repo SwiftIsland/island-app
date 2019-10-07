@@ -70,7 +70,6 @@
 		CE84EA282343DA9A00C9C82E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EA272343DA9A00C9C82E /* AboutViewController.swift */; };
 		CE84EA2A234783DF00C9C82E /* About_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = CE84EA29234783DF00C9C82E /* About_valid.json */; };
 		CE84EA2C2347843E00C9C82E /* AboutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84EA2B2347843E00C9C82E /* AboutTests.swift */; };
-		CE84EA2E23478B2E00C9C82E /* About_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = CE84EA29234783DF00C9C82E /* About_valid.json */; };
 		CE84EA3123478C9400C9C82E /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE84EA3023478C9400C9C82E /* About.storyboard */; };
 		ED8C140122C2063900E6DE6E /* Mentor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8C140022C2063900E6DE6E /* Mentor.storyboard */; };
 /* End PBXBuildFile section */
@@ -513,7 +512,6 @@
 			files = (
 				2ABEC0BF22B9925400C0C8A5 /* WorkSans-Black.ttf in Resources */,
 				2AD36FEB225E830A00AF7542 /* LaunchScreen.storyboard in Resources */,
-				CE84EA2E23478B2E00C9C82E /* About_valid.json in Resources */,
 				2ABEC0BD22B9925400C0C8A5 /* OFL.txt in Resources */,
 				2ABEC0B822B9925400C0C8A5 /* WorkSans-Light.ttf in Resources */,
 				2ABEC0B922B9925400C0C8A5 /* WorkSans-ExtraBold.ttf in Resources */,

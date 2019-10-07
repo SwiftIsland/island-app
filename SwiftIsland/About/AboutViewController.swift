@@ -58,7 +58,7 @@ class AboutViewController: UIViewController {
   }
   
   func fetchAbout() {
-    dataManager.getAbout { (result) in
+    dataManager.get(ofType: .about) { (result: Result<About, DataErrors>) -> Void in
       switch result {
       case .success(let about):
         self.about = about
