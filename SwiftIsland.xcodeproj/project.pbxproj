@@ -67,7 +67,10 @@
 		2AF63104226DE96D00509053 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63103226DE96D00509053 /* MapViewController.swift */; };
 		2AF63107226E5CA300509053 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF63106226E5CA300509053 /* Area.swift */; };
 		4555A97923476EFE006B4DDC /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555A97823476EFE006B4DDC /* MKCoordinateRegionExtension.swift */; };
+		45600EEA234B328800DC2B6E /* MKMapViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45600EE9234B328800DC2B6E /* MKMapViewMock.swift */; };
+		45600EEC234B345200DC2B6E /* MKUserLocationMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45600EEB234B345200DC2B6E /* MKUserLocationMock.swift */; };
 		4592B5F32349C97100C38256 /* MKCoordinateRegionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592B5F22349C97100C38256 /* MKCoordinateRegionExtensionTests.swift */; };
+		4592B5FA234A025400C38256 /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4592B5F9234A025400C38256 /* MapViewControllerTests.swift */; };
 		ED8C140122C2063900E6DE6E /* Mentor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8C140022C2063900E6DE6E /* Mentor.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -146,7 +149,10 @@
 		2AF63103226DE96D00509053 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2AF63106226E5CA300509053 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		4555A97823476EFE006B4DDC /* MKCoordinateRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtension.swift; sourceTree = "<group>"; };
+		45600EE9234B328800DC2B6E /* MKMapViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewMock.swift; sourceTree = "<group>"; };
+		45600EEB234B345200DC2B6E /* MKUserLocationMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKUserLocationMock.swift; sourceTree = "<group>"; };
 		4592B5F22349C97100C38256 /* MKCoordinateRegionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtensionTests.swift; sourceTree = "<group>"; };
+		4592B5F9234A025400C38256 /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		ED8C140022C2063900E6DE6E /* Mentor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mentor.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,6 +273,7 @@
 		2ABBDD82226FA1C300D4212C /* SwiftIslandTests */ = {
 			isa = PBXGroup;
 			children = (
+				4592B5F4234A00A300C38256 /* Map */,
 				2ADD086722ADAFCA00A90D1E /* Resources */,
 				2ABBDD8E226FA2A700D4212C /* Mocks */,
 				2ADD086422ADAF4E00A90D1E /* Entities */,
@@ -298,6 +305,8 @@
 				2ADD085A22ADA5F100A90D1E /* FileManagerMock.swift */,
 				2ADD085C22ADA6E200A90D1E /* BundleMock.swift */,
 				2AA81FDD22B83850001F3A58 /* APIManagerMock.swift */,
+				45600EE9234B328800DC2B6E /* MKMapViewMock.swift */,
+				45600EEB234B345200DC2B6E /* MKUserLocationMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -400,6 +409,14 @@
 				2ADD086A22ADB01400A90D1E /* TestDataManager.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4592B5F4234A00A300C38256 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				4592B5F9234A025400C38256 /* MapViewControllerTests.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,11 +564,14 @@
 				2ADD085D22ADA6E200A90D1E /* BundleMock.swift in Sources */,
 				2ABBDD84226FA1C300D4212C /* SwiftIslandTests.swift in Sources */,
 				2AA81FDA22B6E708001F3A58 /* APIManagerTests.swift in Sources */,
+				45600EEA234B328800DC2B6E /* MKMapViewMock.swift in Sources */,
 				2ABBDD90226FA2B600D4212C /* CacheManagerMock.swift in Sources */,
+				4592B5FA234A025400C38256 /* MapViewControllerTests.swift in Sources */,
 				2AA81FDE22B83850001F3A58 /* APIManagerMock.swift in Sources */,
 				239DCB9B2343763D00F0CD95 /* UIViewExtensionsTests.swift in Sources */,
 				2AA81FDC22B6E74D001F3A58 /* URLSessionMock.swift in Sources */,
 				2ADD086322ADADBF00A90D1E /* ThemeTests.swift in Sources */,
+				45600EEC234B345200DC2B6E /* MKUserLocationMock.swift in Sources */,
 				2ABBDD8D226FA28000D4212C /* DataManagerTests.swift in Sources */,
 				2ADD086622ADAF7400A90D1E /* AreaTests.swift in Sources */,
 				2ADD085B22ADA5F100A90D1E /* FileManagerMock.swift in Sources */,
