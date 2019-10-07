@@ -30,17 +30,13 @@ class MentorCollectionView: CardViewController {
   override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     super.traitCollectionDidChange(previousTraitCollection)
 
-    guard previousTraitCollection != nil else {
-      return
-    }
+    guard previousTraitCollection != nil else { return }
     collectionView?.collectionViewLayout.invalidateLayout()
     setupCollectionView()
   }
 
   private func setupCollectionView() {
-    guard let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else {
-      return
-    }
+    guard let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else { return }
 
     let frameWidth = view.frame.width
     let horizontalSpacing = flowLayout.scrollDirection == .vertical ? flowLayout.minimumInteritemSpacing : flowLayout.minimumLineSpacing

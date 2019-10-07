@@ -22,9 +22,7 @@ class ActivityDetailsViewController: UIViewController {
   }
 
   func configure(with activity: Schedule.Activity?) {
-    guard view != nil, let activity = activity else {
-      return
-    }
+    guard view != nil, let activity = activity else { return }
     titleLabel.text = activity.title
     titleLabel.accessibilityHint = startsAtSpoken(activity.datefrom)
 
@@ -71,9 +69,7 @@ class ActivityTagView: UIView {
 
   var text: String? {
     didSet {
-      guard let text = text, text.isEmpty == false else {
-        return
-      }
+      guard let text = text, text.isEmpty == false else { return }
       tagLabel.text = text
 
       isAccessibilityElement = true
@@ -88,9 +84,7 @@ class ActivityMentorView: UIView {
 
   var mentor: Mentor? {
     didSet {
-      guard let mentor = mentor else {
-        return
-      }
+      guard let mentor = mentor else { return }
       nameLabel.text = mentor.name
       avatarImageView.image = UIImage(named: mentor.image)
 
@@ -105,9 +99,7 @@ class ActivityDescriptionView: UIView {
 
   var text: String? {
     didSet {
-      guard let text = text, text.isEmpty == false else {
-        return
-      }
+      guard let text = text, text.isEmpty == false else { return }
       descriptionLabel.text = text
 
       isAccessibilityElement = true

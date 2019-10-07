@@ -163,9 +163,7 @@ extension TimelineViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let rowCount = self.tableView(tableView, numberOfRowsInSection: indexPath.section)
-    guard indexPath.row > 0, indexPath.row < rowCount - 1 else {
-      return
-    }
+    guard indexPath.row > 0, indexPath.row < rowCount - 1 else { return }
     let adjustedIndexPath = IndexPath(item: indexPath.item - 1, section: indexPath.section)
     let activity = activities[adjustedIndexPath.section][adjustedIndexPath.row]
     showActivity(activity: activity)
