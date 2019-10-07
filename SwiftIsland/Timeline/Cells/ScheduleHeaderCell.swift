@@ -26,6 +26,7 @@ class ScheduleHeaderCell: UITableViewCell {
   }
 
   func setup(with schedule: Schedule, faded: Bool) {
+    selectionStyle = .none
     dateLabel.text = dateFormatter.string(from: schedule.date)
     timelineLine.alpha = faded ? Theme.fadedAlpha : 1
   }
