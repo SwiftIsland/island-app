@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
-  private enum Regions {
+  enum Regions {
     static let island: MKCoordinateRegion = {
       let center = CLLocationCoordinate2D(latitude: 53.083167, longitude: 4.813895)
       let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
@@ -25,7 +25,7 @@ class MapViewController: UIViewController {
     }()
   }
 
-  private enum Coordinates {
+  enum Coordinates {
     static let venue = CLLocationCoordinate2D(latitude: 53.11492071953518, longitude: 4.89718462979863)
   }
 
