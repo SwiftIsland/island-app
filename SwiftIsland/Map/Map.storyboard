@@ -39,11 +39,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show cottage location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX3-6K-1og">
                                         <rect key="frame" x="8" y="37" width="164" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="textDefault"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="0fO-vo-e92"/>
                                     <constraint firstItem="vfU-J7-nKJ" firstAttribute="height" secondItem="Daw-L8-dbh" secondAttribute="height" id="CzP-RI-BZv"/>
@@ -68,7 +68,7 @@
                                 <color key="color" name="tag"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="r02-Oi-ZfG" firstAttribute="centerX" secondItem="h0a-wK-8s4" secondAttribute="centerX" id="7Km-aL-Lk0"/>
                             <constraint firstItem="r02-Oi-ZfG" firstAttribute="centerY" secondItem="h0a-wK-8s4" secondAttribute="centerY" id="AvM-mF-BH6"/>
@@ -96,12 +96,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="map" width="34" height="34"/>
+        <image name="map" width="23" height="26"/>
         <namedColor name="orange">
             <color red="1" green="0.53333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tag">
             <color red="0.57647058823529407" green="0.81568627450980391" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textDefault">
+            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
