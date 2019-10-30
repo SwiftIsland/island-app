@@ -28,6 +28,8 @@ platform :ios do
       buildPullrequest(options)
     elsif BitriseCI.isDevelop?
       buildDevelop(options)
+    elsif BitriseCI.isReleaseBranch?
+      buildRelease(options)
     else
       buildLocal(options)
     end
@@ -57,7 +59,16 @@ platform :ios do
     
     runScan(options)
   end
-  
+
+  desc "Release app"
+  lane :buildRelease do |options|
+    options[:configuration] ||= CONFIG_RELEASE
+    
+    runScan(options)
+    runGym(options)
+    runDeliver(options)
+  end
+
   # Private stuff
   
   ## Building & Delivery
@@ -82,6 +93,16 @@ platform :ios do
       output_style: 'rspec',
       buildlog_path: './build/logs/',
       xcargs: "-parallelizeTargets OTHER_SWIFT_FLAGS=\"-Xfrontend -debug-time-function-bodies\""
+    )
+  end
+
+  private_lane :runDeliver do |options|
+    deliver(
+      submit_for_review: true,
+      force: true,
+      ipa: './build/SwiftIsland.ipa',
+      metadata_path: "./fastlane/metadata",
+      screenshots_path: './fastlane/screenshots'
     )
   end
 end

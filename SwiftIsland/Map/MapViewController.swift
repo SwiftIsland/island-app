@@ -10,9 +10,28 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
+  enum Regions {
+    static let island: MKCoordinateRegion = {
+      let center = CLLocationCoordinate2D(latitude: 53.083167, longitude: 4.813895)
+      let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+
+      return MKCoordinateRegion(center: center, span: span)
+    }()
+
+    static let venue: MKCoordinateRegion = {
+      let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+
+      return MKCoordinateRegion(center: Coordinates.venue, span: span)
+    }()
+  }
+
+  enum Coordinates {
+    static let venue = CLLocationCoordinate2D(latitude: 53.11492071953518, longitude: 4.89718462979863)
+  }
 
   private let dataManager = DataManager.shared
   private var areas: [Area] = []
+  private let locationManager = CLLocationManager()
   private var selectedArea: Area? {
     didSet {
       if let selectedArea = selectedArea {
@@ -32,8 +51,11 @@ class MapViewController: UIViewController {
   }
   @IBOutlet weak var cottagePicker: UIPickerView!
 
+  private var didDetectUserLocation = false
+
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupLocationManager()
     setupMap()
   }
 
@@ -46,7 +68,14 @@ class MapViewController: UIViewController {
 private extension MapViewController {
 
   func setupMap() {
-    centerOnVenue()
+    mapView.showsUserLocation = true
+  }
+
+  func setupLocationManager() {
+    locationManager.requestWhenInUseAuthorization()
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    locationManager.distanceFilter = kCLDistanceFilterNone
+    locationManager.startUpdatingLocation()
   }
 
   func getAreas() {
@@ -81,7 +110,7 @@ private extension MapViewController {
   }
 
   func centerOnVenue() {
-    let location = CLLocation(latitude: 53.11492071953518, longitude: 4.89718462979863)
+    let location = CLLocation(latitude: Coordinates.venue.latitude, longitude: Coordinates.venue.longitude)
     centerMapOnLocation(location: location)
   }
 
@@ -90,10 +119,14 @@ private extension MapViewController {
                                     span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
     DispatchQueue.main.async {
       self.mapView.setRegion(region, animated: true)
-      let annotation = MKPointAnnotation()
-      annotation.coordinate = location.coordinate
-      self.mapView.addAnnotation(annotation)
+      self.setPointAnnotation(for: location.coordinate)
     }
+  }
+
+  func setPointAnnotation(for coordinate: CLLocationCoordinate2D) {
+    let annotation = MKPointAnnotation()
+    annotation.coordinate = coordinate
+    self.mapView.addAnnotation(annotation)
   }
 }
 
@@ -111,6 +144,34 @@ extension MapViewController: MKMapViewDelegate {
     }
 
     return MKPolylineRenderer(overlay: overlay)
+  }
+
+  func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+    if !didDetectUserLocation {
+      guard let location = userLocation.location else {
+        return
+      }
+
+      if !Regions.island.contains(location: location) || Regions.venue.contains(location: location) {
+        centerOnVenue()
+        didDetectUserLocation = true
+
+        return
+      }
+
+      let region = MKCoordinateRegion(coordinateA: Coordinates.venue, coordinateB: location.coordinate)
+
+      DispatchQueue.main.async {
+        self.mapView.setRegion(region, animated: true)
+        self.setPointAnnotation(for: Coordinates.venue)
+      }
+
+      didDetectUserLocation = true
+    }
+  }
+
+  func mapView(_ mapView: MKMapView, didFailToLocateUserWithError error: Error) {
+    centerOnVenue()
   }
 }
 
