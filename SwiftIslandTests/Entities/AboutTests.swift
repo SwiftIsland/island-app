@@ -10,11 +10,9 @@ import XCTest
 @testable import SwiftIsland
 
 class AboutTests: XCTestCase {
-  
   func testJSONDecode() {
     guard let testFile = TestDataManager().getLocalTestAsset(forPath: "About_valid.json") else { XCTFail("Did not find test file"); return }
     let aboutContent: About? = try? JSONDecoder().decode(About.self, from: testFile)
-    
     XCTAssertNotNil(aboutContent)
     XCTAssertEqual(aboutContent?.appInfo.appName, "SwiftIsland")
     XCTAssertEqual(aboutContent?.appInfo.latestAppVersion, "1.1.1")
@@ -25,5 +23,4 @@ class AboutTests: XCTestCase {
     XCTAssertEqual(aboutContent?.githubLink, "https://github.com/SwiftIsland/island-app")
     XCTAssertEqual(aboutContent?.contributors.count, 5)
   }
-  
 }
