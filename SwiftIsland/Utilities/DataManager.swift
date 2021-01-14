@@ -10,7 +10,7 @@ import Foundation
 
 protocol Listable: Codable {}
 enum ListableType {
-  case mentor, area
+  case mentor, area, schedule, about
 
   var endpoint: APIManager.Endpoint {
     switch self {
@@ -18,6 +18,10 @@ enum ListableType {
       return .mentors
     case .area:
       return .area
+    case .schedule:
+      return .schedule
+    case .about:
+      return .about
     }
   }
 
@@ -27,13 +31,17 @@ enum ListableType {
       return .mentors
     case .area:
       return .area
+    case .schedule:
+      return .schedule
+    case .about:
+      return .about
     }
   }
 }
 
 protocol DataManaging {
-  func getSchedule(completion: @escaping (Result<[Schedule], DataErrors>) -> Void)
   func get<T: Listable>(ofType type: ListableType, completion: @escaping (Result<[T], DataErrors>) -> Void)
+  func get<T: Listable>(ofType type: ListableType, completion: @escaping (Result<T, DataErrors>) -> Void)
 }
 
 enum DataErrors: Error {
@@ -61,20 +69,39 @@ class DataManager {
 }
 
 extension DataManager: DataManaging {
-
-  func getSchedule(completion: @escaping (Result<[Schedule], DataErrors>) -> Void) {
-
-    _ = apiManager.get(endpoint: .schedule) { (result: Result<[Schedule], Error>) in
+  func get<T: Listable>(ofType type: ListableType, completion: @escaping (Result<[T], DataErrors>) -> Void) {
+    _ = apiManager.get(endpoint: type.endpoint) { (result: Result<[T], Error>) in
       switch result {
-      case .success(let schedule):
-        try? self.cacheManager.set(to: .schedule, data: schedule)
-        completion(.success(schedule))
+      case .success(let objects):
+        try? self.cacheManager.set(to: type.cacheFiles, data: objects)
+        completion(.success(objects))
       case .failure(let fetchError):
-        // If the fetch failed, first check the cache. If that fails too, then check the
-        // error. Otherwise disregard the error and show the cached result instead.
         do {
-          let schedule: [Schedule] = try self.cacheManager.get(from: .schedule)
-          completion(.success(schedule))
+          let objects: [T] = try self.cacheManager.get(from: type.cacheFiles)
+          completion(.success(objects))
+        } catch {
+          if let networkError = fetchError as? APIManagerError,
+            case .apiReponseUnhandledStatusCode(let statusCode) = networkError,
+            statusCode == 404 {
+            completion(.failure(.notYetAvailable))
+          } else {
+            completion(.failure(.noData))
+          }
+        }
+      }
+    }
+  }
+  
+  func get<T: Listable>(ofType type: ListableType, completion: @escaping (Result<T, DataErrors>) -> Void) {
+    _ = apiManager.get(endpoint: type.endpoint) { (result: Result<T, Error>) in
+      switch result {
+      case .success(let object):
+        try? self.cacheManager.set(to: type.cacheFiles, data: object)
+        completion(.success(object))
+      case .failure(let fetchError):
+        do {
+          let object: T = try self.cacheManager.get(from: type.cacheFiles)
+          completion(.success(object))
         } catch {
           if let networkError = fetchError as? APIManagerError,
             case .apiReponseUnhandledStatusCode(let statusCode) = networkError,
@@ -88,20 +115,4 @@ extension DataManager: DataManaging {
     }
   }
 
-  func get<T: Listable>(ofType type: ListableType, completion: @escaping (Result<[T], DataErrors>) -> Void) {
-    _ = apiManager.get(endpoint: type.endpoint) { (result: Result<[T], Error>) in
-      switch result {
-      case .success(let objects):
-        try? self.cacheManager.set(to: type.cacheFiles, data: objects)
-        completion(.success(objects))
-      case .failure:
-        do {
-          let objects: [T] = try self.cacheManager.get(from: type.cacheFiles)
-          completion(.success(objects))
-        } catch {
-          completion(.failure(.noData))
-        }
-      }
-    }
-  }
 }

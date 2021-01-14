@@ -23,6 +23,7 @@ final class APIManager: APIManaging {
     case schedule
     case mentors
     case area = "locations"
+    case about
   }
 
   private let baseURL: URL

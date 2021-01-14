@@ -24,3 +24,5 @@ struct Schedule: Codable {
     let concurrent: [Activity]?
   }
 }
+
+extension Schedule: Listable {}

@@ -75,7 +75,8 @@ class TimelineViewController: CardViewController {
 
   func fetchSchedule() {
     loadingSpinner.startAnimating()
-    dataManager.getSchedule { result in
+
+    dataManager.get(ofType: .schedule) { (result: Result<[Schedule], DataErrors>) in
       self.loadingSpinner.stopAnimating()
       switch result {
       case .success(let schedule):

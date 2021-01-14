@@ -12,6 +12,7 @@ enum CacheFiles: String {
   case schedule
   case area
   case mentors
+  case about
 }
 
 enum CacheErrors: Error {

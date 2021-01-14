@@ -37,7 +37,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 404)
     let expectation = XCTestExpectation(description: "")
 
-    sut.getSchedule { result in
+    sut.get(ofType: .schedule) { (result: Result<[Schedule], DataErrors>) in
       if case .failure(let error) = result {
         XCTAssertEqual(error, DataErrors.notYetAvailable)
       } else {
@@ -55,7 +55,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerResult = [Schedule]()
     let expectation = XCTestExpectation(description: "")
 
-    sut.getSchedule { result in
+    sut.get(ofType: .schedule) { (result: Result<[Schedule], DataErrors>) in
       if case .failure(let error) = result {
         XCTAssertEqual(error, DataErrors.notYetAvailable)
       }
@@ -77,7 +77,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 1337)
     let expectation = XCTestExpectation(description: "")
 
-    sut.getSchedule { result in
+    sut.get(ofType: .schedule) { (result: Result<[Schedule], DataErrors>) in
       if case .failure(let error) = result {
         XCTAssertEqual(error, DataErrors.notYetAvailable)
       }
@@ -100,7 +100,7 @@ class DataManagerTests: XCTestCase {
     apiManagerMock.getCompletionHandlerError = APIManagerError.apiReponseUnhandledStatusCode(statusCode: 1337)
     let expectation = XCTestExpectation(description: "")
 
-    sut.getSchedule { result in
+    sut.get(ofType: .schedule) { (result: Result<[Schedule], DataErrors>) in
       if case .failure(let error) = result {
         XCTAssertEqual(error, DataErrors.noData)
       } else {
